@@ -1,0 +1,11 @@
+<!ENTITY currency "$">
+<!ENTITY in_stock "В наличии">
+<!ENTITY out_of_stock "Под заказ">
+
+<!ELEMENT store (product+)>
+<!ELEMENT product (name, category, description, availability, price)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT category (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT availability (#PCDATA)>
+<!ELEMENT price (#PCDATA)>

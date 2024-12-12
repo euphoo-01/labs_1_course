@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<!DOCTYPE store [
+<!ENTITY currency "$">
+<!ENTITY in_stock "В наличии">
+<!ENTITY out_of_stock "Под заказ">
+<!ELEMENT store (product*)>
+<!ELEMENT product (name, category, description, availability, price)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT category (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT availability (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+]>
+<store>
+    <product>
+        <name>Смартфон</name>
+        <category>Электроника</category>
+        <description>Современный смартфон с AMOLED-дисплеем</description>
+        <availability>&in_stock;</availability>
+        <price>&currency;599.99</price>
+    </product>
+    <product>
+        <name>Ноутбук</name>
+        <category>Компьютеры</category>
+        <description>Мощный ноутбук для работы и игр</description>
+        <availability>&out_of_stock;</availability>
+        <price>&currency;999.99</price>
+    </product>
+    <product>
+        <name>Беспроводные наушники</name>
+        <category>Аксессуары</category>
+        <description>Высококачественный звук и шумоподавление</description>
+        <availability>&in_stock;</availability>
+        <price>&currency;149.99</price>
+    </product>
+    <product>
+        <name>Кофеварка</name>
+        <category>Бытовая техника</category>
+        <description>Компактная кофеварка с капсульной системой</description>
+        <availability>&in_stock;</availability>
+        <price>&currency;79.99</price>
+    </product>
+    <product>
+        <name>Электросамокат</name>
+        <category>Транспорт</category>
+        <description>Легкий и маневренный электросамокат</description>
+        <availability>&out_of_stock;</availability>
+        <price>&currency;299.99</price>
+    </product>
+</store>
