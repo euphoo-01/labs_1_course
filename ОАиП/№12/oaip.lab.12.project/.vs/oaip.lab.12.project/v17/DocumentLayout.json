@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211612\\oaip.lab.12.project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B8746823-0374-420B-BE8E-BE9D716E562D}|oaip.lab12.dops\\oaip.lab12.dops.vcxproj|D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211612\\oaip.lab.12.project\\oaip.lab12.dops\\dops.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B8746823-0374-420B-BE8E-BE9D716E562D}|oaip.lab12.dops\\oaip.lab12.dops.vcxproj|solutionrelative:oaip.lab12.dops\\dops.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C18C0B19-AD7B-4E77-90B4-76AC76595DA8}|oaip.lab.12.ex2\\oaip.lab.12.ex2.vcxproj|D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211612\\oaip.lab.12.project\\oaip.lab.12.ex2\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C18C0B19-AD7B-4E77-90B4-76AC76595DA8}|oaip.lab.12.ex2\\oaip.lab.12.ex2.vcxproj|solutionrelative:oaip.lab.12.ex2\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5335A0-F9AA-4290-B74A-5AE83E99B72C}|oaip.lab.12.project\\oaip.lab.12.project.vcxproj|D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211612\\oaip.lab.12.project\\oaip.lab.12.project\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0C5335A0-F9AA-4290-B74A-5AE83E99B72C}|oaip.lab.12.project\\oaip.lab.12.project.vcxproj|solutionrelative:oaip.lab.12.project\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211612\\oaip.lab.12.project\\oaip.lab.12.project\\main.cpp",
+              "RelativeDocumentMoniker": "oaip.lab.12.project\\main.cpp",
+              "ToolTip": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211612\\oaip.lab.12.project\\oaip.lab.12.project\\main.cpp",
+              "RelativeToolTip": "oaip.lab.12.project\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-23T09:21:42.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "dops.cpp",
+              "DocumentMoniker": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211612\\oaip.lab.12.project\\oaip.lab12.dops\\dops.cpp",
+              "RelativeDocumentMoniker": "oaip.lab12.dops\\dops.cpp",
+              "ToolTip": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211612\\oaip.lab.12.project\\oaip.lab12.dops\\dops.cpp",
+              "RelativeToolTip": "oaip.lab12.dops\\dops.cpp",
+              "ViewState": "AgIAANsAAAAAAAAAAAAAAPMAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-23T09:19:45.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211612\\oaip.lab.12.project\\oaip.lab.12.ex2\\main.cpp",
+              "RelativeDocumentMoniker": "oaip.lab.12.ex2\\main.cpp",
+              "ToolTip": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211612\\oaip.lab.12.project\\oaip.lab.12.ex2\\main.cpp",
+              "RelativeToolTip": "oaip.lab.12.ex2\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-22T20:55:05.321Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

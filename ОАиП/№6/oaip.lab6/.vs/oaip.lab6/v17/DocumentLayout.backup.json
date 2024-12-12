@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u21166\\oaip.lab6\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{06144AEC-F38D-4CE6-9595-86650B0BD269}|oaip.lab6.ex4\\oaip.lab6.ex4.vcxproj|D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u21166\\oaip.lab6\\oaip.lab6.ex4\\l6.ex4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{06144AEC-F38D-4CE6-9595-86650B0BD269}|oaip.lab6.ex4\\oaip.lab6.ex4.vcxproj|solutionrelative:oaip.lab6.ex4\\l6.ex4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{380CE30B-B1D7-4118-B14E-A65973C4519C}|oaip.lab6.ex2\\oaip.lab6.ex2.vcxproj|D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u21166\\oaip.lab6\\oaip.lab6.ex2\\l6.ex2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{380CE30B-B1D7-4118-B14E-A65973C4519C}|oaip.lab6.ex2\\oaip.lab6.ex2.vcxproj|solutionrelative:oaip.lab6.ex2\\l6.ex2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93BF4D97-3509-4033-B678-437CF9D607A3}|oaip.lab6.ex1\\oaip.lab6.ex1.vcxproj|D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u21166\\oaip.lab6\\oaip.lab6.ex1\\l6.ex1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{93BF4D97-3509-4033-B678-437CF9D607A3}|oaip.lab6.ex1\\oaip.lab6.ex1.vcxproj|solutionrelative:oaip.lab6.ex1\\l6.ex1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E116332C-60B9-4BCE-9E99-BA426967F806}|oaip.lab6\\oaip.lab6.vcxproj|D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u21166\\oaip.lab6\\oaip.lab6\\l6.v10.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E116332C-60B9-4BCE-9E99-BA426967F806}|oaip.lab6\\oaip.lab6.vcxproj|solutionrelative:oaip.lab6\\l6.v10.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "l6.ex1.cpp",
+              "DocumentMoniker": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u21166\\oaip.lab6\\oaip.lab6.ex1\\l6.ex1.cpp",
+              "RelativeDocumentMoniker": "oaip.lab6.ex1\\l6.ex1.cpp",
+              "ToolTip": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u21166\\oaip.lab6\\oaip.lab6.ex1\\l6.ex1.cpp",
+              "RelativeToolTip": "oaip.lab6.ex1\\l6.ex1.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-28T10:55:20.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "l6.ex2.cpp",
+              "DocumentMoniker": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u21166\\oaip.lab6\\oaip.lab6.ex2\\l6.ex2.cpp",
+              "RelativeDocumentMoniker": "oaip.lab6.ex2\\l6.ex2.cpp",
+              "ToolTip": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u21166\\oaip.lab6\\oaip.lab6.ex2\\l6.ex2.cpp",
+              "RelativeToolTip": "oaip.lab6.ex2\\l6.ex2.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-28T10:40:10.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "l6.ex4.cpp",
+              "DocumentMoniker": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u21166\\oaip.lab6\\oaip.lab6.ex4\\l6.ex4.cpp",
+              "RelativeDocumentMoniker": "oaip.lab6.ex4\\l6.ex4.cpp",
+              "ToolTip": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u21166\\oaip.lab6\\oaip.lab6.ex4\\l6.ex4.cpp",
+              "RelativeToolTip": "oaip.lab6.ex4\\l6.ex4.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-28T00:45:09.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "l6.v10.cpp",
+              "DocumentMoniker": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u21166\\oaip.lab6\\oaip.lab6\\l6.v10.cpp",
+              "RelativeDocumentMoniker": "oaip.lab6\\l6.v10.cpp",
+              "ToolTip": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u21166\\oaip.lab6\\oaip.lab6\\l6.v10.cpp",
+              "RelativeToolTip": "oaip.lab6\\l6.v10.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-28T00:07:11.673Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

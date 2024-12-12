@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u21163\\lavshuk3 v3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2535A60F-5B5B-4A78-8894-050D301F9F0B}|lavshuk3 v3.vcxproj|D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u21163\\lavshuk3 v3\\lavshuk3 v3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2535A60F-5B5B-4A78-8894-050D301F9F0B}|lavshuk3 v3.vcxproj|solutionrelative:lavshuk3 v3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "lavshuk3 v3.cpp",
+              "DocumentMoniker": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u21163\\lavshuk3 v3\\lavshuk3 v3.cpp",
+              "RelativeDocumentMoniker": "lavshuk3 v3.cpp",
+              "ToolTip": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u21163\\lavshuk3 v3\\lavshuk3 v3.cpp",
+              "RelativeToolTip": "lavshuk3 v3.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-14T00:46:00.868Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
