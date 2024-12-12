@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 4</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: "Montserrat";
+            font-weight: 500;
+        }
+        nav{
+            position: absolute;
+            transition: all .2s ease-in-out;
+        }
+        nav ul.first>li{
+            float:left;
+            list-style-type: none;
+            border-radius: 5px;
+            width: 150px;
+            text-align: center;
+            background: url(images/facultet.png) no-repeat 0 0;
+            background-size: 25px;
+            height: 25px;
+            border: 1px black solid;
+            margin-right: 15px;
+            position: relative;  
+            transition: all .2s ease-in-out;
+
+        }
+        nav ul.first>li a{
+            color: black;
+            transition: color .2s ease-in-out;
+            text-decoration: none;
+        }
+        .it:hover{
+            background-position: 0 -25px;
+        }
+        .pim:hover{
+            background-position: 0 -75px;
+        }
+        .htit:hover{
+            background-position: 0 -50px;
+        }
+        nav ul.first>li:hover{
+            border: red 1px solid;
+        }
+        nav ul.first>li:hover, nav ul.first>li a:hover{
+            color: red;
+        }
+        nav ul.first>li>a{
+           display: block;
+           margin-bottom: 5px;
+        }
+        .it:hover ul>li{
+            visibility: visible;
+            opacity: 1;
+        }
+        nav ul.second>li{
+            float: left;
+            margin-left: -41px;
+            width: 150px;
+            list-style-type: none;
+            position: relative;
+            height: 30px;
+            border: 1px black solid;
+            visibility: hidden;
+            opacity: 0;
+            background-color: white;
+            transition: opacity .2s ease-in-out;
+        }
+        nav ul.second>li:hover{
+            opacity: 0.5;
+        }
+        nav ul.second>li>a{
+            color: black;
+            margin: 0 auto;
+            display: block;
+            text-decoration: none;   
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="first">
+            <li><a href="https://belstu.by">БГТУ</a></li>
+            <li class="it"><a href="https://it.belstu.by/">ИТ</a>
+                <ul class="second">
+                    <li><a href="https://it.belstu.by/abiturientu/informacionnye-sistemy-i-tehnologii/">Кафедра ИСиТ</a></li>
+                    <li><a href="https://it.belstu.by/abiturientu/programmnoe-obespechenie-informacionnyh-tehnologij/">Кафедра ПИ</a></li>
+                    <li><a href="https://it.belstu.by/abiturientu/dizajn-jelektronnyh-i-veb-izdanij/">Кафедра ИиВД</a></li>
+                </ul>
+            </li>
+
+            <li class="pim"><a href="https://pim.belstu.by/">ПиМ</a></li>
+            <li class="htit"><a href="https://htit.belstu.by/">ХТиТ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

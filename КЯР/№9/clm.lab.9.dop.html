@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dop</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 150px);
+      grid-gap: 10px;
+      max-width: 600px;
+    }
+
+    .grid-item {
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #ccc;
+      background-color: #fff;
+    }
+
+    .row-1 {
+      grid-column: span 3;
+    }
+    .row-1 p {
+      color: blue;
+      font-weight: bold;
+    }
+
+    .row-2 {
+      background-color: red;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-item row-1">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nam esse, facilis laborum eius nobis quam soluta optio possimus maiores quaerat, voluptates consequuntur quisquam illo delectus iure quod accusamus. Aut..</p>
+    </div>
+    <div class="grid-item row-2">ячейка 1</div>
+    <div class="grid-item row-2">ячейка 2</div>
+    <div class="grid-item row-2">ячейка 3</div>
+    <div class="grid-item">ячейка 1</div>
+    <div class="grid-item">ячейка 2</div>
+    <div class="grid-item"> ячейка 3</div>
+  </div>
+</body>
+</html>

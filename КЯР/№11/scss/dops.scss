@@ -1,0 +1,44 @@
+// Задание 12
+
+
+$headerSizing: 48px;
+$header2Sizing: 36px;
+$header3Sizing: 24px;
+$paragraphSizing: 20px;
+
+@for $i from 1 through 3 {
+    h#{$i} {
+        font-size: $header#{$i}Sizing;
+        @if ($header#{$i}Sizing == 20px) {
+            color: red;
+        }
+    }
+}
+p {
+    font-size: $paragraph-Sizing;
+    @if ($paragraph-sizing == 20px) {
+        color: red;
+    }
+}
+
+// Задание 16
+
+article {
+    ul {
+        li {
+            color: blue;
+            font-family: Arial;
+            font-size: 24px;
+        }
+    }
+}
+
+ol {
+    li {
+        color: orange;
+        font-size: 12px;
+    }
+    background-color: black;
+    width: 400px;
+    text-align: center;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 4</title>
+    <style>
+        article{
+            margin: 0 auto;
+            width: 900px;
+        }
+        div {
+            display: inline-block;
+            margin: 10px;
+            width: 150px;
+            height: 150px;
+            border: 1px black solid;
+        }
+        #d1{
+            background-image: linear-gradient(to top, red, blue);
+        }
+        #d2{
+            background-image: repeating-linear-gradient(45deg, rgb(255,0,0) 0px 10px, rgb(0,0,255) 10px 20px);
+        }
+        #d3{
+            background-image: radial-gradient(circle, yellow, green);
+        }
+        #d4{
+            background-image: repeating-radial-gradient(yellow 0px 10px, green 10px 20px);
+        }
+        #d5{
+            background-image: 
+            radial-gradient(yellow, green, transparent),
+            linear-gradient(to top, magenta, blue);
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <div id="d3"></div>
+        <div id="d4"></div>
+        <div id="d5"></div>
+    </article>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+store {
+    display: block;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    color: #333;
+}
+
+product {
+    display: flex;
+    flex-flow: column; 
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+product name {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+product price {
+    color: #28a745;
+    font-weight: bold;
+}
+
+product description {
+    font-style: italic;
+    margin-top: 5px;
+}
+
+product category {
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+product availability {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #dc3545;
+}
+
+product availability:contains("В наличии") {
+    color: #28a745;
+}

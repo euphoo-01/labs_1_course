@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+    <style>
+       @font-face
+        {
+        font-family: 'Caveat';
+        src: url('fonts/Caveat.woff') format('woff');
+        }
+        @font-face
+        {
+        font-family: 'Exo2';
+        src: url('fonts/Exo2.woff') format('woff');
+        }
+        @font-face
+        {
+        font-family: 'Comfortaa';
+        src: url('fonts/Comfortaa.woff') format('woff');
+        }
+        h1{
+            font-family: Caveat;
+            line-height: 0;
+            margin: 20px 0px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 45px;
+            text-shadow: black 0px 5px 3px;
+        }
+        h2{
+            font-family: Exo2;
+            margin-bottom: 1.2em;
+            margin-top: 0.2rem;
+            text-indent: 25px;
+            text-align: left;            
+        }
+        p{
+            font-family: Comfortaa;
+            text-indent: 25px;
+            text-align:justify;
+            line-height: 200%;
+            font-size: 20px;
+            margin: 0px;
+        }
+        p:first-letter{
+            font-weight: bold;
+            font-size: 45px;
+            color: white;
+            background-color: hsla(275, 100%, 10%, 1);
+        }
+        ul li{
+            list-style-type: none;
+            font-family: Comfortaa;
+            font-size: 20px;
+            counter-increment: item;
+        }
+        ul li::before{
+            content: counter(item, upper-roman) ". ";
+            color: blue;
+        }
+        #t2{
+            margin: 10px 0px;
+            line-height: 0;
+        }
+        section p::first-line{
+            color: red;
+        }
+        section p{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem, ipsum.</h1>
+    <h2>Lorem, ipsum.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo consequuntur laboriosam repellat? Excepturi, perspiciatis vel?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime fugit facilis minus sit architecto numquam atque nam modi iste voluptates.</p>
+    <h2>Lorem ipsum.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum error dolorem, odio suscipit ipsum nostrum neque. Eaque, nesciunt!</p>
+    <h2 id="t2">Работа со списками</h2>
+    <ul>
+        <li><span>Пункт 1</span></li>
+        <li><span>Пункт 2</span></li>
+        <li><span>Пункт 3</span></li>
+        <li><span>Пункт 4</span></li>
+        <li><span>Пункт 5</span></li>
+    </ul>
+    <section>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In modi voluptas libero sapiente tempore dolorem. Eveniet aliquid possimus atque distinctio voluptas incidunt! Consectetur neque aperiam labore id adipisci, voluptatum expedita ex nihil, laudantium quisquam facilis!</p>
+    </section>
+</body>
+</html>

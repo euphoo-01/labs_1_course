@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаба 5</title>
+    <style>
+        /* Расписание подгруппы */
+        .raspisanie {
+            border-collapse: collapse;
+        }
+        .raspisanie td {
+            border:  2px black solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 100px;
+            height: 100px;
+        }
+        .raspisanie tr td:first-child {
+            background-color: gray;
+            font-weight: bold;
+            color: white;
+        }
+        .raspisanie tr:first-child td{
+            background-color: darkorange;
+            width: 100px;
+            height: 25px;
+            color: white;
+            font-weight: bold;
+        }
+
+        #r {
+            color: red;
+        }
+
+        /* Топ производителей смартфонов */
+        .ex2{
+            border-collapse: collapse;
+            empty-cells: hide;
+            vertical-align: middle;
+            text-align: center;
+            padding: 3px;
+        }
+        .ex2 thead tr th:nth-child(n+2){
+            background-color: #00BFF0;
+            color: white;
+        }
+        .ex2 td:nth-child(2){
+            background-color: darkblue;
+            color: white;
+        }
+        .ex2 td:nth-child(3) {
+            background-color: purple;
+            color: white;
+            width: 50px;
+        }
+        .ex2 td:nth-child(4){
+            background-color: green;
+            color: white;
+            width: 60px;
+        }
+        .ex2 tr td, .ex2 tr th{
+            border: 1px black solid;
+        }
+        .ex2 caption{
+            font-size: 1.2em;
+        }
+        .ex2 tr td:empty, .ex2 tr th:empty{
+            visibility: hidden;
+            border: none;
+        }
+        /* Шахматная доска */
+        .doska{
+            border-collapse: collapse;
+            empty-cells: hide;
+        }
+        .doska tr:first-child::before, .doska tr:last-child::before{
+            content: " ";
+        }
+        .doska tr:nth-child(odd) td:nth-child(even), .doska tr:nth-child(even) td:nth-child(odd){
+            background-color: black;
+        }
+        .doska tr:nth-child(1n) td:first-child, .doska tr:nth-child(1n) td:last-child{
+            background-color: gray;
+            width: 20px;
+            height: 40px;
+        }
+        .doska tr:first-child td:nth-child(1n), .doska tr:last-child td:nth-child(1n){
+            background-color: gray;
+            width: 40px;
+            height: 20px;
+        }
+        .doska tr td{
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px black solid;
+        }
+    </style>
+</head>
+<body>
+    <!--Таблица расписания занятий-->
+    <table class="raspisanie">
+        <caption>Лавшук Станислав Александрович 1 курс 7 группа, 2 подгруппа</caption>
+        <tr>
+            <td>Время</td>
+            <td>Понедельник</td>
+            <td>Вторник</td>
+            <td>Среда</td>
+            <td>Четверг</td>
+            <td>Пятница</td>
+            <td>Суббота</td>
+        </tr>
+        <tr>
+            <td>13.00-14.25</td>
+            <td></td>
+            <td><b>Физическая культура</b></td>
+            <td></td>
+            <td></td>
+            <td><b>Физическая культура</b></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2">14.40-16.05</td>
+            <td rowspan="2"><span id="r">пз</span> 423-4 <b>Белорусский язык</b></td>
+            <td rowspan="2"><span id="r">лк</span> 200-3а <b>Основы алгоритмизации и программирования</b></td>
+            <td><span id="r">пз</span> I 502-1 <b>Арифметико-логические основы вычислительных систем</b></td>
+
+            <td rowspan="2"><span id="r">лк</span> 100-3а <b>Компьютерные языки разметкик</b></td>
+            <td rowspan="2"><span id="r">пз</span> 308а-4 <b>Линейная алгебра и аналитическая геометрия</b></td>
+            <td rowspan="2"><span id="r">лр</span> 310-а-1 <b>Основы алгоритмизации и программирования</b></td>
+        </tr>
+        <tr>
+            <td style="background: transparent; color: black; font-weight:normal;"><span id="r">пз</span> II 232-4 <b>Математический анализ</b></td>
+        </tr>
+        <tr>
+            <td>16.25-17.50</td>
+            <td><span id="r">лр</span> 204-1 <b>Основы программной инженерии</b></td>
+            <td><span id="r">лк</span> 200-3а <b>Линейная алгебра и аналитическая геометрия асс. Калиновская Е.В.</b></td>
+            <td><span id="r">лк</span> 100-3а <b>Математический анализ</b></td>
+            <td><span id="r">пз</span> 222-2 общ. <b>Английский язык</b></td>
+            <td><span id="r">пз</span> 222-2 общ. <b>Английский язык</b></td>
+            <td><span id="r">лк</span> 100-3а <b>Арифметико-логические основы вычислительных систем Гринюк Д.В.</b></td>
+        </tr>
+        <tr>
+            <td>18.00-19.25</td>
+            <td><span id="r">пз</span> 308-2 <b>Математический анализ</b></td>
+            <td><span id="r">пз</span> 308-2 <b>Математический анализ</b></td>
+            <td></td>
+            <td><span id="r">лк</span> 200-3а <b>Математический анализ асс. Калиновская Е.В.</b></td>
+            <td><span id="r">лк</span> 200-3а <b>Основы программной инженерии Наркевич А.С.</b></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2">19.35-21.00</td>
+            <td><br><br><br></td>
+            <td rowspan="2"></td>
+            <td rowspan="2"></td>
+            <td rowspan="2"></td>
+            <td rowspan="2"></td>
+            <td rowspan="2"></td>
+        </tr>
+        <tr>
+            <td style="background: transparent; color: black; font-weight: normal;"><span id="r">лк</span> 200-3а <b>Коррупция и её общественная опасность</b></td>
+        </tr>
+    </table>
+    <!--2 задание-->
+    <table class="ex2">
+        <caption>Russia:Top smartphone vendors Q1 2021</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Vendor</th>
+                <th>Unit Share</th>
+                <th>Annual Growth</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#1 ⇑</td>
+                <td>Xiaomi</td>
+                <td>32%</td>
+                <td>+125%</td>
+            </tr>
+            <tr>
+                <td>#2 ⇑</td>
+                <td>Samsung</td>
+                <td>27%</td>
+                <td>+41%</td>
+            </tr>
+            <tr>
+                <td>#3 ⇑</td>
+                <td>Honor</td>
+                <td>10%</td>
+                <td>0%</td>
+            </tr>
+            <tr>
+                <td>#4 ⇔</td>
+                <td>Apple</td>
+                <td>9%</td>
+                <td>+24%</td>
+            </tr>
+            <tr>
+                <td>#5 ⇔</td>
+                <td>Realme</td>
+                <td>9%</td>
+                <td>+682%</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td style="empty-cells: hide;"></td>
+                <td>Total</td>
+                <td>82%</td>
+                <td>682%</td>
+            </tr>
+        </tfoot>
+    </table>
+    <!--Задание 4-->
+    <table class="doska">
+        <caption id="c1">Шахматная доска</caption>
+        <tr>
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+            <td>d</td>
+            <td>e</td>
+            <td>f</td>
+            <td>g</td>
+            <td>h</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+            <td>d</td>
+            <td>e</td>
+            <td>f</td>
+            <td>g</td>
+            <td>h</td>
+        </tr>
+    </table>
+</body>
+</html>

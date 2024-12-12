@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доп. задания</title>
+    <style>
+        nav ul {
+            list-style-type: none;
+        }
+        nav ul.first>li>a{
+            display: block;
+            border: 1px black solid;
+            width: 150px;
+            height: 25px;
+            background-color: yellow;
+            margin-top: -1px;
+        }
+        nav ul.first>li:nth-child(2):hover ul.second {
+            visibility: visible;
+        }
+        nav ul.second{
+            display: block;
+            position: absolute;
+            left: 160px;
+            top: 42px;
+            visibility: hidden;
+            margin-left: -1px;
+        }
+        nav ul.second>li {
+            position: relative;
+        }
+        nav ul.second>li>a
+        {
+            display: block;
+            border: 1px black solid;
+            background-color: red;
+            width: 100px;
+            height: 25px;
+            margin-top: -1px;
+        }
+        nav ul.second>li:hover{
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="first">
+            <li><a>Первый</a></li>
+            <li><a>Второй</a>
+                <ul class="second">
+                    <li><a>Эл. 1</a></li>
+                    <li><a>Эл. 2</a></li>
+                    <li><a>Эл. 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

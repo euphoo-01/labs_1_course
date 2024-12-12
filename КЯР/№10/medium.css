@@ -1,0 +1,11 @@
+.gallery-element > label {
+    color: blue;
+}
+.gallery > div {
+    border: 1px blue solid;
+    width: 100%;
+    height: inherit;
+}
+.container > label{
+    display: flex;
+}

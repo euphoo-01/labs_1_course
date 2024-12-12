@@ -1,0 +1,161 @@
+@import url(medium.css) (min-width: 480px) and (max-width: 810px);
+*{
+    font-family: Helvetica;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 5px;
+}
+.row{
+    display: inline-flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    gap: 5px;
+}
+.header{
+    border: 1px black solid;
+    border-radius: 5px;
+    flex: 1 1 0;
+    text-align: center;
+}
+.element1{
+    border: 1px black solid;
+    border-radius: 5px;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+.element2{
+    border: 1px black solid;
+    border-radius: 5px;
+    flex: 2;
+    align-items: center;
+}
+.element3{
+    border: 1px black solid;
+    border-radius: 5px;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+p { 
+    padding: 5px;
+    text-align: justify;
+}
+.hamburger-button::before{
+    content: " ";
+    background-color: rgb(0,200,256);
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 50%;
+    margin-top: -10px;
+    z-index: -1;
+    border-radius: 100%;
+    box-shadow: rgb(0,200,256) 0px 0px 10px;
+}
+.hamburger-button {
+    display: none;
+    position: fixed;
+    right: 30px;
+    bottom: 25px;
+    font-size: 25px;
+    padding: 5px;
+    z-index: 0;
+    transition: all .1s ease-in-out;
+}
+.hamburger-button:hover{
+    transform: translateY(5px);
+}
+.hamburger-button:active{
+    color: aqua;
+}
+@media (max-width: 480px){
+    .hamburger-button{
+        display: flex;
+    }
+}
+@media (min-width: 480px) and (max-width: 810px){
+    .hamburger-button{
+        display: flex;
+    }
+}
+@keyframes menuAnimation{
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.menu {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 10px;
+}
+.menu ul{
+    list-style: none;
+}
+.menu ul li:active {
+    outline: 1px solid red;
+}
+
+.menu ul li{
+    display: flex;
+    border: 1px black solid;
+    background-color: aqua;
+    margin: 5px;
+    width: 150px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.menu ul li a {
+    color: black;
+    text-decoration: none;
+}
+#hamburger-checker {
+    display: none;
+}
+#hamburger-checker:checked + .menu{
+    display: inline-block;
+    animation: menuAnimation .5s ease-in-out forwards;
+}
+.gallery{
+    display: flex;
+    gap: 5px;
+    flex-flow: row wrap;
+}
+.gallery-element{
+    display: block;
+    height: 130px;
+    width: 100px;
+    border: 1px black solid;
+    border-radius: 5px;
+    margin: 5px;
+}
+.gallery-element > img{
+    width: 100%;
+}
+.gallery-element > label{
+    text-align: center;
+}
+@media (max-width: 480px){
+    .gallery-element > label{
+        color: red;
+    }
+    .gallery-element{
+        border: 1px red solid;
+        width: 100%;
+        height: inherit;
+    }
+}

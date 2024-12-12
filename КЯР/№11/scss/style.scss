@@ -1,0 +1,187 @@
+@import "_variables.scss";
+
+body {
+    @include switch-theme(theme($isDark));
+    @include font-sizes($header-size);
+    margin: 0;
+    font-family: $paragraph-family;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+header {
+    @if ($isDark == true) {
+        background: url("../images/dark-texture.jpg") center 10%;
+    }
+    @else {
+        background: url("../images/texture.jpg") center;
+    }
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 10px 20px;
+
+
+    img {
+        height: 50px; 
+        margin-right: auto; 
+    }
+
+    nav {
+        display: flex; 
+        gap: 20px;
+
+        a {
+            @extend %paragraph-font;
+            @include switch-border(theme($isDark));
+            align-self: center;
+            box-sizing: content-box;
+            text-decoration: none;
+            color: inherit;
+            background-color: inherit;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            &:hover {
+                background-color: $teal;
+            }
+            &:active {
+                @include transform(scale, 1.1);
+            }
+        }
+    }
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    width: 100%;
+
+    .column-1 {
+        @include switch-border(theme($isDark));
+        flex: 2 1 60%; // Занимает 2/3 ширины
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        box-sizing: border-box;
+        p {
+            flex: 1 1 20%;
+            padding: 20px;
+            text-align: left;
+            align-self: flex-start;
+        }
+        img {
+            height: 150px;
+            width: 150px;
+        }
+    }
+
+    .column-2 {
+        flex: 1 1 30%; // Занимает 1/3 ширины
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .form {
+            @include switch-border(theme($isDark));
+            background-color: $teal;
+            padding: 20px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            h1{
+                padding: 0px;
+                margin: 10px 0 15px 0px;
+            }
+
+            label {
+                @extend %paragraph-font;
+            }
+
+            input,
+            textarea {
+                @include switch-border(theme($isDark));
+                @include switch-theme(theme($isDark));
+                box-sizing: border-box;
+                width: 100%;
+                padding: 10px;
+            }
+
+            input[type="submit"] {
+                @include switch-theme(theme($isDark));
+                cursor: pointer;
+                transition: transform .1s ease-in-out, opacity .1s ease-in-out;
+                &:active {
+                    @include transform(scale, 1.01);
+                }
+                &:hover {
+                    opacity: .9;
+                }
+            }
+        }
+
+        article {
+            @include switch-border(theme($isDark));
+            img, p{
+                margin: 10px;
+            }
+            img {
+                height: 100px;
+                width: 100px;
+                float: left;
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+.row {
+    @extend %flex-row;
+}
+ 
+.article-2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+
+    img {
+        margin: 10px;
+        flex: 1 1 calc(25% - 20px); // 4 изображения в ряд
+        max-width: 100%;
+        border-radius: 5px;
+    }
+}
+
+footer {
+    background-color: inherit;
+    padding: 10px 20px;
+    text-align: left;
+    p {
+        margin: 0;
+    }
+}
+
+h1 {
+    @extend %header-font;
+    margin-bottom: 20px;
+    margin-left: .5em;
+}
+
+p {
+    margin-bottom: 10px;
+    @extend %paragraph-font;
+}
+
+img {
+    border-radius: 5px;
+}

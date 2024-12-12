@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<store>
+    <product>
+        <name>Смартфон</name>
+        <category>Электроника</category>
+        <description>Современный смартфон с AMOLED-дисплеем</description>
+        <price>599.99</price>
+        <availability>В наличии</availability>
+    </product>
+    <product>
+        <name>Ноутбук</name>
+        <price>999.99</price>
+        <description>Мощный ноутбук для работы и игр</description>
+        <category>Компьютеры</category>
+        <availability>Под заказ</availability>
+    </product>
+    <product>
+        <name>Беспроводные наушники</name>
+        <price>149.99</price>
+        <description>Высококачественный звук и шумоподавление</description>
+        <category>Аксессуары</category>
+        <availability>В наличии</availability>
+    </product>
+    <product>
+        <name>Кофеварка</name>
+        <price>79.99</price>
+        <description>Компактная кофеварка с капсульной системой</description>
+        <category>Бытовая техника</category>
+        <availability>В наличии</availability>
+    </product>
+    <product>
+        <name>Электросамокат</name>
+        <price>299.99</price>
+        <description>Легкий и маневренный электросамокат</description>
+        <category>Транспорт</category>
+        <availability>Под заказ</availability>
+    </product>
+</store>

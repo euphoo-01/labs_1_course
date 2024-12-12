@@ -1,0 +1,27 @@
+.abzac{
+    color: red;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1,h2,h3{
+    color:magenta;
+    font-family: Monotype Corsiva;
+}
+.pp1{
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18pt;
+}
+.pp2{
+    color: yellow;
+    font-size: 20pt;
+    font-family: 'Times New Roman', Times, serif;
+}
+.pp3{
+    color: green;
+    font-size: 22pt;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background-color: #BDB76B;
+}

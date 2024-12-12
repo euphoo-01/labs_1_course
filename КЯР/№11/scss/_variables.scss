@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+$gray: rgb(40,40,40);
+$teal: #2f9c7f;
+$header-family: "Montserrat", sans-serif;
+$paragraph-family: "Roboto", sans-serif;
+$isDark: false;
+$header-size: 48px;
+
+@function paragraph-size($header-size) {
+    @return $header-size * 0.3;
+}
+@function theme($Dark) {
+    @if ($Dark == true) {
+        @return blc;
+    }
+    @else {
+        @return wht;
+    }
+}
+
+@mixin transform($func, $value) {
+    @if $func == "rotate"{
+        -webkit-transform: rotate($value);
+        -moz-transform: rotate($value);
+        -ms-transform: rotate($value);
+        transform: rotate($value);
+    }
+    @if $func == "translateX"{
+        -webkit-transform: translateX($value);
+        -moz-transform: translateX($value);
+        -ms-transform: translateX($value);
+        transform: translateX($value);
+    }
+    @if $func == "translateY"{
+        -webkit-transform: translateY($value);
+        -moz-transform: translateY($value);
+        -ms-transform: translateY($value);
+        transform: translateY($value);
+    }
+    @if $func == "scale"{
+        -webkit-transform: scale($value);
+        -moz-transform: scale($value);
+        -ms-transform: scale($value);
+        transform: scale($value);
+    }
+}
+@mixin switch-theme($color) {
+    @if ($color == blc) {
+        color: white;
+        background-color: $gray;  
+    }
+    @else {
+        color: $gray;
+        background-color: white;
+    }
+}
+@mixin switch-border($color) {
+    @if ($color == blc) {
+        border: 3px white solid;
+        border-radius: 10px;
+    }
+    @else {
+        border: 3px $gray solid;
+        border-radius: 10px;
+    }
+}
+@mixin font-sizes($header-size) {
+    h1 {
+        font-size: $header-size;
+    }
+    p {
+        font-size: paragraph-size($header-size);
+    }
+}
+
+%header-font {
+    font-family: $header-family;
+    font-weight: 700;
+}
+%paragraph-font {
+    font-family: $paragraph-family;
+    font-weight: 400;
+}
+%flex {
+    display: flex;
+    align-items: center;
+    justify-items: flex-start;
+}
+%flex-row {
+    @extend %flex;
+    flex-flow: row wrap;
+}
+%flex-column {
+    @extend %flex;
+    flex-flow: column wrap;
+}

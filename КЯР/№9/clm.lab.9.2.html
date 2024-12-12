@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        body{
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(5,20%);
+            grid-template-rows: repeat(4,25%);
+            grid-gap: 5px;
+            align-items: stretch;
+            height: 100vh;
+        }
+        .grid-container>div {
+            display: block;
+            border: 1px solid black;
+            transition: transform .2s ease-in-out, z-index .2s ease-in-out;
+        }
+        .item-9{
+            grid-column: 4/6;
+            grid-row: 2/4;
+            background-color: lightgray;
+        }
+        .grid-container>div{
+            display: flex;
+            justify-content: center;
+        }
+        .grid-container>.item-10{
+            display: block;
+            grid-column: 1/3;
+            grid-row: 3/5;
+            background-color: lightgray;
+        }
+        .item-10 img { 
+            float: left;
+            width: 100px;
+            height: 100px;
+        }
+
+        .item-10 p {
+            position: initial;
+        }
+        .grid-container>div:hover{
+            transform: scale(1.25);
+            z-index: 1;
+        }
+
+        p {
+            position: absolute;
+            margin-top: 5px;
+            font-weight: 700;
+            color: white;
+            text-shadow: black 0px 0px 5px;
+        }
+        img {
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item-1"><img src="images/i1.png"><p>Изображение 1</p></div>
+        <div class="item-2"><img src="images/i2.png"><p>Изображение 2</p></div>
+        <div class="item-3"><img src="images/i3.png"><p>Изображение 3</p></div>
+        <div class="item-4"><img src="images/i4.png"><p>Изображение 4</p></div>
+        <div class="item-5"><img src="images/i5.png"><p>Изображение 5</p></div>
+        <div class="item-6"><img src="images/i6.png"><p>Изобрежение 6</p></div>
+        <div class="item-7"><img src="images/i7.png"><p>Изображение 7</p></div>
+        <div class="item-8"><img src="images/i8.png"><p>Изображение 8</p></div>
+        <div class="item-9"><img src="images/sobaka.gif"></div>
+        <div id="item10" class="item-10"><img src="images/tarakan.webp">
+        <p class="item10-text">Lorem ipsum dolor sit amet consectetur adipisici lorem*5ng elit. Accusantium pariatur iure nobis distinctio doloribus voluptates repellat voluptatibus excepturi culpa quia facere eius deleniti quasi ducimus velit, adipisci at. Beatae, blanditiis. </p></div>
+        <div class="item-11"><img src="images/i9.png"><p>Изображение 9</p></div>
+        <div class="item-12"><img src="images/i10.png"><p>Изображение 10</p></div>
+        <div class="item-13"><img src="images/i11.png"><p>Изображение 11</p></div>
+        <div class="item-14"><img src="images/i12.png"><p>Изображение 12</p></div>
+    </div>
+</body>
+</html>

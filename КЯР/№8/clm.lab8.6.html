@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доп. задание 2</title>
+    <style>
+        nav ul{
+            list-style-type: none;
+        }
+        nav ul.first>li{
+            float:left;
+        }
+        nav ul.first>li>a{
+            background-color: yellow;
+            padding: 5px;
+            border: 1px black solid;
+            margin-left:-1px;
+        }
+        nav ul.second>li>a{
+            background-color: brown;
+            color: white;
+            display: block;
+            border: 1px white solid;
+            outline: 1px black solid;
+            width: 149px;
+        }
+        nav ul.second>li>a:hover{
+            opacity: 0.7;
+        }
+        nav ul.second>li{
+            position: relative;
+        }
+        nav ul.second{
+            position: absolute;
+            left: 162px;
+            margin-top: 5px;
+            visibility: hidden;
+        }
+        nav ul.first>li:nth-child(3):hover ul.second{
+            visibility: visible;
+        }
+        nav ul.first>li:hover>a{
+            opacity: 0.5;
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="first">
+            <li><a>Че-то там</a></li>
+            <li><a>Че-то там</a></li>
+            <li><a>Че-то там особенное</a>
+            <ul class="second">
+                <li><a >Чето мелкое</a></li>
+                <li><a >Чето мелкое</a></li>
+                <li><a >Чето мелкое</a></li>
+            </ul>
+            </li>
+            <li><a>Че-то там</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
