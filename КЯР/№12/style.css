@@ -41,7 +41,3 @@ product availability {
     font-weight: bold;
     color: #dc3545;
 }
-
-product availability:contains("В наличии") {
-    color: #28a745;
-}
