@@ -1,5 +1,5 @@
-﻿Сборка начата 08.12.2024 3:12:28.
-Уровень детализации журнала: Normal.     1>Проект "D:\University\Лабораторные работы\ОаИП\№17\oaip.lab17.project\oaip.lab17.project\oaip.lab17.project.vcxproj" в узле 2 (целевые объекты Build).
+﻿Сборка начата 12.12.2024 4:13:29.
+Уровень детализации журнала: Normal.     1>Проект "D:\University\Labs_1_course\ОАиП\№17\oaip.lab17.project\oaip.lab17.project\oaip.lab17.project.vcxproj" в узле 2 (целевые объекты Build).
      1>PrepareForBuild:
          Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
        InitializeBuildStatus:
@@ -9,15 +9,17 @@
          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX64\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"x64\Debug\\" /Fd"x64\Debug\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt main.cpp
          main.cpp
        Link:
-         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\University\Лабораторные работы\ОаИП\№17\oaip.lab17.project\x64\Debug\oaip.lab17.main.exe" /INCREMENTAL /ILK:"x64\Debug\oaip.lab17.main.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\University\Лабораторные работы\ОаИП\№17\oaip.lab17.project\x64\Debug\oaip.lab17.main.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\University\Лабораторные работы\ОаИП\№17\oaip.lab17.project\x64\Debug\oaip.lab17.main.lib" /MACHINE:X64 x64\Debug\main.obj
-         oaip.lab17.project.vcxproj -> D:\University\Лабораторные работы\ОаИП\№17\oaip.lab17.project\x64\Debug\oaip.lab17.main.exe
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\University\Labs_1_course\ОАиП\№17\oaip.lab17.project\x64\Debug\oaip.lab17.main.exe" /INCREMENTAL /ILK:"x64\Debug\oaip.lab17.main.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\University\Labs_1_course\ОАиП\№17\oaip.lab17.project\x64\Debug\oaip.lab17.main.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\University\Labs_1_course\ОАиП\№17\oaip.lab17.project\x64\Debug\oaip.lab17.main.lib" /MACHINE:X64 x64\Debug\main.obj
+         oaip.lab17.project.vcxproj -> D:\University\Labs_1_course\ОАиП\№17\oaip.lab17.project\x64\Debug\oaip.lab17.main.exe
+       TlogCleanup:
+         Следующие элементы будут удалены из tlogs, так как они были удалены из проекта или сборки: D:\University\Лабораторные работы\ОаИП\№17\oaip.lab17.project\oaip.lab17.project\main.cpp.
        FinalizeBuildStatus:
          Файл "x64\Debug\oaip.lab17.main.tlog\unsuccessfulbuild" удаляется.
          Обращение к "x64\Debug\oaip.lab17.main.tlog\oaip.lab17.main.lastbuildstate".
-     1>Сборка проекта "D:\University\Лабораторные работы\ОаИП\№17\oaip.lab17.project\oaip.lab17.project\oaip.lab17.project.vcxproj" завершена (целевые объекты Build).
+     1>Сборка проекта "D:\University\Labs_1_course\ОАиП\№17\oaip.lab17.project\oaip.lab17.project\oaip.lab17.project.vcxproj" завершена (целевые объекты Build).
 
 Сборка успешно завершена.
     Предупреждений: 0
     Ошибок: 0
 
-Прошло времени 00:00:00.60
+Прошло времени 00:00:00.84

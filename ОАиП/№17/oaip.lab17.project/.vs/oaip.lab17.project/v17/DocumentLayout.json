@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211617\\oaip.lab17.project\\",
+  "WorkspaceRootPath": "D:\\University\\Labs_1_course\\\u041E\u0410\u0438\u041F\\\u211617\\oaip.lab17.project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{322D0229-C501-4C23-A4EE-FC7022B3807A}|\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435\\\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435.vcxproj|D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211617\\oaip.lab17.project\\\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435\\additional.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{322D0229-C501-4C23-A4EE-FC7022B3807A}|\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435\\\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435.vcxproj|D:\\University\\Labs_1_course\\\u041E\u0410\u0438\u041F\\\u211617\\oaip.lab17.project\\\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435\\additional.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{322D0229-C501-4C23-A4EE-FC7022B3807A}|\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435\\\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435.vcxproj|solutionrelative:\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435\\additional.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0662014B-247D-4C82-BFF5-257C73AFDC0C}|oaip.lab17.project\\oaip.lab17.project.vcxproj|D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211617\\oaip.lab17.project\\oaip.lab17.project\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{0662014B-247D-4C82-BFF5-257C73AFDC0C}|oaip.lab17.project\\oaip.lab17.project.vcxproj|D:\\University\\Labs_1_course\\\u041E\u0410\u0438\u041F\\\u211617\\oaip.lab17.project\\oaip.lab17.project\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0662014B-247D-4C82-BFF5-257C73AFDC0C}|oaip.lab17.project\\oaip.lab17.project.vcxproj|solutionrelative:oaip.lab17.project\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -24,11 +24,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "additional.cpp",
-              "DocumentMoniker": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211617\\oaip.lab17.project\\\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435\\additional.cpp",
+              "DocumentMoniker": "D:\\University\\Labs_1_course\\\u041E\u0410\u0438\u041F\\\u211617\\oaip.lab17.project\\\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435\\additional.cpp",
               "RelativeDocumentMoniker": "\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435\\additional.cpp",
-              "ToolTip": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211617\\oaip.lab17.project\\\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435\\additional.cpp",
+              "ToolTip": "D:\\University\\Labs_1_course\\\u041E\u0410\u0438\u041F\\\u211617\\oaip.lab17.project\\\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435\\additional.cpp",
               "RelativeToolTip": "\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435\\additional.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAAAKsAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-08T00:16:20.373Z",
               "EditorCaption": ""
@@ -37,11 +37,11 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "main.cpp",
-              "DocumentMoniker": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211617\\oaip.lab17.project\\oaip.lab17.project\\main.cpp",
+              "DocumentMoniker": "D:\\University\\Labs_1_course\\\u041E\u0410\u0438\u041F\\\u211617\\oaip.lab17.project\\oaip.lab17.project\\main.cpp",
               "RelativeDocumentMoniker": "oaip.lab17.project\\main.cpp",
-              "ToolTip": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211617\\oaip.lab17.project\\oaip.lab17.project\\main.cpp",
+              "ToolTip": "D:\\University\\Labs_1_course\\\u041E\u0410\u0438\u041F\\\u211617\\oaip.lab17.project\\oaip.lab17.project\\main.cpp",
               "RelativeToolTip": "oaip.lab17.project\\main.cpp",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAEgAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-07T23:48:30.235Z",
               "EditorCaption": ""
