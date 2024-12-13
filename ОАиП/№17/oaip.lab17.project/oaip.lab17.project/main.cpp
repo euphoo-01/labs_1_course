@@ -3,9 +3,9 @@ using namespace std;
 
 void input1DArray(int* arr, int* sz);
 void returnOddNumbers(int* arr, int* sz);
+void delete2DArray(int** arr, int* n);
 
 void input2DArray(int** arr, int* n, int* m);
-void initialize2DArray(int** arr, int* n, int* m);
 int findMaxNumber(int** arr, int* n, int* m);
 int numberOfRepeats(int** arr, int* number, int* n, int* m);
 void printRepeatedIndexes(int** arr, int* number, int* n, int* m);
@@ -27,6 +27,8 @@ int main() {
 		input1DArray(line, &n);
 
 		returnOddNumbers(line, &n);
+
+		delete[] line;
 		break;
 	}
 	case 2: {
@@ -35,8 +37,10 @@ int main() {
 		cout << "¬ведите количество строк матрицы: "; cin >> n;
 		cout << "¬ведите количество столбцов матрицы: "; cin >> m;
 
-		int** matrix = nullptr;
-		initialize2DArray(matrix, &n, &m);
+		int** matrix = new int* [n];
+		for (int i = 0; i < n; i++) {
+			matrix[i] = new int[n];
+		}
 		input2DArray(matrix, &n, &m);
 
 		int maxNumber = findMaxNumber(matrix, &n, &m);
@@ -46,6 +50,8 @@ int main() {
 			cout << "„исло " << maxNumber << " встречаетс€ в массиве " << repeats << " раз. ≈го позиции: ";
 			printRepeatedIndexes(matrix, &maxNumber, &n, &m);
 		}
+
+		delete2DArray(matrix, &n);
 		break;
 	}
 	default: {
@@ -69,11 +75,11 @@ void returnOddNumbers(int* arr, int* sz) {
 	}
 }
 
-void initialize2DArray(int** arr, int* n, int* m){
-	arr = new int* [*n];
+void delete2DArray(int** arr, int* n){
 	for (int i{}; i < *n; i++) {
-		arr[i] = new int[*m];
+		delete[] arr[i];
 	}
+	delete[] arr;
 }
 
 void input2DArray(int** arr, int* n, int* m) {

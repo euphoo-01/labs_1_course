@@ -6,6 +6,7 @@ void input1DArray(int* arr, int sz);
 void input2DArray(int** arr, int* n, int* m);
 void print2DArray(int** arr, int n, int m);
 void print1DArray(int* arr, int n);
+void delete2DArray(int** arr, int n);
 
 // Вариант 12
 int countNegative(int* inputArr, int n);
@@ -52,6 +53,8 @@ int main() {
 			else {
 				cerr << "В массиве нет отрицательных элементов!";
 			}
+
+			delete[] line;
 		}
 		else if (exercise == 2) {
 			cout << "===== ЗАДАНИЕ 2 =====" << endl;
@@ -73,6 +76,7 @@ int main() {
 				cerr << "В матрице нет отрицательных элементов." << endl;
 			}
 			
+			delete2DArray(matrix, n);
 		}
 		else {
 			cerr << "Такого задания нет!" << endl;
@@ -93,6 +97,7 @@ int main() {
 			cout << "Масимальный элемент массива: " << findMaxElement(line, n);
 			cout << "Минимальный элемент массива: " << findMinElement(line, n);
 			
+			delete[] line;
 		}
 		else if (exercise == 2) {
 			cout << "===== ЗАДАНИЕ 2 ======" << endl;
@@ -118,6 +123,7 @@ int main() {
 				cerr << "В матрице нет столбца, содержащего только положительные элементы." << endl;
 			}
 
+			delete2DArray(matrix, n);
 		}
 		else {
 			cerr << "Такого задания нет!" << endl;
@@ -139,6 +145,8 @@ int main() {
 			cout << "Максимальный отрицательный элемент массива: " << maxNegativeElement << endl;
 			cout << "Результат смены мест: " << endl;
 			print1DArray(line, n);
+
+			delete[] line;
 		}
 		else if (exercise == 2) {
 			cout << "===== ЗАДАНИЕ 2 =====" << endl;
@@ -163,6 +171,8 @@ int main() {
 			else {
 				cerr << "В какой то строке матрицы нет отрицательного элемента." << endl;
 			}
+
+			delete2DArray(matrix, n);
 		}
 		else {
 			cerr << "Такого задания нет!" << endl;
@@ -208,6 +218,13 @@ void print1DArray(int* arr, int n) {
 	for (int i = 0; i < n; i++) {
 		cout << arr[i] << '\t';
 	}
+}
+
+void delete2DArray(int** arr, int n) {
+	for (int i = 0; i < n; i++) {
+		delete[] arr[i];
+	}
+	delete[] arr;
 }
 
 // Вариант 12
