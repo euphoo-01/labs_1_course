@@ -8,8 +8,8 @@
 
 using namespace std;
 
-void sortWords (int wordCount, ...);
-string findEarliestWord(const string& text);
+void sortWords (int, ...);
+string findEarliestWord(const string&);
 
 int main() {
     system("chcp 1251");

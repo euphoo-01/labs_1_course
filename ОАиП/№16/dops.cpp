@@ -3,28 +3,28 @@
 using namespace std;
 
 // Общие функции
-void input2DArray(int** arr, int n, int m);
-void input1DArray(float* arr, int sz);
-void printArray(int** arr, int n, int m);
-void deleteArray(int** arr, int n);
+void input2DArray(int**, int, int);
+void input1DArray(float*, int);
+void printArray(int**, int, int);
+void deleteArray(int**, int);
 
 //Вариант 12
-int findMinElement(int** arr, int n, int m);
-bool isSimillar(int** arr, int sz, int k);
+int findMinElement(int**, int, int);
+bool isSimillar(int**, int, int);
 
 //Вариант 14
-int minAbsoluteElementIndex(float* arr, int sz);
-int firstNegativeIndex(float* arr, int sz);
-float sumOfAbsoluteElements(float* arr, int sz, int pos);
+int minAbsoluteElementIndex(float*, int);
+int firstNegativeIndex(float*, int);
+float sumOfAbsoluteElements(float*, int, int);
 
-bool haveBSTU(string str);
+bool haveBSTU(string);
 
 //Вариант 16
-int maxNumber(int* arr, int sz);
-int countMatch(int* arr, int sz, int number);
+int maxNumber(int*, int);
+int countMatch(int*, int, int);
 
-string shortestWord(string str);
-string longestWord(string str);
+string shortestWord(string);
+string longestWord(string);
 
 
 int main() {

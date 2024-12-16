@@ -2,36 +2,36 @@
 #include <string>
 using namespace std;
 
-// Вариант 10
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 10
 
 const string name = "matrix";
 
-void deleteArray(int** arr, int n);
-int findIndexHasK(int** arr, int n, int m, int k);
+void deleteArray(int**, int);
+int findIndexHasK(int**, int, int, int);
 
-int countWords(string str);
-string swapCentralWords(string str, int words);
+int countWords(string);
+string swapCentralWords(string, int);
 int main() {
 	system("chcp 1251");
 
 	int choice;
-	cout << "Какое задание выполнить? "; cin >> choice;
+	cout << "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ? "; cin >> choice;
 	
 	switch (choice) {
 	case 1: {
 		int n, m;
 
-		cout << "Введите количество строк массива: "; cin >> n;
-		cout << "Введите количество столбцов массива: "; cin >> m;
+		cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: "; cin >> n;
+		cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: "; cin >> m;
 
-		// Инициализация массива
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		int** matrix = new int* [n];
 		for (int i{}; i < n; ++i) {
 			matrix[i] = new int[m];
 		}
 
-		// Ввод массива
-		cout << "Введите элементы матрицы: " << endl;
+		// пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+		cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " << endl;
 		for (int i{}; i < n; i++) {
 			for (int j{}; j < m; j++) {
 				cin >> matrix[i][j];
@@ -40,15 +40,15 @@ int main() {
 		}
 
 		int k;
-		cout << "Введите число k: "; cin >> k;
+		cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ k: "; cin >> k;
 
 		int kIndex = findIndexHasK(matrix, n, m, k);
 
-		// Вывод
+		// пїЅпїЅпїЅпїЅпїЅ
 		if (kIndex)
-			cout << "Столбец матрицы, в котором есть k: " << kIndex << endl;
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ k: " << kIndex << endl;
 		else
-			cerr << "Числа k нет в матрице." << endl;
+			cerr << "пїЅпїЅпїЅпїЅпїЅ k пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ." << endl;
 
 		deleteArray(matrix, n);
 
@@ -57,29 +57,29 @@ int main() {
 	case 2: {
 		string s{};
 
-		cout << "Введите строку: "; 
-		cin.ignore(); // Очищаем символ \n
+		cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: "; 
+		cin.ignore(); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ \n
 		getline(cin, s);
 
 		int wordCount = countWords(s);
-		if (wordCount % 2 == 0) { // Если количество слов четное
+		if (wordCount % 2 == 0) { // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 			s = swapCentralWords(s, wordCount);
-			cout << "Результат: " << endl << s << endl;
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " << endl << s << endl;
 		}
 		else {
-			cerr << "Количество слов в строке нечетное!" << endl;
+			cerr << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!" << endl;
 		}
 
 		break;
 	}
 	default: {
-		cerr << "Такого варианта не существует!";
+		cerr << "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!";
 		break;
 	}
 	}
 }
 
-// Функции для массива
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 void deleteArray(int** arr, int n) {
 	for (int i = 0; i < n; ++i) {
 		delete[] arr[i];
@@ -99,7 +99,7 @@ int findIndexHasK(int** arr, int n, int m, int k) {
 }
 
 
-// Функции для строки
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 int countWords(string str) {
 	int count = 0;
 	for (int i{}; i < str.length(); i++) {
@@ -115,13 +115,13 @@ string swapCentralWords(string str, int words) {
 		leftStartIndex = 0, leftEndIndex = 0, rightStartIndex = 0, rightEndIndex = 0;
 	for (int i{}; i < str.length(); i++) {
 		if (str[i] == ' ') {
-			if (++currentWord == words / 2 - 1) { // Если текущее слово - левое от центра
-				int j = i + 1, // Пропускаем пробел
+			if (++currentWord == words / 2 - 1) { // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+				int j = i + 1, // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 					k = 0;
 
 				leftStartIndex = j;
 
-				while (str[j++] != ' ') { // Определяем длину левого от центра слова
+				while (str[j++] != ' ') { // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 					k++;
 				}
 				left = str.substr(leftStartIndex, k);
@@ -130,7 +130,7 @@ string swapCentralWords(string str, int words) {
 				k = 0;
 
 
-				while (str[j++] != ' ') { // Определяем длину правого от центра слова
+				while (str[j++] != ' ') { // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 					k++;
 				}
 				right = str.substr(rightStartIndex, k);
@@ -140,12 +140,12 @@ string swapCentralWords(string str, int words) {
 			}
 		}
 	}
-	string swapped = right + ' ' + left + ' '; // Левое и правое от центра слова, поменянные местами
+	string swapped = right + ' ' + left + ' '; // пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
-	str.erase(rightStartIndex, rightEndIndex-rightStartIndex); // Очистка исходной строки от правого слова
-	str.erase(leftStartIndex, leftEndIndex - leftStartIndex); // Очистка исходной строки от левого слова
+	str.erase(rightStartIndex, rightEndIndex-rightStartIndex); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	str.erase(leftStartIndex, leftEndIndex - leftStartIndex); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 
-	str.insert(leftStartIndex, swapped); // Вставляем слова в измененном порядке
+	str.insert(leftStartIndex, swapped); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
 	return str;
 }

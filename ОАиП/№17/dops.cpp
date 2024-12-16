@@ -1,67 +1,67 @@
 #include <iostream>
 using namespace std;
 
-//  Основные функции
-void input1DArray(int* arr, int sz);
-void input2DArray(int** arr, int* n, int* m);
-void print2DArray(int** arr, int n, int m);
-void print1DArray(int* arr, int n);
-void delete2DArray(int** arr, int n);
+//  пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+void input1DArray(int*, int);
+void input2DArray(int**, int*, int*);
+void print2DArray(int**, int, int);
+void print1DArray(int*, int);
+void delete2DArray(int**, int);
 
-// Вариант 12
-int countNegative(int* inputArr, int n);
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 12
+int countNegative(int*, int);
 
-int findRowOfNegative(int** arr, int n, int m);
-void decraseCol(int** arr, int n, int col);
+int findRowOfNegative(int**, int, int);
+void decraseCol(int**, int, int);
 
-// Вариант 14
-int findMinElement(int* arr, int n);
-int findMaxElement(int* arr, int n);
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 14
+int findMinElement(int*, int);
+int findMaxElement(int*, int);
 
-int findPositiveRow(int** arr, int n, int m);
-void inverseRow(int** arr, int n, int m, int row);
+int findPositiveRow(int**, int, int);
+void inverseRow(int**, int, int, int);
 
-// Вариант 16
-int findMaxNegativeElementIndex(int* arr, int n);
-void swapThisWithLast(int* arr, int n, int index);
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 16
+int findMaxNegativeElementIndex(int*, int);
+void swapThisWithLast(int*, int, int);
 
-bool everyRowHasNegative(int** arr, int n, int m);
-void invertMatrix(int** arr, int n, int m);
+bool everyRowHasNegative(int**, int, int);
+void invertMatrix(int**, int, int);
 
 
 int main() {
 	system("chcp 1251");
 
 	int variant, exercise;
-	cout << "Введите вариант: "; cin >> variant;
-	cout << "Введите номер задания: "; cin >> exercise;
+	cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: "; cin >> variant;
+	cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: "; cin >> exercise;
 
 	switch (variant) {
 	case 12: {
 		if (exercise == 1) {
-			cout << "===== ЗАДАНИЕ 1 =====" << endl;
+			cout << "===== пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 1 =====" << endl;
 			
 			int n;
-			cout << "Введите n: "; cin >> n;
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ n: "; cin >> n;
 			int* line = new int[n];
 
 			input1DArray(line, n);
 
 			if (int nNegatives = countNegative(line, n)) {
-				cout << "Количество отрицательных элементов в массиве: " << nNegatives << endl;
+				cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " << nNegatives << endl;
 			}
 			else {
-				cerr << "В массиве нет отрицательных элементов!";
+				cerr << "пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!";
 			}
 
 			delete[] line;
 		}
 		else if (exercise == 2) {
-			cout << "===== ЗАДАНИЕ 2 =====" << endl;
+			cout << "===== пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 2 =====" << endl;
 
 			int n, m;
-			cout << "Введите количество строк матрицы: "; cin >> n;
-			cout << "Введите количество столбцов матрицы:"; cin >> m;
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: "; cin >> n;
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:"; cin >> m;
 
 			int** matrix = new int*[n];
 			for (int i = 0; i < n; i++) {
@@ -70,92 +70,92 @@ int main() {
             input2DArray(matrix, &n, &m);
 
 			if (int row = findRowOfNegative(matrix, n, m)) {
-                cout << "В матрице присутсвует строка, содержащая хотя бы один отрицательный элемент - " << row+1 << " строка." << endl;
+                cout << "пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ - " << row+1 << " пїЅпїЅпїЅпїЅпїЅпїЅ." << endl;
 				decraseCol(matrix, n, row);
 				print2DArray(matrix, n, m);
 			}
 			else {
-				cerr << "В матрице нет отрицательных элементов." << endl;
+				cerr << "пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ." << endl;
 			}
 			
 			delete2DArray(matrix, n);
 		}
 		else {
-			cerr << "Такого задания нет!" << endl;
+			cerr << "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ!" << endl;
 		}
 		break;
 	}
 	case 14: {
 		if (exercise == 1) {
-			cout << "===== ЗАДАНИЕ 1 ======" << endl;
+			cout << "===== пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 1 ======" << endl;
 			
 			int n;
-			cout << "Введите n: "; cin >> n;
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ n: "; cin >> n;
 			int* line = new int[n];
 			input1DArray(line, n);
 			
 			int difference = findMaxElement(line, n) - findMinElement(line, n);
-			cout << "Разность максимального и минимального элементов массива: " << difference;
-			cout << "Масимальный элемент массива: " << findMaxElement(line, n);
-			cout << "Минимальный элемент массива: " << findMinElement(line, n);
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " << difference;
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " << findMaxElement(line, n);
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " << findMinElement(line, n);
 			
 			delete[] line;
 		}
 		else if (exercise == 2) {
-			cout << "===== ЗАДАНИЕ 2 ======" << endl;
+			cout << "===== пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 2 ======" << endl;
 
 			int n, m;
-			cout << "Введите количество строк: "; cin >> n;
-			cout << "Введите количество столбцов: "; cin >> m;
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: "; cin >> n;
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: "; cin >> m;
 
 			int** matrix = new int* [n];
 			for (int i = 0; i < n; i++) {
 				matrix[i] = new int[m];
 			}
 
-			cout << "Введите элементы матрицы: " << endl;
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " << endl;
 			input2DArray(matrix, &n, &m);
 			int positiveRow;
 			if (positiveRow = findPositiveRow(matrix, n, m)) {
 				inverseRow(matrix, n, m, positiveRow);
-				cout << "В матрице есть столбец, где все элементы положительные: " << positiveRow << endl;
+				cout << "пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " << positiveRow << endl;
 				print2DArray(matrix, n, m);
 			}
 			else {
-				cerr << "В матрице нет столбца, содержащего только положительные элементы." << endl;
+				cerr << "пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ." << endl;
 			}
 
 			delete2DArray(matrix, n);
 		}
 		else {
-			cerr << "Такого задания нет!" << endl;
+			cerr << "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ!" << endl;
 		}
 		break;
 	}
 	case 16: {
 		if (exercise == 1) {
-			cout << "====== ЗАДАНИЕ 1 ======" << endl;
+			cout << "====== пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 1 ======" << endl;
 
 			int n;
-			cout << "Введите n: "; cin >> n;
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ n: "; cin >> n;
 			int* line = new int[n];
 
 			int maxNegativeIndex = findMaxNegativeElementIndex(line, n);
 			int maxNegativeElement = line[maxNegativeIndex];
 			
 			swapThisWithLast(line, n, maxNegativeIndex);
-			cout << "Максимальный отрицательный элемент массива: " << maxNegativeElement << endl;
-			cout << "Результат смены мест: " << endl;
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " << maxNegativeElement << endl;
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ: " << endl;
 			print1DArray(line, n);
 
 			delete[] line;
 		}
 		else if (exercise == 2) {
-			cout << "===== ЗАДАНИЕ 2 =====" << endl;
+			cout << "===== пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 2 =====" << endl;
 
 			int n, m;
-			cout << "Введите количество строк: "; cin >> n;
-			cout << "Введите количество столбцов: "; cin >> m;
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: "; cin >> n;
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: "; cin >> m;
 			
 			int** matrix = new int* [n];
 			for (int i = 0; i < n; i++) {
@@ -165,24 +165,24 @@ int main() {
 			input2DArray(matrix, &n, &m);
 
 			if (everyRowHasNegative(matrix, n, m)) {
-				cout << "Каждая строка матрицы имеет хотя-бы один отрицательный элемент." << endl;
-				cout << "Результат инверсии: " << endl;
+				cout << "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ." << endl;
+				cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " << endl;
 				invertMatrix(matrix, n, m);
 				print2DArray(matrix, n, m);
 			}
 			else {
-				cerr << "В какой то строке матрицы нет отрицательного элемента." << endl;
+				cerr << "пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ." << endl;
 			}
 
 			delete2DArray(matrix, n);
 		}
 		else {
-			cerr << "Такого задания нет!" << endl;
+			cerr << "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ!" << endl;
 		}
 		break;
 	}
 	default: {
-		cerr << "Такого варианта нет!" << endl;
+		cerr << "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ!" << endl;
 		break;
 	}
 	}
@@ -190,18 +190,18 @@ int main() {
 	return 0;
 }
 
-// Пользовательские функции
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
-// Основные функции
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 void input1DArray(int* arr, int sz) {
 	for (int i{}; i < sz; i++) {
-		cout << "Введите элемент массива [" << i + 1 << "]: "; 
+		cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ [" << i + 1 << "]: "; 
 		cin >> arr[i];
 	}
 }
 void input2DArray(int** arr, int* n, int* m) {
 	for (int i{}; i < *n; i++) {
-		cout << i + 1 << "-я строка: " << endl;
+		cout << i + 1 << "-пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: " << endl;
 		for (int j{}; j < *m; j++) {
 			cin >> arr[i][j];
 		}
@@ -229,7 +229,7 @@ void delete2DArray(int** arr, int n) {
 	delete[] arr;
 }
 
-// Вариант 12
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 12
 int countNegative(int* inputArr, int n) {
 	int count = 0;
 	for (int i = 1; i < n; i+=2)
@@ -255,7 +255,7 @@ void decraseCol(int** arr, int n, int col) {
 }
 
 
-// Вариант 14
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 14
 int findMinElement(int* arr, int n) {
 	int min = *arr;
 	for (int i = 0; i < n; i++) {
@@ -299,7 +299,7 @@ void inverseRow(int** arr, int n, int m, int row) {
 }
 
 
-// Вариант 16
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 16
 int findMaxNegativeElementIndex(int* arr, int n) {
 	int min = INT_MAX;
 	int minIndex;

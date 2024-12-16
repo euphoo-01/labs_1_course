@@ -1,26 +1,26 @@
 #include <iostream>
 using namespace std;
 
-void input1DArray(int* arr, int* sz);
-void returnOddNumbers(int* arr, int* sz);
-void delete2DArray(int** arr, int* n);
+void input1DArray(int*, int*);
+void returnOddNumbers(int*, int*);
+void delete2DArray(int**, int*);
 
-void input2DArray(int** arr, int* n, int* m);
-int findMaxNumber(int** arr, int* n, int* m);
-int numberOfRepeats(int** arr, int* number, int* n, int* m);
-void printRepeatedIndexes(int** arr, int* number, int* n, int* m);
+void input2DArray(int**, int*, int*);
+int findMaxNumber(int**, int*, int*);
+int numberOfRepeats(int**, int*, int*, int*);
+void printRepeatedIndexes(int**, int*, int*, int*);
 
 int main() {
 	system("chcp 1251");
 
 	int exercise;
-	cout << "Какое задание? "; cin >> exercise;
+	cout << "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ? "; cin >> exercise;
 
 	switch (exercise) {
 	case 1: {
-		cout << "===== ЗАДАНИЕ 1 =====" << endl;
+		cout << "===== пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 1 =====" << endl;
 		int n;
-		cout << "Введите размер массива: "; cin >> n;
+		cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: "; cin >> n;
 
 		int* line = new int[n];
 
@@ -32,10 +32,10 @@ int main() {
 		break;
 	}
 	case 2: {
-		cout << "===== ЗАДАНИЕ 2 =====" << endl;
+		cout << "===== пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 2 =====" << endl;
 		int n, m;
-		cout << "Введите количество строк матрицы: "; cin >> n;
-		cout << "Введите количество столбцов матрицы: "; cin >> m;
+		cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: "; cin >> n;
+		cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: "; cin >> m;
 
 		int** matrix = new int* [n];
 		for (int i = 0; i < n; i++) {
@@ -47,7 +47,7 @@ int main() {
 		int repeats = numberOfRepeats(matrix, &maxNumber, &n, &m);
 
 		if (repeats - 1) {
-			cout << "Число " << maxNumber << " встречается в массиве " << repeats << (repeats > 1 ? " раза" : " раз") << ".Его позиции: " << endl;
+			cout << "пїЅпїЅпїЅпїЅпїЅ " << maxNumber << " пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ " << repeats << (repeats > 1 ? " пїЅпїЅпїЅпїЅ" : " пїЅпїЅпїЅ") << ".пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " << endl;
 			printRepeatedIndexes(matrix, &maxNumber, &n, &m);
 		}
 
@@ -55,7 +55,7 @@ int main() {
 		break;
 	}
 	default: {
-		cerr << "Такого варианта нет!" << endl;
+		cerr << "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ!" << endl;
 	}
 	}
 	return 0;
@@ -63,14 +63,14 @@ int main() {
 
 void input1DArray(int* arr, int* sz) {
 	for (int i{}; i < *sz; i++) {
-		cout << "Введите элемент массива [" << i+1 << "]: "; cin >> arr[i];
+		cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ [" << i+1 << "]: "; cin >> arr[i];
 	}
 }
 
 void returnOddNumbers(int* arr, int* sz) {
 	for (int i = 0; i < *sz; i += 2) {
 		if (arr[i] % 2 == 0) {
-			cout << "Элемент под номером " << i + 1 << " четный." << endl;
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ " << i + 1 << " пїЅпїЅпїЅпїЅпїЅпїЅ." << endl;
 		}
 	}
 }
@@ -115,7 +115,7 @@ void printRepeatedIndexes(int** arr, int* number, int* n, int* m) {
 	for (int i{}; i < *n; i++) {
 		for (int j{}; j < *m; j++) {
 			if (arr[i][j] == *number)
-				cout << i+1 << " строка " << j+1 << " столбец." << endl;
+				cout << i+1 << " пїЅпїЅпїЅпїЅпїЅпїЅ " << j+1 << " пїЅпїЅпїЅпїЅпїЅпїЅпїЅ." << endl;
 		}
 	}
 }
