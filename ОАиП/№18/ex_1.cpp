@@ -34,7 +34,7 @@ int main() {
     double f1X = calculateRoot(f1, a, b, e);
     double f2X = calculateRoot(f2, a, b, e);
 
-    if (f1X) {
+    if (f1X && f2X) {
         cout << "Корень первой функции: " << f1X << endl;
         cout << "Корень второй функции: " << f2X << endl;
     }

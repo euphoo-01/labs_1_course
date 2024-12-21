@@ -2,36 +2,34 @@
 #include <string>
 using namespace std;
 
-// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 10
+// Вариант 10
 
-const string name = "matrix";
+void deleteArray(int** arr, int n);
+int findIndexHasK(int** arr, int n, int m, int k);
 
-void deleteArray(int**, int);
-int findIndexHasK(int**, int, int, int);
-
-int countWords(string);
-string swapCentralWords(string, int);
+int countWords(string str);
+void swapCentralWords(string str, int words);
 int main() {
 	system("chcp 1251");
 
 	int choice;
-	cout << "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ? "; cin >> choice;
+	cout << "Какое задание выполнить? "; cin >> choice;
 	
 	switch (choice) {
 	case 1: {
 		int n, m;
 
-		cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: "; cin >> n;
-		cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: "; cin >> m;
+		cout << "Введите количество строк массива: "; cin >> n;
+		cout << "Введите количество столбцов массива: "; cin >> m;
 
-		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+		// Инициализация массива
 		int** matrix = new int* [n];
 		for (int i{}; i < n; ++i) {
 			matrix[i] = new int[m];
 		}
 
-		// пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
-		cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " << endl;
+		// Ввод массива
+		cout << "Введите элементы матрицы: " << endl;
 		for (int i{}; i < n; i++) {
 			for (int j{}; j < m; j++) {
 				cin >> matrix[i][j];
@@ -40,15 +38,15 @@ int main() {
 		}
 
 		int k;
-		cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ k: "; cin >> k;
+		cout << "Введите число k: "; cin >> k;
 
 		int kIndex = findIndexHasK(matrix, n, m, k);
 
-		// пїЅпїЅпїЅпїЅпїЅ
+		// Вывод
 		if (kIndex)
-			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ k: " << kIndex << endl;
+			cout << "Столбец матрицы, в котором есть k: " << kIndex << endl;
 		else
-			cerr << "пїЅпїЅпїЅпїЅпїЅ k пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ." << endl;
+			cerr << "Числа k нет в матрице." << endl;
 
 		deleteArray(matrix, n);
 
@@ -57,29 +55,29 @@ int main() {
 	case 2: {
 		string s{};
 
-		cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: "; 
-		cin.ignore(); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ \n
+		cout << "Введите строку: "; 
+		cin.ignore(); // Очищаем символ \n
 		getline(cin, s);
 
 		int wordCount = countWords(s);
-		if (wordCount % 2 == 0) { // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
-			s = swapCentralWords(s, wordCount);
-			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " << endl << s << endl;
+		if (wordCount % 2 == 0) { // Если количество слов четное
+			swapCentralWords(s, wordCount);
+			cout << "Результат: " << endl << s << endl;
 		}
 		else {
-			cerr << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!" << endl;
+			cerr << "Количество слов в строке нечетное!" << endl;
 		}
 
 		break;
 	}
 	default: {
-		cerr << "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!";
+		cerr << "Такого варианта не существует!";
 		break;
 	}
 	}
 }
 
-// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+// Функции для массива
 void deleteArray(int** arr, int n) {
 	for (int i = 0; i < n; ++i) {
 		delete[] arr[i];
@@ -99,7 +97,7 @@ int findIndexHasK(int** arr, int n, int m, int k) {
 }
 
 
-// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+// Функции для строки
 int countWords(string str) {
 	int count = 0;
 	for (int i{}; i < str.length(); i++) {
@@ -109,19 +107,19 @@ int countWords(string str) {
 	return count;
 }
 
-string swapCentralWords(string str, int words) {
+void swapCentralWords(string str, int words) {
 	string left, right;
 	int currentWord = 0,
 		leftStartIndex = 0, leftEndIndex = 0, rightStartIndex = 0, rightEndIndex = 0;
 	for (int i{}; i < str.length(); i++) {
 		if (str[i] == ' ') {
-			if (++currentWord == words / 2 - 1) { // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
-				int j = i + 1, // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+			if (++currentWord == words / 2 - 1) { // Если следующее слово - левое от центра
+				int j = i + 1, // Пропускаем пробел
 					k = 0;
 
 				leftStartIndex = j;
 
-				while (str[j++] != ' ') { // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+				while (str[j++] != ' ') { // Определяем длину левого от центра слова
 					k++;
 				}
 				left = str.substr(leftStartIndex, k);
@@ -130,7 +128,7 @@ string swapCentralWords(string str, int words) {
 				k = 0;
 
 
-				while (str[j++] != ' ') { // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+				while (str[j++] != ' ') { // Определяем длину правого от центра слова
 					k++;
 				}
 				right = str.substr(rightStartIndex, k);
@@ -140,12 +138,12 @@ string swapCentralWords(string str, int words) {
 			}
 		}
 	}
-	string swapped = right + ' ' + left + ' '; // пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	string swapped = right + ' ' + left + ' '; // Левое и правое от центра слова, поменянные местами
 
-	str.erase(rightStartIndex, rightEndIndex-rightStartIndex); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
-	str.erase(leftStartIndex, leftEndIndex - leftStartIndex); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	str.erase(rightStartIndex, rightEndIndex-rightStartIndex); // Очистка исходной строки от правого слова
+	str.erase(leftStartIndex, leftEndIndex - leftStartIndex); // Очистка исходной строки от левого слова
 
-	str.insert(leftStartIndex, swapped); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	str.insert(leftStartIndex, swapped); // Вставляем слова в измененном порядке
 
-	return str;
+	
 }

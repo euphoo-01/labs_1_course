@@ -2,46 +2,46 @@
 #include <string>
 using namespace std;
 
-// ĞĞ±Ñ‰Ğ¸Ğµ Ñ„ÑƒĞ½ĞºÑ†Ğ¸Ğ¸
-void input2DArray(int**, int, int);
-void input1DArray(float*, int);
-void printArray(int**, int, int);
-void deleteArray(int**, int);
+// Îáùèå ôóíêöèè
+void input2DArray(int** arr, int n, int m);
+void input1DArray(float* arr, int sz);
+void printArray(int** arr, int n, int m);
+void deleteArray(int** arr, int n);
 
-//Ğ’Ğ°Ñ€Ğ¸Ğ°Ğ½Ñ‚ 12
-int findMinElement(int**, int, int);
-bool isSimillar(int**, int, int);
+//Âàğèàíò 12
+int findMinElement(int** arr, int n, int m);
+bool isSimillar(int** arr, int sz, int k);
 
-//Ğ’Ğ°Ñ€Ğ¸Ğ°Ğ½Ñ‚ 14
-int minAbsoluteElementIndex(float*, int);
-int firstNegativeIndex(float*, int);
-float sumOfAbsoluteElements(float*, int, int);
+//Âàğèàíò 14
+int minAbsoluteElementIndex(float* arr, int sz);
+int firstNegativeIndex(float* arr, int sz);
+float sumOfAbsoluteElements(float* arr, int sz, int pos);
 
-bool haveBSTU(string);
+bool haveBSTU(string str);
 
-//Ğ’Ğ°Ñ€Ğ¸Ğ°Ğ½Ñ‚ 16
-int maxNumber(int*, int);
-int countMatch(int*, int, int);
+//Âàğèàíò 16
+int maxNumber(int* arr, int sz);
+int countMatch(int* arr, int sz, int number);
 
-string shortestWord(string);
-string longestWord(string);
+string shortestWord(string str);
+string longestWord(string str);
 
 
 int main() {
 	system("chcp 1251");
 
 	int variant, exercise;
-	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ²Ğ°Ñ€Ğ¸Ğ°Ğ½Ñ‚: "; cin >> variant;
-	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ½Ğ¾Ğ¼ĞµÑ€ Ğ·Ğ°Ğ´Ğ°Ğ½Ğ¸Ñ: "; cin >> exercise;
+	cout << "Ââåäèòå âàğèàíò: "; cin >> variant;
+	cout << "Ââåäèòå íîìåğ çàäàíèÿ: "; cin >> exercise;
 
 	switch (variant) {
 	case 12: {
 		if (exercise == 1) {
-			cout << "====== Ğ—ĞĞ”ĞĞĞ˜Ğ• 1 =======" << endl;
+			cout << "====== ÇÀÄÀÍÈÅ 1 =======" << endl;
 
 			int d, p;
-			cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ ÑÑ‚Ñ€Ğ¾Ğº Ğ¼Ğ°Ñ‚Ñ€Ğ¸Ñ†Ñ‹(<= 16): "; cin >> d;
-			cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ĞºĞ¾Ğ»Ñ‡ĞµÑÑ‚Ğ²Ğ¾ ÑÑ‚Ğ¾Ğ»Ğ±Ñ†Ğ¾Ğ² Ğ¼Ğ°Ñ‚Ñ€Ğ¸Ñ†Ñ‹(<= 18): "; cin >> p;
+			cout << "Ââåäèòå êîëè÷åñòâî ñòğîê ìàòğèöû(<= 16): "; cin >> d;
+			cout << "Ââåäèòå êîë÷åñòâî ñòîëáöîâ ìàòğèöû(<= 18): "; cin >> p;
 
 			if (d <= 16 && p <= 18) {
 				int** F2 = new int* [d];
@@ -61,7 +61,7 @@ int main() {
 			}
 		}
 		else if (exercise == 2) {
-			cout << "====== Ğ—Ğ°Ğ´Ğ°Ğ½Ğ¸Ğµ 2 ======" << endl;
+			cout << "====== Çàäàíèå 2 ======" << endl;
 
 			const int SIZE = 4;
 			int** matrix = new int* [SIZE];
@@ -79,92 +79,90 @@ int main() {
 			deleteArray(matrix, SIZE);
 		}
 		else {
-			cerr << "Ğ¢Ğ°ĞºĞ¾Ğ³Ğ¾ Ğ·Ğ°Ğ´Ğ°Ğ½Ğ¸Ñ Ğ½ĞµÑ‚." << endl;
+			cerr << "Òàêîãî çàäàíèÿ íåò." << endl;
 		}
 		break;
 	}
 	case 14: {
 		if (exercise == 1) {
-			cout << "===== Ğ—ĞĞ”ĞĞĞ˜Ğ• 1 =====" << endl;
+			cout << "===== ÇÀÄÀÍÈÅ 1 =====" << endl;
 
 			int n;
-			cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ€Ğ°Ğ·Ğ¼ĞµÑ€ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğ°: "; cin >> n;
+			cout << "Ââåäèòå ğàçìåğ ìàññèâà: "; cin >> n;
 
 			float* line = new float[n];
 
 			input1DArray(line, n);
 
-			cout << "ĞœĞ¸Ğ½Ğ¸Ğ¼Ğ°Ğ»ÑŒĞ½Ñ‹Ğ¹ Ğ¿Ğ¾ Ğ¼Ğ¾Ğ´ÑƒĞ»Ñ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğ° Ğ½Ğ°Ñ…Ğ¾Ğ´Ğ¸Ñ‚ÑÑ Ğ¿Ğ¾Ğ´ Ğ½Ğ¾Ğ¼ĞµÑ€Ğ¾Ğ¼" << minAbsoluteElementIndex(line, n) + 1
-				<< " Ğ¸ Ñ€Ğ°Ğ²ĞµĞ½ " << line[minAbsoluteElementIndex(line, n)] << endl;
+			cout << "Ìèíèìàëüíûé ïî ìîäóëş ıëåìåíò ìàññèâà íàõîäèòñÿ ïîä íîìåğîì" << minAbsoluteElementIndex(line, n) + 1
+				<< " è ğàâåí " << line[minAbsoluteElementIndex(line, n)] << endl;
 
 			int negativeIndex;
 			if ((negativeIndex = firstNegativeIndex(line, n)) >= 0)
 			{
-				cout << "Ğ¡ÑƒĞ¼Ğ¼Ğ° Ğ¼Ğ¾Ğ´ÑƒĞ»ĞµĞ¹ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ² Ğ¼Ğ°ÑÑĞ¸Ğ²Ğ°, Ñ€Ğ°ÑĞ¿Ğ¾Ğ»Ğ¾Ğ¶ĞµĞ½Ğ½Ñ‹Ñ… Ğ¿Ğ¾ÑĞ»Ğµ Ğ¿ĞµÑ€Ğ²Ğ¾Ğ³Ğ¾ Ğ¾Ñ‚Ñ€Ğ¸Ñ†Ğ°Ñ‚ĞµĞ»ÑŒĞ½Ğ¾Ğ³Ğ¾ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ°: "
+				cout << "Ñóììà ìîäóëåé ıëåìåíòîâ ìàññèâà, ğàñïîëîæåííûõ ïîñëå ïåğâîãî îòğèöàòåëüíîãî ıëåìåíòà: "
 					<< sumOfAbsoluteElements(line, n, negativeIndex) << endl;
 			}
 			else {
-				cerr << "Ğ’ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğµ Ğ½ĞµÑ‚ Ğ¾Ñ‚Ñ€Ğ¸Ñ†Ğ°Ñ‚ĞµĞ»ÑŒĞ½Ñ‹Ñ… ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ²!" << endl;
+				cerr << "Â ìàññèâå íåò îòğèöàòåëüíûõ ıëåìåíòîâ!" << endl;
 			}
 			
 			delete[] line;
 		}
 		else if (exercise == 2) {
-			cout << "===== Ğ—ĞĞ”ĞĞĞ˜Ğ• 2 =====" << endl;
+			cout << "===== ÇÀÄÀÍÈÅ 2 =====" << endl;
 
 			string input;
-			cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ÑÑ‚Ñ€Ğ¾ĞºÑƒ: ";
+			cout << "Ââåäèòå ñòğîêó: ";
 			cin.ignore();
 			getline(cin, input);
 
 			if (haveBSTU(input)) {
-				cout << "Ğ¡Ñ‚Ñ€Ğ¾ĞºĞ° ÑĞ¾Ğ´ĞµÑ€Ğ¶Ğ¸Ñ‚ ÑĞ»Ğ¾Ğ²Ğ¾ \"Ğ‘Ğ“Ğ¢Ğ£\"." << endl;
+				cout << "Ñòğîêà ñîäåğæèò ñëîâî \"ÁÃÒÓ\"." << endl;
 			}
 			else {
-				cerr << "Ğ¡Ñ‚Ñ€Ğ¾ĞºĞ° Ğ½Ğµ ÑĞ¾Ğ´ĞµÑ€Ğ¶Ğ¸Ñ‚ ÑĞ»Ğ¾Ğ²Ğ¾ \"Ğ‘Ğ“Ğ¢Ğ£\"." << endl;
+				cerr << "Ñòğîêà íå ñîäåğæèò ñëîâî \"ÁÃÒÓ\"." << endl;
 			}
 		}
 		else {
-			cerr << "Ğ¢Ğ°ĞºĞ¾Ğ³Ğ¾ Ğ·Ğ°Ğ´Ğ°Ğ½Ğ¸Ñ Ğ½ĞµÑ‚." << endl;
+			cerr << "Òàêîãî çàäàíèÿ íåò." << endl;
 		}
 		
 		break;
 	}
 	case 16: {
 		if (exercise == 1) {
-			cout << "===== Ğ—ĞĞ”ĞĞĞ˜Ğ• 1 =====" << endl;
+			cout << "===== ÇÀÄÀÍÈÅ 1 =====" << endl;
 
 			int n;
-			cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ n: "; cin >> n;
+			cout << "Ââåäèòå n: "; cin >> n;
 
 			int* A = new int[n];
 
 			int max = maxNumber(A, n);
-			cout << "ĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ğ²ÑÑ‚Ñ€ĞµÑ‡Ğ°ÑÑ‰Ğ¸Ñ…ÑÑ Ğ¼Ğ°ĞºÑĞ¸Ğ¼Ğ°Ğ»ÑŒĞ½Ñ‹Ñ… ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ² \"" << max << "\" Ğ² Ğ¼Ğ°ÑÑĞ¸Ğ²Ğµ: " 
+			cout << "Êîëè÷åñòâî âñòğå÷àşùèõñÿ ìàêñèìàëüíûõ ıëåìåíòîâ \"" << max << "\" â ìàññèâå: " 
 				<< countMatch(A, n, max) << endl;
-
-			delete[] A;
 		}
 		else if (exercise == 2) {
-			cout << "===== Ğ—ĞĞ”ĞĞĞ˜Ğ• 2 =====" << endl;
+			cout << "===== ÇÀÄÀÍÈÅ 2 =====" << endl;
 
 			string str;
-			cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ÑÑ‚Ñ€Ğ¾ĞºÑƒ: "; cin.ignore();
+			cout << "Ââåäèòå ñòğîêó: "; cin.ignore();
 			getline(cin, str);
 			
 			string shortest = shortestWord(str),
 				longest = longestWord(str);
 
-			cout << "Ğ¡Ğ°Ğ¼Ğ¾Ğµ ĞºĞ¾Ñ€Ğ¾Ñ‚ĞºĞ¾Ğµ ÑĞ»Ğ¾Ğ²Ğ¾ Ğ² ÑÑ‚Ñ€Ğ¾ĞºĞµ: " << shortest << endl;
-			cout << "Ğ¡Ğ°Ğ¼Ğ¾Ğµ Ğ´Ğ»Ğ¸Ğ½Ğ½Ğ¾Ğµ ÑĞ»Ğ¾Ğ²Ğ¾ Ğ² ÑÑ‚Ñ€Ğ¾ĞºĞµ: " << longest << endl;
+			cout << "Ñàìîå êîğîòêîå ñëîâî â ñòğîêå: " << shortest << endl;
+			cout << "Ñàìîå äëèííîå ñëîâî â ñòğîêå: " << longest << endl;
 		}
 		else {
-			cerr << "Ğ¢Ğ°ĞºĞ¾Ğ³Ğ¾ Ğ·Ğ°Ğ´Ğ°Ğ½Ğ¸Ñ Ğ½ĞµÑ‚." << endl;
+			cerr << "Òàêîãî çàäàíèÿ íåò." << endl;
 		}
 		break;
 	}
 	default: {
-		cerr << "ĞÑˆĞ¸Ğ±ĞºĞ°, Ñ‚Ğ°ĞºĞ¾Ğ³Ğ¾ Ğ²Ğ°Ñ€Ğ¸Ğ°Ğ½Ñ‚Ğ° Ğ½ĞµÑ‚." << endl;
+		cerr << "Îøèáêà, òàêîãî âàğèàíòà íåò." << endl;
 		break;
 	}
 	}
@@ -172,11 +170,11 @@ int main() {
 }
 
 
-// ĞĞ±Ñ‰Ğ¸Ğµ Ñ„ÑƒĞ½ĞºÑ†Ğ¸Ğ¸
+// Îáùèå ôóíêöèè
 void input2DArray(int** arr, int n, int m) {
-	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ñ‹ Ğ¼Ğ°Ñ‚Ñ€Ğ¸Ñ†Ñ‹ (" << n << ", " << m << "): " << endl;
-	for (int i{}; i < n; i++) {
-		for (int j{}; j < m; j++) {
+	cout << "Ââåäèòå ıëåìåíòû ìàòğèöû (" << n << ", " << m << "): " << endl;
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
 			cin >> arr[i][j];
 		}
 		cout << endl;
@@ -184,7 +182,7 @@ void input2DArray(int** arr, int n, int m) {
 }
 
 void input1DArray(float* arr, int sz) {
-	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ñ‹ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğ° (" << sz << "): " << endl;
+	cout << "Ââåäèòå ıëåìåíòû ìàññèâà (" << sz << "): " << endl;
 	for (int i{}; i < sz; i++) {
 		cin >> arr[i];
 	}
@@ -207,7 +205,7 @@ void deleteArray(int** arr, int n) {
 }
 
 
-// Ğ’Ğ°Ñ€Ğ¸Ğ°Ğ½Ñ‚ 12
+// Âàğèàíò 12
 int findMinElement(int** arr, int row, int m) {
 	int tempMin = arr[row][0];
 	for (int j{}; j < m; j++) {
@@ -228,7 +226,7 @@ bool isSimillar(int** arr, int sz, int k) {
 }
 
 
-// Ğ’Ğ°Ñ€Ğ¸Ğ°Ğ½Ñ‚ 14
+// Âàğèàíò 14
 int minAbsoluteElementIndex(float* arr, int sz) {
 	float tempMin = abs(*arr);
 	int minIndex = 0;
@@ -260,7 +258,7 @@ int firstNegativeIndex(float* arr, int sz) {
 bool haveBSTU(string str) {
 	
 	for (size_t i = 1; i < str.length() - 3; i++) {
-		if (str.substr(i, 4) == "Ğ‘Ğ“Ğ¢Ğ£") {
+		if (str.substr(i, 4) == "ÁÃÒÓ") {
 			return true;
 		}
 	}
@@ -268,7 +266,7 @@ bool haveBSTU(string str) {
 }
 
 
-// Ğ’Ğ°Ñ€Ğ¸Ğ°Ğ½Ñ‚ 16
+// Âàğèàíò 16
 int maxNumber(int* arr, int sz) {
 	int maxNumber = *arr;
 	for (int i{}; i < sz; i++) {

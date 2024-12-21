@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211616\\oaip.lab16.project\\",
+  "WorkspaceRootPath": "D:\\University\\Labs_1_course\\\u041E\u0410\u0438\u041F\\\u211616\\oaip.lab16.project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B162294-2D62-49B5-B67F-5225B9CA25F3}|oaip.lab16.dops\\oaip.lab16.dops.vcxproj|D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211616\\oaip.lab16.project\\oaip.lab16.dops\\dops.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{8B162294-2D62-49B5-B67F-5225B9CA25F3}|oaip.lab16.dops\\oaip.lab16.dops.vcxproj|D:\\University\\Labs_1_course\\\u041E\u0410\u0438\u041F\\\u211616\\oaip.lab16.project\\oaip.lab16.dops\\dops.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{8B162294-2D62-49B5-B67F-5225B9CA25F3}|oaip.lab16.dops\\oaip.lab16.dops.vcxproj|solutionrelative:oaip.lab16.dops\\dops.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1B40C57-A092-4793-B845-E04CE7C595F2}|oaip.lab16.project\\oaip.lab16.project.vcxproj|D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211616\\oaip.lab16.project\\oaip.lab16.project\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{F1B40C57-A092-4793-B845-E04CE7C595F2}|oaip.lab16.project\\oaip.lab16.project.vcxproj|D:\\University\\Labs_1_course\\\u041E\u0410\u0438\u041F\\\u211616\\oaip.lab16.project\\oaip.lab16.project\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F1B40C57-A092-4793-B845-E04CE7C595F2}|oaip.lab16.project\\oaip.lab16.project.vcxproj|solutionrelative:oaip.lab16.project\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
@@ -27,11 +27,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "dops.cpp",
-              "DocumentMoniker": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211616\\oaip.lab16.project\\oaip.lab16.dops\\dops.cpp",
+              "DocumentMoniker": "D:\\University\\Labs_1_course\\\u041E\u0410\u0438\u041F\\\u211616\\oaip.lab16.project\\oaip.lab16.dops\\dops.cpp",
               "RelativeDocumentMoniker": "oaip.lab16.dops\\dops.cpp",
-              "ToolTip": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211616\\oaip.lab16.project\\oaip.lab16.dops\\dops.cpp",
+              "ToolTip": "D:\\University\\Labs_1_course\\\u041E\u0410\u0438\u041F\\\u211616\\oaip.lab16.project\\oaip.lab16.dops\\dops.cpp",
               "RelativeToolTip": "oaip.lab16.dops\\dops.cpp",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD4BAAAAAAAAAAAIwEsBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-07T13:53:10.438Z",
               "EditorCaption": ""
@@ -50,13 +50,14 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "main.cpp",
-              "DocumentMoniker": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211616\\oaip.lab16.project\\oaip.lab16.project\\main.cpp",
+              "DocumentMoniker": "D:\\University\\Labs_1_course\\\u041E\u0410\u0438\u041F\\\u211616\\oaip.lab16.project\\oaip.lab16.project\\main.cpp",
               "RelativeDocumentMoniker": "oaip.lab16.project\\main.cpp",
-              "ToolTip": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211616\\oaip.lab16.project\\oaip.lab16.project\\main.cpp",
+              "ToolTip": "D:\\University\\Labs_1_course\\\u041E\u0410\u0438\u041F\\\u211616\\oaip.lab16.project\\oaip.lab16.project\\main.cpp",
               "RelativeToolTip": "oaip.lab16.project\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJMAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAIwJUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-07T12:13:35.375Z"
+              "WhenOpened": "2024-12-07T12:13:35.375Z",
+              "EditorCaption": ""
             }
           ]
         }

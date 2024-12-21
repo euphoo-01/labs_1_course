@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211614\\oaip.lab14.project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9104A52F-C145-4758-AB8B-04DEA301B937}|Optional\\Optional.vcxproj|D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211614\\oaip.lab14.project\\Optional\\optional_exercise.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9104A52F-C145-4758-AB8B-04DEA301B937}|Optional\\Optional.vcxproj|solutionrelative:Optional\\optional_exercise.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C250808A-412D-4EEB-8FE1-DA77CC5FB680}|Exercise 2\\Exercise 2.vcxproj|D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211614\\oaip.lab14.project\\Exercise 2\\exercise_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C250808A-412D-4EEB-8FE1-DA77CC5FB680}|Exercise 2\\Exercise 2.vcxproj|solutionrelative:Exercise 2\\exercise_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{280DE81D-E7D5-4CF0-AED8-6A3BC5E9E506}|oaip.lab14.project\\oaip.lab14.project.vcxproj|D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211614\\oaip.lab14.project\\oaip.lab14.project\\exercise_1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{280DE81D-E7D5-4CF0-AED8-6A3BC5E9E506}|oaip.lab14.project\\oaip.lab14.project.vcxproj|solutionrelative:oaip.lab14.project\\exercise_1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "optional_exercise.cpp",
+              "DocumentMoniker": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211614\\oaip.lab14.project\\Optional\\optional_exercise.cpp",
+              "RelativeDocumentMoniker": "Optional\\optional_exercise.cpp",
+              "ToolTip": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211614\\oaip.lab14.project\\Optional\\optional_exercise.cpp",
+              "RelativeToolTip": "Optional\\optional_exercise.cpp",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAgwJYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-30T18:19:13.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "exercise_2.cpp",
+              "DocumentMoniker": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211614\\oaip.lab14.project\\Exercise 2\\exercise_2.cpp",
+              "RelativeDocumentMoniker": "Exercise 2\\exercise_2.cpp",
+              "ToolTip": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211614\\oaip.lab14.project\\Exercise 2\\exercise_2.cpp",
+              "RelativeToolTip": "Exercise 2\\exercise_2.cpp",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAC0AAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-30T17:55:45.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "exercise_1.cpp",
+              "DocumentMoniker": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211614\\oaip.lab14.project\\oaip.lab14.project\\exercise_1.cpp",
+              "RelativeDocumentMoniker": "oaip.lab14.project\\exercise_1.cpp",
+              "ToolTip": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u0430\u0418\u041F\\\u211614\\oaip.lab14.project\\oaip.lab14.project\\exercise_1.cpp",
+              "RelativeToolTip": "oaip.lab14.project\\exercise_1.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-30T17:33:29.471Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
