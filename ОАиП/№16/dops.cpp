@@ -137,7 +137,10 @@ int main() {
 			int n;
 			cout << "Введите n: "; cin >> n;
 
+
 			int* A = new int[n];
+
+			input1DArray((float*)A, n);
 
 			int max = maxNumber(A, n);
 			cout << "Количество встречающихся максимальных элементов \"" << max << "\" в массиве: " 

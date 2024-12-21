@@ -8,7 +8,7 @@ void deleteArray(int** arr, int n);
 int findIndexHasK(int** arr, int n, int m, int k);
 
 int countWords(string str);
-void swapCentralWords(string str, int words);
+void swapCentralWords(string* str, int words);
 int main() {
 	system("chcp 1251");
 
@@ -61,7 +61,7 @@ int main() {
 
 		int wordCount = countWords(s);
 		if (wordCount % 2 == 0) { // Если количество слов четное
-			swapCentralWords(s, wordCount);
+			swapCentralWords(&s, wordCount);
 			cout << "Результат: " << endl << s << endl;
 		}
 		else {
@@ -107,31 +107,31 @@ int countWords(string str) {
 	return count;
 }
 
-void swapCentralWords(string str, int words) {
+void swapCentralWords(string* str, int words) {
 	string left, right;
 	int currentWord = 0,
 		leftStartIndex = 0, leftEndIndex = 0, rightStartIndex = 0, rightEndIndex = 0;
-	for (int i{}; i < str.length(); i++) {
-		if (str[i] == ' ') {
+	for (int i{}; i < (*str).length(); i++) {
+		if ((*str)[i] == ' ') {
 			if (++currentWord == words / 2 - 1) { // Если следующее слово - левое от центра
 				int j = i + 1, // Пропускаем пробел
 					k = 0;
 
 				leftStartIndex = j;
 
-				while (str[j++] != ' ') { // Определяем длину левого от центра слова
+				while ((*str)[j++] != ' ') { // Определяем длину левого от центра слова
 					k++;
 				}
-				left = str.substr(leftStartIndex, k);
+				left = (*str).substr(leftStartIndex, k);
 
 				rightStartIndex = leftEndIndex = j;
 				k = 0;
 
 
-				while (str[j++] != ' ') { // Определяем длину правого от центра слова
+				while ((*str)[j++] != ' ') { // Определяем длину правого от центра слова
 					k++;
 				}
-				right = str.substr(rightStartIndex, k);
+				right = (*str).substr(rightStartIndex, k);
 
 				rightEndIndex = j;
 				break;
@@ -140,10 +140,10 @@ void swapCentralWords(string str, int words) {
 	}
 	string swapped = right + ' ' + left + ' '; // Левое и правое от центра слова, поменянные местами
 
-	str.erase(rightStartIndex, rightEndIndex-rightStartIndex); // Очистка исходной строки от правого слова
-	str.erase(leftStartIndex, leftEndIndex - leftStartIndex); // Очистка исходной строки от левого слова
+	(*str).erase(rightStartIndex, rightEndIndex-rightStartIndex); // Очистка исходной строки от правого слова
+	(*str).erase(leftStartIndex, leftEndIndex - leftStartIndex); // Очистка исходной строки от левого слова
 
-	str.insert(leftStartIndex, swapped); // Вставляем слова в измененном порядке
+	(*str).insert(leftStartIndex, swapped); // Вставляем слова в измененном порядке
 
 	
 }
