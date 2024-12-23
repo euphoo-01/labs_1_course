@@ -1,0 +1,102 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u041F\u0418\\\u21166\\opi.lab6.project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2EF82EFD-8CD7-44FE-BC9B-69319CA4AFD7}|opi.lab6.project.vcxproj|D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u041F\u0418\\\u21166\\opi.lab6.project\\convertNUM.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2EF82EFD-8CD7-44FE-BC9B-69319CA4AFD7}|opi.lab6.project.vcxproj|solutionrelative:convertNUM.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EF82EFD-8CD7-44FE-BC9B-69319CA4AFD7}|opi.lab6.project.vcxproj|D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u041F\u0418\\\u21166\\opi.lab6.project\\convertRUS.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2EF82EFD-8CD7-44FE-BC9B-69319CA4AFD7}|opi.lab6.project.vcxproj|solutionrelative:convertRUS.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EF82EFD-8CD7-44FE-BC9B-69319CA4AFD7}|opi.lab6.project.vcxproj|D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u041F\u0418\\\u21166\\opi.lab6.project\\convertEN.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2EF82EFD-8CD7-44FE-BC9B-69319CA4AFD7}|opi.lab6.project.vcxproj|solutionrelative:convertEN.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EF82EFD-8CD7-44FE-BC9B-69319CA4AFD7}|opi.lab6.project.vcxproj|D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u041F\u0418\\\u21166\\opi.lab6.project\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2EF82EFD-8CD7-44FE-BC9B-69319CA4AFD7}|opi.lab6.project.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EF82EFD-8CD7-44FE-BC9B-69319CA4AFD7}|opi.lab6.project.vcxproj|D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u041F\u0418\\\u21166\\opi.lab6.project\\modules.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2EF82EFD-8CD7-44FE-BC9B-69319CA4AFD7}|opi.lab6.project.vcxproj|solutionrelative:modules.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u041F\u0418\\\u21166\\opi.lab6.project\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u041F\u0418\\\u21166\\opi.lab6.project\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAUwDEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-11T10:39:17.43Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "convertNUM.cpp",
+              "DocumentMoniker": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u041F\u0418\\\u21166\\opi.lab6.project\\convertNUM.cpp",
+              "RelativeDocumentMoniker": "convertNUM.cpp",
+              "ToolTip": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u041F\u0418\\\u21166\\opi.lab6.project\\convertNUM.cpp",
+              "RelativeToolTip": "convertNUM.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-18T06:09:56.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "convertEN.cpp",
+              "DocumentMoniker": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u041F\u0418\\\u21166\\opi.lab6.project\\convertEN.cpp",
+              "RelativeDocumentMoniker": "convertEN.cpp",
+              "ToolTip": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u041F\u0418\\\u21166\\opi.lab6.project\\convertEN.cpp",
+              "RelativeToolTip": "convertEN.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-18T06:09:36.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "convertRUS.cpp",
+              "DocumentMoniker": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u041F\u0418\\\u21166\\opi.lab6.project\\convertRUS.cpp",
+              "RelativeDocumentMoniker": "convertRUS.cpp",
+              "ToolTip": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u041F\u0418\\\u21166\\opi.lab6.project\\convertRUS.cpp",
+              "RelativeToolTip": "convertRUS.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-11T10:49:31.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "modules.h",
+              "DocumentMoniker": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u041F\u0418\\\u21166\\opi.lab6.project\\modules.h",
+              "RelativeDocumentMoniker": "modules.h",
+              "ToolTip": "D:\\University\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\\u041E\u041F\u0418\\\u21166\\opi.lab6.project\\modules.h",
+              "RelativeToolTip": "modules.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-11T10:49:04.319Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

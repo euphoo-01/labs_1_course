@@ -1,0 +1,1 @@
+bool proverka(float price);

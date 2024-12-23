@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style2.xsl"?>
+<students>
+    <student>
+        <name>Лавшук Станислав</name>
+        <grades>
+            <subject name="Основы Алгоритмизации и Программирования">7</subject>
+            <subject name="Основы Программной Инженерии">6</subject>
+            <subject name="Компьютерные Языки Разметки">8</subject>
+            <subject name="Математический анализ">4</subject>
+            <subject name="Линейная алгебра и Аналитическая геометрия">5</subject>
+            <subject name="Белорусский язык">7</subject>
+            <subject name="Английский язык">9</subject>
+            <subject name="Арифметико-логические основы вычислительных систем">5</subject>
+        </grades>
+    </student>
+        <student>
+        <name>Иванов Иван</name>
+        <grades>
+            <subject name="Основы Алгоритмизации и Программирования">10</subject>
+            <subject name="Основы Программной Инженерии">2</subject>
+            <subject name="Компьютерные Языки Разметки">5</subject>
+            <subject name="Математический анализ">9</subject>
+            <subject name="Линейная алгебра и Аналитическая геометрия">9</subject>
+            <subject name="Белорусский язык">7</subject>
+            <subject name="Английский язык">3</subject>
+            <subject name="Арифметико-логические основы вычислительных систем">4</subject>
+        </grades>
+    </student>
+    
+</students>

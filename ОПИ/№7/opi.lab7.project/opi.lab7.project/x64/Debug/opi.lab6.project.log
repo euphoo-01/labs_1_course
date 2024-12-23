@@ -1,0 +1,26 @@
+﻿Сборка начата 25.11.2024 16:22:19.
+Уровень детализации журнала: Normal.     1>Проект "D:\University\Лабораторные работы\ОПИ\№7\opi.lab7.project\opi.lab6.project.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+       InitializeBuildStatus:
+         Создание "opi.lab7.project\x64\Debug\opi.lab7.project.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "opi.lab7.project\x64\Debug\opi.lab7.project.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX64\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"opi.lab7.project\x64\Debug\\" /Fd"opi.lab7.project\x64\Debug\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt calculate_for_rus_letter.cpp
+         calculate_for_rus_letter.cpp
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\University\Лабораторные работы\ОПИ\№7\opi.lab7.project\x64\Debug\opi.lab7.project.exe" /INCREMENTAL /ILK:"opi.lab7.project\x64\Debug\opi.lab7.project.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\University\Лабораторные работы\ОПИ\№7\opi.lab7.project\x64\Debug\opi.lab7.project.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\University\Лабораторные работы\ОПИ\№7\opi.lab7.project\x64\Debug\opi.lab7.project.lib" /MACHINE:X64 opi.lab7.project\x64\Debug\calculate_for_eng_letter.obj
+         opi.lab7.project\x64\Debug\convert_digit_to_cp1251.obj
+         opi.lab7.project\x64\Debug\main.obj
+         opi.lab7.project\x64\Debug\calculate_for_rus_letter.obj
+         opi.lab6.project.vcxproj -> D:\University\Лабораторные работы\ОПИ\№7\opi.lab7.project\x64\Debug\opi.lab7.project.exe
+       FinalizeBuildStatus:
+         Файл "opi.lab7.project\x64\Debug\opi.lab7.project.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "opi.lab7.project\x64\Debug\opi.lab7.project.tlog\opi.lab7.project.lastbuildstate".
+     1>Сборка проекта "D:\University\Лабораторные работы\ОПИ\№7\opi.lab7.project\opi.lab6.project.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:01.23

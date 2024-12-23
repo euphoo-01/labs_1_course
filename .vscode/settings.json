@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "cstdlib": "cpp",
+        "iostream": "cpp",
+        "xstring": "cpp",
+        "*.cpp": "cpp",
+        "ostream": "cpp"
+    },
+    "[cpp]": {
+        "files.encoding": "windows1251"
+    }
+}
