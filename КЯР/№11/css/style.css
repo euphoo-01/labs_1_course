@@ -4,7 +4,9 @@ h1 {
   font-weight: 700;
 }
 
-p, .container .column-2 .form label, header nav a {
+p,
+.container .column-2 .form label,
+header nav a {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
@@ -36,7 +38,7 @@ body p {
 
 header {
   background: url("../images/texture.jpg") center;
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 10;
   display: flex;
@@ -127,23 +129,24 @@ header nav a:active {
   width: 100%;
   padding: 10px;
 }
-.container .column-2 .form input[type=submit] {
+.container .column-2 .form input[type="submit"] {
   color: rgb(40, 40, 40);
   background-color: white;
   cursor: pointer;
   transition: transform 0.1s ease-in-out, opacity 0.1s ease-in-out;
 }
-.container .column-2 .form input[type=submit]:active {
+.container .column-2 .form input[type="submit"]:active {
   transform: scale(1.01);
 }
-.container .column-2 .form input[type=submit]:hover {
+.container .column-2 .form input[type="submit"]:hover {
   opacity: 0.9;
 }
 .container .column-2 article {
   border: 3px rgb(40, 40, 40) solid;
   border-radius: 10px;
 }
-.container .column-2 article img, .container .column-2 article p {
+.container .column-2 article img,
+.container .column-2 article p {
   margin: 10px;
 }
 .container .column-2 article img {
@@ -186,4 +189,4 @@ p {
 
 img {
   border-radius: 5px;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

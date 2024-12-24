@@ -11,6 +11,7 @@ int main()
 {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
+    
     int choice;
     printf("Какое задание выполнять? ");
     scanf("%i", &choice);
