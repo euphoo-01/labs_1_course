@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма</title>
+    <style>
+      .container {
+        border: 2px solid black;
+        border-radius: 15px;
+        margin: auto;
+        width: 50%;
+        padding-right: 10px;
+      }
+      h1 {
+        text-align: center;
+      }
+      .form-group {
+        gap: 6px;
+        display: flex;
+        align-items: center;
+      }
+      .form-group p {
+        text-align: right;
+        width: 150px;
+      }
+      .form-group input[type="text"] {
+        flex: 1;
+      }
+      .form-group input[type="checkbox"] {
+        margin-right: 10px;
+      }
+      .submit-button {
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Данные студента</h1>
+      <div>
+        <div class="form-group">
+          <p>Имя студента</p>
+          <input
+            type="text"
+            placeholder="обязательно заполнить"
+            required="true"
+            id="name"
+          />
+        </div>
+        <div class="form-group">
+          <p>Отчество студента</p>
+          <input
+            type="text"
+            placeholder="обязательно заполнить"
+            required="true"
+            id="patronymic"
+          />
+        </div>
+        <div class="form-group">
+          <p>Фамилия студента</p>
+          <input
+            type="text"
+            placeholder="обязательно заполнить"
+            required="true"
+            id="surname"
+          />
+        </div>
+        <div class="form-group">
+          <p>Факультет</p>
+          <select class="fac" id="faculty">
+            <option value="1">ФИТ</option>
+            <option value="2">ПИМ</option>
+            <option value="3">ЛИД</option>
+            <option value="4">ТОВ</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>Группа</p>
+          <select id="group">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>Курс</p>
+          <select id="course">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>Адрес почты</p>
+          <input type="text" id="email" />
+        </div>
+        <div class="form-group">
+          <p>Контактный номер</p>
+          <input type="text" id="phone" />
+        </div>
+        <div class="form-group">
+          <p>Какую социальную сеть вы используете?</p>
+          <input type="checkbox" id="vk" />VK
+          <input type="checkbox" id="facebook" />Facebook
+          <input type="checkbox" id="instagram" />Instagram
+        </div>
+      </div>
+      <input type="button" value="Отправить" class="submit-button" />
+    </div>
+    <footer id="footer"></footer>
+    <script>
+      const submitButton = document.querySelector(".submit-button");
+      submitButton.addEventListener("click", () => {
+        let name = document.getElementById("name").value;
+        let patronymic = document.getElementById("patronymic").value;
+        let surname = document.getElementById("surname").value;
+        let faculty = document.getElementById("faculty").value;
+        let group = document.getElementById("group").value;
+        let course = document.getElementById("course").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+        let vk = document.getElementById("vk").checked;
+        let facebook = document.getElementById("facebook").checked;
+        let instagram = document.getElementById("instagram").checked;
+        let socialNetworks = [];
+        if (vk) {
+          socialNetworks.push("VK");
+        }
+        if (facebook) {
+          socialNetworks.push("Facebook");
+        }
+        if (instagram) {
+          socialNetworks.push("Instagram");
+        }
+        let footer = document.getElementById("footer");
+        footer.innerHTML = `
+<h2>Данные студента</h2>
+<p>Имя: ${name}</p>
+<p>Отчество: ${patronymic}</p>
+<p>Фамилия: ${surname}</p>
+<p>Факультет: ${faculty}</p>
+<p>Группа: ${group}</p>
+<p>Курс: ${course}</p>
+<p>Адрес почты: ${email}</p>
+<p>Контактный номер: ${phone}</p>
+<p>Социальные сети: ${socialNetworks + ", "}</p>
+`;
+      });
+    </script>
+  </body>
+</html>
