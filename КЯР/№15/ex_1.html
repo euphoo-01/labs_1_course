@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Фотогалерея</title>
     <style>
-      .gallery img {
+      .gallery img,
+      .gallery div {
         width: 200px;
         margin: 10px;
       }
@@ -22,6 +23,10 @@
       .img-1 {
         height: 200px;
         width: 200px;
+        display: inline-block;
+      }
+      .photo1 {
+        display: inline-block;
       }
     </style>
   </head>
@@ -31,39 +36,40 @@
         <img id="photo1" src="images/ae86.gif" alt="Фото 1" />
         <div class="description">
           Красивая машинка. Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. At, eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur non alias dolor impedit consectetur, voluptatum commodi aliquid eos quibusdam magnam?
+          elit. At, eos. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Consequatur non alias dolor impedit consectetur, voluptatum
+          commodi aliquid eos quibusdam magnam?
         </div>
       </div>
       <img id="photo2" src="images/drift.gif" alt="Фото 2" />
       <img id="photo3" src="images/sakura.gif" alt="Фото 3" />
     </div>
-
-    <script>
-      const photo1 = document.getElementById("photo1");
-      const description = document.querySelector(".description");
-      photo1.addEventListener("mouseover", () => {
-        description.style.display = "block";
-        photo1.style.display = "none";
-      });
-      photo1.addEventListener("mouseout", () => {
-        description.style.display = "none";
-        photo1.style.display = "block";
-      });
-
-      const photo2 = document.getElementById("photo2");
-      photo2.addEventListener("click", () => {
-        photo2.classList.toggle("highlight");
-      });
-
-      const photo3 = document.getElementById("photo3");
-      photo3.addEventListener(
-        "mouseover",
-        () => (photo3.src = "images/markII.gif")
-      );
-      photo3.addEventListener(
-        "mouseout",
-        () => (photo3.src = "images/sakura.gif")
-      );
-    </script>
   </body>
+  <script>
+    const photo1 = document.getElementById("photo1");
+    const description = document.querySelector(".description");
+    photo1.addEventListener("mouseover", () => {
+      description.style.display = "inline-block";
+      photo1.style.display = "none";
+    });
+    photo1.addEventListener("mouseout", () => {
+      description.style.display = "none";
+      photo1.style.display = "block";
+    });
+
+    const photo2 = document.getElementById("photo2");
+    photo2.addEventListener("click", () => {
+      photo2.classList.toggle("highlight");
+    });
+
+    const photo3 = document.getElementById("photo3");
+    photo3.addEventListener(
+      "mouseover",
+      () => (photo3.src = "images/markII.gif")
+    );
+    photo3.addEventListener(
+      "mouseout",
+      () => (photo3.src = "images/sakura.gif")
+    );
+  </script>
 </html>

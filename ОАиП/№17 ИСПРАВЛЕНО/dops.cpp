@@ -119,7 +119,7 @@ int main()
 
 			delete[] line;
 		}
-		else if (exercise == 2)
+		else if (exercise == 2) // Исправлено
 		{
 			cout << "===== ЗАДАНИЕ 2 ======" << endl;
 
@@ -140,7 +140,7 @@ int main()
 			int positiveRow;
 			if (positiveRow = findPositiveRow(matrix, n, m))
 			{
-				inverseRow(matrix, n, m, (positiveRow - 2));
+				inverseRow(matrix, n, m, (positiveRow - 1));
 				cout << "В массиве есть столбец все элементы которого положительны: " << positiveRow << endl;
 				print2DArray(matrix, n, m);
 			}

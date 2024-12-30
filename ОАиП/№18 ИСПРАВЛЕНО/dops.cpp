@@ -77,7 +77,7 @@ int main()
                 cout << "Êîğåíü âòîğîé ôóíêöèè: " << f2X << endl;
             }
         }
-        else if (exercise == 2)
+        else if (exercise == 2) // Èñïğàâëåíî
         {
             cout << "===== ÇÀÄÀÍÈÅ 2 =====" << endl;
 

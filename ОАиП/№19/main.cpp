@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <windows.h>
+#include <vector>
 
 using namespace std;
 
@@ -11,7 +12,7 @@ int main()
 {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-    
+
     int choice;
     printf("Какое задание выполнять? ");
     scanf("%i", &choice);
@@ -77,54 +78,42 @@ int main()
 
     case 2:
     {
-        FILE *f1 = fopen("F1.txt", "w");
 
-        if (f1 == NULL)
+        FILE *file1 = fopen("F1.txt", "r");
+        if (file1 == NULL)
         {
-            printf("Не удалось создать файл F1.\n");
-            return 1;
+            printf("Не удалось прочитать файл. \n");
+            break;
         }
 
-        int row_count;
-
-        printf("Сколько строк записать?: ");
-        scanf("%i", &row_count);
-        cin.ignore();
-        for (int i = 0; i < row_count; i++)
-        {
-            string line{};
-            getline(cin, line);
-            fprintf(f1, line.c_str());
-            fprintf(f1, "\n");
-        }
-        fclose(f1);
-
-        f1 = fopen("F1.txt", "r");
-        if (f1 == NULL)
-        {
-            printf("Не удалось открыть файл F1.\n");
-            return 1;
-        }
-
-        FILE *f2 = fopen("F2.txt", "w");
-        if (f2 == NULL)
-        {
-            printf("Не удалось создать файл F2.\n");
-            fclose(f1);
-            return 1;
-        }
-
-        char line[256];
-        while (fgets(line, sizeof(line), f1))
-        {
-            if (!have_digit(line))
+        vector<string> input_arr;
+        int str_num = 0;
+        char ch;
+        string temp;
+        while (fscanf_s(file1, "%c", &ch) == 1)
+        { // Запись в массив
+            temp += ch;
+            if (ch == '\n')
             {
-                fputs(line, f2);
+                input_arr.push_back(temp);
+                temp = "";
+                str_num++;
             }
         }
 
-        fclose(f1);
-        fclose(f2);
+        FILE *file2 = fopen("F2.txt", "w");
+        for (int i = 0; i < str_num; i++)
+        {
+            if (!have_digit(input_arr[i].c_str()))
+            {
+                for (int j = 0; j < input_arr[i].length(); j++)
+                {
+                    fprintf(file2, "%c", input_arr[i][j]);
+                }
+            }
+        }
+        fclose(file1);
+        fclose(file2);
 
         break;
     }

@@ -118,44 +118,44 @@
       <input type="button" value="Отправить" class="submit-button" />
     </div>
     <footer id="footer"></footer>
-    <script>
-      const submitButton = document.querySelector(".submit-button");
-      submitButton.addEventListener("click", () => {
-        let name = document.getElementById("name").value;
-        let patronymic = document.getElementById("patronymic").value;
-        let surname = document.getElementById("surname").value;
-        let faculty = document.getElementById("faculty").value;
-        let group = document.getElementById("group").value;
-        let course = document.getElementById("course").value;
-        let email = document.getElementById("email").value;
-        let phone = document.getElementById("phone").value;
-        let vk = document.getElementById("vk").checked;
-        let facebook = document.getElementById("facebook").checked;
-        let instagram = document.getElementById("instagram").checked;
-        let socialNetworks = [];
-        if (vk) {
-          socialNetworks.push("VK");
-        }
-        if (facebook) {
-          socialNetworks.push("Facebook");
-        }
-        if (instagram) {
-          socialNetworks.push("Instagram");
-        }
-        let footer = document.getElementById("footer");
-        footer.innerHTML = `
-<h2>Данные студента</h2>
-<p>Имя: ${name}</p>
-<p>Отчество: ${patronymic}</p>
-<p>Фамилия: ${surname}</p>
-<p>Факультет: ${faculty}</p>
-<p>Группа: ${group}</p>
-<p>Курс: ${course}</p>
-<p>Адрес почты: ${email}</p>
-<p>Контактный номер: ${phone}</p>
-<p>Социальные сети: ${socialNetworks + ", "}</p>
-`;
-      });
-    </script>
   </body>
+  <script>
+    const submitButton = document.querySelector(".submit-button");
+    submitButton.addEventListener("click", () => {
+      let name = document.getElementById("name").value;
+      let patronymic = document.getElementById("patronymic").value;
+      let surname = document.getElementById("surname").value;
+      let faculty = document.getElementById("faculty").value;
+      let group = document.getElementById("group").value;
+      let course = document.getElementById("course").value;
+      let email = document.getElementById("email").value;
+      let phone = document.getElementById("phone").value;
+      let vk = document.getElementById("vk").checked;
+      let facebook = document.getElementById("facebook").checked;
+      let instagram = document.getElementById("instagram").checked;
+      let socialNetworks = [];
+      if (vk) {
+        socialNetworks.push("VK");
+      }
+      if (facebook) {
+        socialNetworks.push("Facebook");
+      }
+      if (instagram) {
+        socialNetworks.push("Instagram");
+      }
+      let footer = document.getElementById("footer");
+      footer.innerHTML = `
+        <h2>Данные студента</h2>
+        <p>Имя: ${name}</p>
+        <p>Отчество: ${patronymic}</p>
+        <p>Фамилия: ${surname}</p>
+        <p>Факультет: ${faculty}</p>
+        <p>Группа: ${group}</p>
+        <p>Курс: ${course}</p>
+        <p>Адрес почты: ${email}</p>
+        <p>Контактный номер: ${phone}</p>
+        <p>Социальные сети: ${socialNetworks + ", "}</p>
+        `;
+    });
+  </script>
 </html>
