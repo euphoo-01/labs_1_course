@@ -1,0 +1,10 @@
+{
+    "files.encoding": "windows1251",
+    "files.associations": {
+        "cstdlib": "cpp",
+        "algorithm": "cpp",
+        "xstring": "cpp",
+        "string": "cpp",
+        "vector": "cpp"
+    }
+}
