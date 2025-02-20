@@ -83,7 +83,7 @@ int main()
     file2.close();
 
     if (wordNumberWithMaxVowels != -1)
-        cout << "Номер слова с наибольшим количеством гласных: " << wordNumberWithMaxVowels << endl;
+        cout << "Номер слова в файле 1 с наибольшим количеством гласных: " << wordNumberWithMaxVowels << endl;
     else
         cout << "В файле не найдено слов с гласными." << endl;
 

@@ -18,6 +18,15 @@ int main()
     cout << "Введите строку: ";
     getline(cin, str);
 
+    for (char ch : str)
+    {
+        if (!(ch >= 0 && ch <= 128))
+        {
+            cerr << "Ошибка! Допустимы только символы английского алфавита!" << endl;
+            return 1;
+        }
+    }
+
     ofstream outFile("FILE3");
     if (outFile.is_open())
     {
