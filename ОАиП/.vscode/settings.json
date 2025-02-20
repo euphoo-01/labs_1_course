@@ -1,3 +1,9 @@
 {
-    "files.encoding": "windows1251"
+    "files.encoding": "windows1251",
+    "files.associations": {
+        "fstream": "cpp",
+        "iostream": "cpp",
+        "xstring": "cpp",
+        "iosfwd": "cpp"
+    }
 }

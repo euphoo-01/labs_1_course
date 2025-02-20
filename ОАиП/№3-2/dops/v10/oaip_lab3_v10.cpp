@@ -4,6 +4,7 @@
 #include <string>
 using namespace std;
 
+bool isWordValid(string word);
 int main()
 {
     SetConsoleCP(1251);
@@ -37,15 +38,13 @@ int main()
                     if (lineCouner == 1)
                     { // Если создалась первая строка в файле FILE2
                         for (wchar_t c : line)
-                        {
-                            if (consonantENLetters.find(c) == string::npos && consonantRULetters.find(c) == string::npos)
+                            if (consonantENLetters.find_first_of(c) != string::npos || consonantRULetters.find_first_of(c) != string::npos)
                             { // Если символ имеется в строке с согласными буквами
                                 consonantCount++;
                             }
-                        }
                     }
-                    lineCouner++;
                 }
+                lineCouner++;
             }
         }
         cout << "Количество согласных букв в первой строке FILE2: " << consonantCount << endl;
@@ -55,4 +54,20 @@ int main()
         cerr << "Ошибка! Не удалось открыть файл..." << endl;
     }
     return 0;
+}
+
+bool isWordValid(string word)
+{
+    for (char ch : word)
+    {
+        if (!iswalpha(ch))
+        {
+            return false;
+        }
+        else if (isdigit(ch))
+        {
+            return false;
+        }
+    }
+    return true;
 }

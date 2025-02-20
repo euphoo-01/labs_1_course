@@ -16,7 +16,7 @@ int main()
 
     ifstream inFile("FILE1");
     ofstream outFile("FILE2");
-
+   
     string line;
     int wordCount = 0;
     int lineCount = 0;
