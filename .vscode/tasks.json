@@ -37,7 +37,8 @@
                 "/Zi",
                 "/EHsc",
                 "/nologo",
-                "/Fe${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "/Fe${fileDirname}\\compiled\\${fileBasenameNoExtension}.exe",
+                "/Fo${fileDirname}\\compiled\\",
                 "${file}"
             ],
             "options": {
