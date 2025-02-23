@@ -7,7 +7,7 @@
 #include "detSerialNumber.hpp"
 #include "splitData.hpp"
 using namespace std;
-const string BDAY_DATE = "29022012";
+const string BDAY_DATE = "02012007";
 
 vector<int> days_in_months = {31, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 

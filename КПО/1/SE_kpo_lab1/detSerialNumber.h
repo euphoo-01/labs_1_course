@@ -1,2 +1,2 @@
-#include "detSerialNumber.cpp"
-int detSerialNumber(int day, int month, vector<int> &days_in_months);
+#include <vector>
+int detSerialNumber(int day, int month, std::vector<int> &days_in_months);

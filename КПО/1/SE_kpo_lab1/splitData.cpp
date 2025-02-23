@@ -1,5 +1,5 @@
-#include <vector>
-#include <string>
+#include "stdafx.h"
+#include "splitData.h"
 using namespace std;
 vector<int> splitData(string date)
 {

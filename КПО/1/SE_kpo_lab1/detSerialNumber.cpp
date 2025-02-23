@@ -1,5 +1,5 @@
-#include <vector>
-#include <string>
+#include "stdafx.h"
+#include "detSerialNumber.h"
 using namespace std;
 int detSerialNumber(int day, int month, vector<int> &days_in_months)
 {

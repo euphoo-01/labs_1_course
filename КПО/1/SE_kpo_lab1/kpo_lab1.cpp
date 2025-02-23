@@ -1,7 +1,10 @@
 ﻿#include "stdafx.h"
+#include "detSerialNumber.h"
+#include "detViscosity.h"
+#include "splitData.h"
 
 using namespace std;
-const string BDAY_DATE = "29022012";
+const string BDAY_DATE = "02012007";
 
 vector<int> days_in_months = {31, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
@@ -60,7 +63,7 @@ int main()
 		if (bday_day == 29 && bday_month == 2)
 		{
 			int temp_cur_year = cur_year;
-			while (!detViscosity(temp_cur_year))
+			while (!detViscosity(temp_cur_year)) // Если в этом году нет этой даты
 			{
 				temp_cur_year++;
 				remaining_days_for_bday += 365;

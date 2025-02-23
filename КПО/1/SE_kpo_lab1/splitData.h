@@ -1,2 +1,3 @@
-#include "splitData.cpp"
-vector<int> splitData(string date);
+#include <vector>
+#include <string>
+std::vector<int> splitData(std::string date);
