@@ -1,0 +1,23 @@
+﻿Сборка начата 24.02.2025 9:24:21.
+Уровень детализации журнала: Normal.     1>Проект "D:\University\Labs_1_course\КПО\2\kpo_lab2\kpo_lab2.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+       InitializeBuildStatus:
+         Создание "kpo_lab2\x64\Debug\kpo_lab2.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "kpo_lab2\x64\Debug\kpo_lab2.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX64\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"kpo_lab2\x64\Debug\\" /Fd"kpo_lab2\x64\Debug\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt kpo_lab2.cpp
+         kpo_lab2.cpp
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\University\Labs_1_course\КПО\2\kpo_lab2\x64\Debug\kpo_lab2.exe" /INCREMENTAL /ILK:"kpo_lab2\x64\Debug\kpo_lab2.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\University\Labs_1_course\КПО\2\kpo_lab2\x64\Debug\kpo_lab2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\University\Labs_1_course\КПО\2\kpo_lab2\x64\Debug\kpo_lab2.lib" /MACHINE:X64 kpo_lab2\x64\Debug\kpo_lab2.obj
+         kpo_lab2.vcxproj -> D:\University\Labs_1_course\КПО\2\kpo_lab2\x64\Debug\kpo_lab2.exe
+       FinalizeBuildStatus:
+         Файл "kpo_lab2\x64\Debug\kpo_lab2.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "kpo_lab2\x64\Debug\kpo_lab2.tlog\kpo_lab2.lastbuildstate".
+     1>Сборка проекта "D:\University\Labs_1_course\КПО\2\kpo_lab2\kpo_lab2.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:01.22

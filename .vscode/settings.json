@@ -4,9 +4,14 @@
         "iostream": "cpp",
         "xstring": "cpp",
         "*.cpp": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "vector": "cpp",
+        "stdexcept": "cpp",
+        "limits": "cpp",
+        "string": "cpp"
     },
     "[cpp]": {
         "files.encoding": "windows1251"
-    }
+    },
+    "files.encoding": "windows1251"
 }
