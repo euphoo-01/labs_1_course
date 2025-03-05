@@ -12,32 +12,32 @@ int main()
     int n;
     long long int f0 = 0, f1 = 1, fSum;
 
-    cout << "Введите число N (нумерация с 0): ";
+    cout << "Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ N (РЅСѓРјРµСЂР°С†РёСЏ СЃ 0): ";
     cin >> n;
 
     clock_t startTime = clock();
-    for (int i = 2; i <= n + 1; i++)
+    for (int i = 2; i <= n; i++)
     {
         fSum = f0 + f1;
         f0 = f1;
         f1 = fSum;
     }
     clock_t endTime = clock();
-    double time = (double)(endTime - startTime) / CLOCKS_PER_SEC;
+    double time = (double)(endTime - startTime) / CLOCKS_PER_SEC; // Р’СЂРµРјСЏ РІ СЃРµРєСѓРЅРґР°С…
     int mins = time / 60;
     double secs = time - mins * 60;
 
-    cout << "Число под номером " << n << " в последовательности чисел Фибоначчи: " << fSum << endl;
-    cout << "Время выполнения цикла: " << mins << (mins <= 1 ? " минута " : (mins > 10 ? " минут " : " минуты ")) << secs << " секунд" << endl;
+    cout << "Р§РёСЃР»Рѕ РїРѕРґ РЅРѕРјРµСЂРѕРј " << n << " РІ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё С‡РёСЃРµР» Р¤РёР±РѕРЅР°С‡С‡Рё: " << fSum << endl;
+    cout << "Р’СЂРµРјСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ С†РёРєР»Р°: " << mins << " РјРёРЅСѓС‚(-Р°) " << secs << " СЃРµРєСѓРЅРґ(-Р°)" << endl;
 
     startTime = clock();
-    cout << "Число под номером " << n << " в последовательности чисел Фибоначчи: " << fibo(n + 1) << endl;
+    cout << "Р§РёСЃР»Рѕ РїРѕРґ РЅРѕРјРµСЂРѕРј " << n << " РІ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё С‡РёСЃРµР» Р¤РёР±РѕРЅР°С‡С‡Рё: " << fibo(n) << endl;
     endTime = clock();
     time = (double)(endTime - startTime) / CLOCKS_PER_SEC;
     mins = time / 60;
     secs = time - mins * 60;
 
-    cout << "Время выполнения рекурсии: " << mins << (mins <= 1 ? " минута " : (mins > 10 ? " минут " : " минуты ")) << secs << " секунд" << endl;
+    cout << "Р’СЂРµРјСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ СЂРµРєСѓСЂСЃРёРё: " << mins << " РјРёРЅСѓС‚(-Р°) " << secs << " СЃРµРєСѓРЅРґ(-Р°)" << endl;
     return 0;
 }
 

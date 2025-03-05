@@ -6,7 +6,7 @@
 #include <algorithm>
 #include <limits>
 #include <locale>
-#include <iomanip> // для округления среднего балла
+#include <iomanip> // РґР»СЏ РѕРєСЂСѓРіР»РµРЅРёСЏ СЃСЂРµРґРЅРµРіРѕ Р±Р°Р»Р»Р°
 
 using namespace std;
 
@@ -24,8 +24,8 @@ typedef struct Students
 
 vector<STU> students;
 vector<int> days_in_months = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-string dictionary = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZабвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ-";
-vector<string> faculties = {"ФИТ", "ХТИТ", "ЛХФ", "ТОВ", "ПИМ", "ИЭФ", "ФЗО"};
+string dictionary = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZР°Р±РІРіРґРµС‘Р¶Р·РёР№РєР»РјРЅРѕРїСЂСЃС‚СѓС„С…С†С‡С€С‰СЉС‹СЊСЌСЋСЏРђР‘Р’Р“Р”Р•РЃР–Р—РР™РљР›РњРќРћРџР РЎРўРЈР¤РҐР¦Р§РЁР©РЄР«Р¬Р­Р®РЇ-";
+vector<string> faculties = {"Р¤РРў", "РҐРўРРў", "Р›РҐР¤", "РўРћР’", "РџРРњ", "РР­Р¤", "Р¤Р—Рћ"};
 
 void input(int);
 void output(int);
@@ -47,15 +47,15 @@ bool isCorrectChoice(string &choice);
 
 int main()
 {
-    SetConsoleOutputCP(1251); // Установка кодировки консоли для вывода
-    SetConsoleCP(1251);       // Установка кодировки консоли для ввода
+    SetConsoleOutputCP(1251); // РЈСЃС‚Р°РЅРѕРІРєР° РєРѕРґРёСЂРѕРІРєРё РєРѕРЅСЃРѕР»Рё РґР»СЏ РІС‹РІРѕРґР°
+    SetConsoleCP(1251);       // РЈСЃС‚Р°РЅРѕРІРєР° РєРѕРґРёСЂРѕРІРєРё РєРѕРЅСЃРѕР»Рё РґР»СЏ РІРІРѕРґР°
     setlocale(LC_ALL, "Russian");
 
     int choice = -1;
     string choice_str;
     do
     {
-        cout << "Меню управления: \n 0) Выход из программы \n 1) Ввести данные студента \n 2) Вывести данные студента \n 3) Удалить данные о студенте \n 4) Найти студента \n 5) Сохранить информацию в файл \n 6) Прочитать информацию из файла \nВаш выбор: ";
+        cout << "РњРµРЅСЋ СѓРїСЂР°РІР»РµРЅРёСЏ: \n 0) Р’С‹С…РѕРґ РёР· РїСЂРѕРіСЂР°РјРјС‹ \n 1) Р’РІРµСЃС‚Рё РґР°РЅРЅС‹Рµ СЃС‚СѓРґРµРЅС‚Р° \n 2) Р’С‹РІРµСЃС‚Рё РґР°РЅРЅС‹Рµ СЃС‚СѓРґРµРЅС‚Р° \n 3) РЈРґР°Р»РёС‚СЊ РґР°РЅРЅС‹Рµ Рѕ СЃС‚СѓРґРµРЅС‚Рµ \n 4) РќР°Р№С‚Рё СЃС‚СѓРґРµРЅС‚Р° \n 5) РЎРѕС…СЂР°РЅРёС‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ РІ С„Р°Р№Р» \n 6) РџСЂРѕС‡РёС‚Р°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ РёР· С„Р°Р№Р»Р° \nР’Р°С€ РІС‹Р±РѕСЂ: ";
         getline(cin, choice_str);
         if (isCorrectChoice(choice_str))
         {
@@ -65,19 +65,19 @@ int main()
             case 1:
             {
             exc_start:
-                cout << "Сколько человек вы хотите добавить? ";
+                cout << "РЎРєРѕР»СЊРєРѕ С‡РµР»РѕРІРµРє РІС‹ С…РѕС‚РёС‚Рµ РґРѕР±Р°РІРёС‚СЊ? ";
                 string count_str;
                 try
                 {
                     while (!(getline(cin, count_str)) || stoi(count_str) <= 0 || !all_of(count_str.begin(), count_str.end(), ::isdigit))
                     {
-                        cout << "Ошибка! Введите корректное количество студентов: ";
+                        cout << "РћС€РёР±РєР°! Р’РІРµРґРёС‚Рµ РєРѕСЂСЂРµРєС‚РЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СѓРґРµРЅС‚РѕРІ: ";
                     }
                     input(stoi(count_str));
                 }
                 catch (exception &e)
                 {
-                    cerr << "Ошибка! " << endl;
+                    cerr << "РћС€РёР±РєР°! " << endl;
                     goto exc_start;
                 }
 
@@ -101,13 +101,13 @@ int main()
             case 0:
                 break;
             default:
-                cout << "Ошибка! Такого варианта нет." << endl;
+                cout << "РћС€РёР±РєР°! РўР°РєРѕРіРѕ РІР°СЂРёР°РЅС‚Р° РЅРµС‚." << endl;
                 break;
             }
         }
         else
         {
-            cerr << "Введите корректный выбор!" << endl;
+            cerr << "Р’РІРµРґРёС‚Рµ РєРѕСЂСЂРµРєС‚РЅС‹Р№ РІС‹Р±РѕСЂ!" << endl;
         }
     } while (choice != 0);
     return 0;
@@ -117,61 +117,61 @@ void input(int n)
 {
     for (int i = 0; i < n; i++)
     {
-        cout << "Введите данные студента: " << endl;
+        cout << "Р’РІРµРґРёС‚Рµ РґР°РЅРЅС‹Рµ СЃС‚СѓРґРµРЅС‚Р°: " << endl;
         STU student;
 
-        // Ввод имени
+        // Р’РІРѕРґ РёРјРµРЅРё
         while (true)
         {
-            cout << "Введите имя: ";
+            cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ: ";
             getline(cin, student.firstName);
             if (isValidName(student.firstName) && isValidHyphen(student.firstName))
             {
                 break;
             }
-            cout << "Ошибка! Неверное имя. Попробуйте снова." << endl;
+            cout << "РћС€РёР±РєР°! РќРµРІРµСЂРЅРѕРµ РёРјСЏ. РџРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°." << endl;
         }
 
-        // Ввод фамилии
+        // Р’РІРѕРґ С„Р°РјРёР»РёРё
         while (true)
         {
-            cout << "Введите фамилию: ";
+            cout << "Р’РІРµРґРёС‚Рµ С„Р°РјРёР»РёСЋ: ";
             getline(cin, student.lastName);
             if (isValidName(student.lastName) && isValidHyphen(student.lastName))
             {
                 break;
             }
-            cout << "Ошибка! Неверная фамилия. Попробуйте снова." << endl;
+            cout << "РћС€РёР±РєР°! РќРµРІРµСЂРЅР°СЏ С„Р°РјРёР»РёСЏ. РџРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°." << endl;
         }
 
-        // Ввод отчества
+        // Р’РІРѕРґ РѕС‚С‡РµСЃС‚РІР°
         while (true)
         {
-            cout << "Введите отчество: ";
+            cout << "Р’РІРµРґРёС‚Рµ РѕС‚С‡РµСЃС‚РІРѕ: ";
             getline(cin, student.patronymic);
             if (isValidPatronymic(student.patronymic) && isValidHyphen(student.patronymic))
             {
                 break;
             }
-            cout << "Ошибка! Неверное отчество. Попробуйте снова." << endl;
+            cout << "РћС€РёР±РєР°! РќРµРІРµСЂРЅРѕРµ РѕС‚С‡РµСЃС‚РІРѕ. РџРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°." << endl;
         }
 
-        // Ввод специальности
+        // Р’РІРѕРґ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё
         while (true)
         {
-            cout << "Введите специальность: ";
+            cout << "Р’РІРµРґРёС‚Рµ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚СЊ: ";
             getline(cin, student.spec);
             if (isValidName(student.spec))
             {
                 break;
             }
-            cout << "Ошибка! Неверная специальность. Попробуйте снова." << endl;
+            cout << "РћС€РёР±РєР°! РќРµРІРµСЂРЅР°СЏ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚СЊ. РџРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°." << endl;
         }
 
-        // Ввод группы
+        // Р’РІРѕРґ РіСЂСѓРїРїС‹
         while (true)
         {
-            cout << "Введите группу: ";
+            cout << "Р’РІРµРґРёС‚Рµ РіСЂСѓРїРїСѓ: ";
             cin >> student.group;
             if (isValidGroup(student.group))
             {
@@ -179,31 +179,31 @@ void input(int n)
                 cin.ignore(9999, '\n');
                 break;
             }
-            cout << "Ошибка! Неверная группа. Попробуйте снова." << endl;
+            cout << "РћС€РёР±РєР°! РќРµРІРµСЂРЅР°СЏ РіСЂСѓРїРїР°. РџРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°." << endl;
             cin.clear();
             cin.ignore(9999, '\n');
         }
 
-        // Ввод факультета
+        // Р’РІРѕРґ С„Р°РєСѓР»СЊС‚РµС‚Р°
         while (true)
         {
-            cout << "Введите факультет (ФИТ, ТОВ, ХТИТ, ПИМ, ИЭФ, ФЗО): ";
+            cout << "Р’РІРµРґРёС‚Рµ С„Р°РєСѓР»СЊС‚РµС‚ (Р¤РРў, РўРћР’, РҐРўРРў, РџРРњ, РР­Р¤, Р¤Р—Рћ): ";
             getline(cin, student.faculty);
             if (isValidFaculty(student.faculty))
             {
                 break;
             }
-            cout << "Ошибка! Неверный факультет. Попробуйте снова." << endl;
+            cout << "РћС€РёР±РєР°! РќРµРІРµСЂРЅС‹Р№ С„Р°РєСѓР»СЊС‚РµС‚. РџРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°." << endl;
         }
 
-        // Ввод среднего балла
+        // Р’РІРѕРґ СЃСЂРµРґРЅРµРіРѕ Р±Р°Р»Р»Р°
         while (true)
         {
-            cout << "Введите средний балл: ";
+            cout << "Р’РІРµРґРёС‚Рµ СЃСЂРµРґРЅРёР№ Р±Р°Р»Р»: ";
             string input;
             cin >> input;
 
-            // Проверяем, является ли ввод числом
+            // РџСЂРѕРІРµСЂСЏРµРј, СЏРІР»СЏРµС‚СЃСЏ Р»Рё РІРІРѕРґ С‡РёСЃР»РѕРј
             bool isNumber = true;
             for (char c : input)
             {
@@ -218,35 +218,35 @@ void input(int n)
             {
                 try
                 {
-                    student.averageMarks = stof(input);                             // Преобразуем строку в число
-                    student.averageMarks = round(student.averageMarks * 100) / 100; // Округление до сотых
+                    student.averageMarks = stof(input);                             // РџСЂРµРѕР±СЂР°Р·СѓРµРј СЃС‚СЂРѕРєСѓ РІ С‡РёСЃР»Рѕ
+                    student.averageMarks = round(student.averageMarks * 100) / 100; // РћРєСЂСѓРіР»РµРЅРёРµ РґРѕ СЃРѕС‚С‹С…
                     if (isValidAverageMarks(student.averageMarks))
                     {
                         break;
                     }
                     else
                     {
-                        cout << "Ошибка! Средний балл должен быть от 0 до 10. Попробуйте снова." << endl;
+                        cout << "РћС€РёР±РєР°! РЎСЂРµРґРЅРёР№ Р±Р°Р»Р» РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РѕС‚ 0 РґРѕ 10. РџРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°." << endl;
                     }
                 }
                 catch (const invalid_argument &)
                 {
-                    cout << "Ошибка! Введите числовое значение для среднего балла." << endl;
+                    cout << "РћС€РёР±РєР°! Р’РІРµРґРёС‚Рµ С‡РёСЃР»РѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ СЃСЂРµРґРЅРµРіРѕ Р±Р°Р»Р»Р°." << endl;
                 }
             }
             else
             {
-                cout << "Ошибка! Введите числовое значение для среднего балла." << endl;
+                cout << "РћС€РёР±РєР°! Р’РІРµРґРёС‚Рµ С‡РёСЃР»РѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ СЃСЂРµРґРЅРµРіРѕ Р±Р°Р»Р»Р°." << endl;
             }
 
-            cin.clear();            // Сброс состояния ошибки
-            cin.ignore(9999, '\n'); // Очистка буфера
+            cin.clear();            // РЎР±СЂРѕСЃ СЃРѕСЃС‚РѕСЏРЅРёСЏ РѕС€РёР±РєРё
+            cin.ignore(9999, '\n'); // РћС‡РёСЃС‚РєР° Р±СѓС„РµСЂР°
         }
 
-        // Ввод даты поступления
+        // Р’РІРѕРґ РґР°С‚С‹ РїРѕСЃС‚СѓРїР»РµРЅРёСЏ
         while (true)
         {
-            cout << "Введите дату поступления (ДДММГГГГ): ";
+            cout << "Р’РІРµРґРёС‚Рµ РґР°С‚Сѓ РїРѕСЃС‚СѓРїР»РµРЅРёСЏ (Р”Р”РњРњР“Р“Р“Р“): ";
             cin >> student.dateOfEntering;
             if (isValidDate(student.dateOfEntering))
             {
@@ -254,7 +254,7 @@ void input(int n)
                 cin.ignore(9999, '\n');
                 break;
             }
-            cout << "Ошибка! Неверная дата. Попробуйте снова." << endl;
+            cout << "РћС€РёР±РєР°! РќРµРІРµСЂРЅР°СЏ РґР°С‚Р°. РџРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°." << endl;
             cin.clear();
             cin.ignore(9999, '\n');
         }
@@ -267,14 +267,14 @@ void output(int)
 {
     for (const auto &student : students)
     {
-        cout << "Имя: " << student.firstName << endl;
-        cout << "Фамилия: " << student.lastName << endl;
-        cout << "Отчество: " << student.patronymic << endl;
-        cout << "Дата поступления: " << student.dateOfEntering << endl;
-        cout << "Специальность: " << student.spec << endl;
-        cout << "Группа: " << student.group << endl;
-        cout << "Факультет: " << student.faculty << endl;
-        cout << "Средний балл: " << fixed << setprecision(2) << student.averageMarks << endl; // Округление до сотых
+        cout << "РРјСЏ: " << student.firstName << endl;
+        cout << "Р¤Р°РјРёР»РёСЏ: " << student.lastName << endl;
+        cout << "РћС‚С‡РµСЃС‚РІРѕ: " << student.patronymic << endl;
+        cout << "Р”Р°С‚Р° РїРѕСЃС‚СѓРїР»РµРЅРёСЏ: " << student.dateOfEntering << endl;
+        cout << "РЎРїРµС†РёР°Р»СЊРЅРѕСЃС‚СЊ: " << student.spec << endl;
+        cout << "Р“СЂСѓРїРїР°: " << student.group << endl;
+        cout << "Р¤Р°РєСѓР»СЊС‚РµС‚: " << student.faculty << endl;
+        cout << "РЎСЂРµРґРЅРёР№ Р±Р°Р»Р»: " << fixed << setprecision(2) << student.averageMarks << endl; // РћРєСЂСѓРіР»РµРЅРёРµ РґРѕ СЃРѕС‚С‹С…
         cout << "-----------------------------" << endl;
     }
 }
@@ -282,28 +282,28 @@ void output(int)
 void del()
 {
     string lastName;
-    cout << "Введите фамилию студента для удаления: ";
+    cout << "Р’РІРµРґРёС‚Рµ С„Р°РјРёР»РёСЋ СЃС‚СѓРґРµРЅС‚Р° РґР»СЏ СѓРґР°Р»РµРЅРёСЏ: ";
     cin >> lastName;
 
-    // Удаление всех студентов с указанной фамилией
+    // РЈРґР°Р»РµРЅРёРµ РІСЃРµС… СЃС‚СѓРґРµРЅС‚РѕРІ СЃ СѓРєР°Р·Р°РЅРЅРѕР№ С„Р°РјРёР»РёРµР№
     auto it = remove_if(students.begin(), students.end(), [lastName](const STU &student)
                         { return student.lastName == lastName; });
 
     if (it != students.end())
     {
         students.erase(it, students.end());
-        cout << "Студент(ы) с фамилией \"" << lastName << "\" успешно удален(ы)." << endl;
+        cout << "РЎС‚СѓРґРµРЅС‚(С‹) СЃ С„Р°РјРёР»РёРµР№ \"" << lastName << "\" СѓСЃРїРµС€РЅРѕ СѓРґР°Р»РµРЅ(С‹)." << endl;
     }
     else
     {
-        cout << "Студент(ы) с фамилией \"" << lastName << "\" не найден(ы)." << endl;
+        cout << "РЎС‚СѓРґРµРЅС‚(С‹) СЃ С„Р°РјРёР»РёРµР№ \"" << lastName << "\" РЅРµ РЅР°Р№РґРµРЅ(С‹)." << endl;
     }
 }
 
 void find()
 {
     string lastName;
-    cout << "Введите фамилию студента для поиска: ";
+    cout << "Р’РІРµРґРёС‚Рµ С„Р°РјРёР»РёСЋ СЃС‚СѓРґРµРЅС‚Р° РґР»СЏ РїРѕРёСЃРєР°: ";
     cin >> lastName;
 
     bool found = false;
@@ -311,14 +311,14 @@ void find()
     {
         if (student.lastName == lastName)
         {
-            cout << "Имя: " << student.firstName << endl;
-            cout << "Фамилия: " << student.lastName << endl;
-            cout << "Отчество: " << student.patronymic << endl;
-            cout << "Дата поступления: " << student.dateOfEntering << endl;
-            cout << "Специальность: " << student.spec << endl;
-            cout << "Группа: " << student.group << endl;
-            cout << "Факультет: " << student.faculty << endl;
-            cout << "Средний балл: " << fixed << setprecision(2) << student.averageMarks << endl; // Округление до сотых
+            cout << "РРјСЏ: " << student.firstName << endl;
+            cout << "Р¤Р°РјРёР»РёСЏ: " << student.lastName << endl;
+            cout << "РћС‚С‡РµСЃС‚РІРѕ: " << student.patronymic << endl;
+            cout << "Р”Р°С‚Р° РїРѕСЃС‚СѓРїР»РµРЅРёСЏ: " << student.dateOfEntering << endl;
+            cout << "РЎРїРµС†РёР°Р»СЊРЅРѕСЃС‚СЊ: " << student.spec << endl;
+            cout << "Р“СЂСѓРїРїР°: " << student.group << endl;
+            cout << "Р¤Р°РєСѓР»СЊС‚РµС‚: " << student.faculty << endl;
+            cout << "РЎСЂРµРґРЅРёР№ Р±Р°Р»Р»: " << fixed << setprecision(2) << student.averageMarks << endl; // РћРєСЂСѓРіР»РµРЅРёРµ РґРѕ СЃРѕС‚С‹С…
             cout << "-----------------------------" << endl;
             found = true;
         }
@@ -326,7 +326,7 @@ void find()
 
     if (!found)
     {
-        cout << "Студент(ы) с фамилией \"" << lastName << "\" не найден(ы)." << endl;
+        cout << "РЎС‚СѓРґРµРЅС‚(С‹) СЃ С„Р°РјРёР»РёРµР№ \"" << lastName << "\" РЅРµ РЅР°Р№РґРµРЅ(С‹)." << endl;
     }
 }
 
@@ -343,7 +343,7 @@ void writeToFile()
     }
     else
     {
-        cout << "Ошибка открытия файла!" << endl;
+        cout << "РћС€РёР±РєР° РѕС‚РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р°!" << endl;
     }
 }
 
@@ -364,14 +364,14 @@ void readFromFile()
             }
             else
             {
-                cout << "Ошибка! Некорректные данные студента: " << student.firstName << " " << student.lastName << " в файле." << endl;
+                cout << "РћС€РёР±РєР°! РќРµРєРѕСЂСЂРµРєС‚РЅС‹Рµ РґР°РЅРЅС‹Рµ СЃС‚СѓРґРµРЅС‚Р°: " << student.firstName << " " << student.lastName << " РІ С„Р°Р№Р»Рµ." << endl;
             }
         }
         file.close();
     }
     else
     {
-        cout << "Ошибка открытия файла!" << endl;
+        cout << "РћС€РёР±РєР° РѕС‚РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р°!" << endl;
     }
 }
 
@@ -458,12 +458,12 @@ bool isValidFaculty(const string &faculty)
 
 bool isValidGroup(int group)
 {
-    return group > 0 && group <= 100; // Пример проверки
+    return group > 0 && group <= 100; // РџСЂРёРјРµСЂ РїСЂРѕРІРµСЂРєРё
 }
 
 bool isValidAverageMarks(float marks)
 {
-    return marks >= 0 && marks <= 10; // Пример проверки
+    return marks >= 0 && marks <= 10; // РџСЂРёРјРµСЂ РїСЂРѕРІРµСЂРєРё
 }
 
 bool isValidHyphen(const string &name)
@@ -487,6 +487,14 @@ bool isCorrectChoice(string &choice)
         {
             return false;
         }
+    }
+    try
+    {
+        int temp = stoi(choice);
+    }
+    catch (exception &e)
+    {
+        return false;
     }
     return true;
 }
