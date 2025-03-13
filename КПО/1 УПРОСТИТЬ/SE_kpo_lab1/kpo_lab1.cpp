@@ -6,7 +6,7 @@
 using namespace std;
 const string BDAY_DATE = "02012007";
 
-vector<int> days_in_months = {31, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+int days_in_months[12] = {31, 28 /*Р¤РµРІСЂР°Р»СЊ, РјРѕРґРёС„РёС†РёСЂСѓРµРј*/, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
 int main()
 {
@@ -14,9 +14,12 @@ int main()
 	string current_date;
 	cout << "Р’РІРµРґРёС‚Рµ РґР°С‚Сѓ РІ С„РѕСЂРјР°С‚Рµ (Р”Р”РњРњР“Р“Р“Р“): ";
 	cin >> current_date;
-
+	bool isAllDigits = true;
+	for (unsigned char c : current_date) {
+		if (!isdigit(c)) isAllDigits = false;
+	}
 	// Р’Р°Р»РёРґР°С†РёСЏ СЃС‚СЂРѕРєРё СЃ РїРѕРјРѕС‰СЊСЋ СѓРЅР°СЂРЅРѕРіРѕ РїСЂРµРґРёРєР°С‚Р°
-	if (!all_of(current_date.begin(), current_date.end(), ::isdigit) || current_date.length() != 8)
+	if (!isAllDigits || current_date.length() != 8)
 	{
 		cerr << "РћС€РёР±РєР°! Р’РІРµРґРµРЅР° РЅРµРїСЂР°РІРёР»СЊРЅР°СЏ РґР°С‚Р°" << endl;
 		return 1;
@@ -29,11 +32,11 @@ int main()
 	bool is_viscos;
 	if (is_viscos = detViscosity(cur_year))
 	{
-		days_in_months.insert(days_in_months.begin() + 1, 29);
+		days_in_months[1] = 29;
 	}
 	else
 	{
-		days_in_months.insert(days_in_months.begin() + 1, 28);
+		days_in_months[1] = 28;
 	}
 
 	// РџСЂРѕРІРµСЂРєР° РЅР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚СЊ РІРІРµРґРµРЅРЅС‹С… С‡РёСЃРµР»

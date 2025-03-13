@@ -9,7 +9,7 @@ using namespace std;
 
 struct TRAIN {
     string destination;
-    int trainNumber;
+    string trainNumber;
     string departureTime;
 };
 
@@ -37,6 +37,31 @@ void sortTrainsByDestination(vector<TRAIN>& trains) {
     }
 }
 
+bool isValidNameProfile(const string& str) {
+    for (unsigned char c : str) {
+        if (!(c == '-' || (c == ' ') ||
+            (c >= 'A' && c <= 'Z') ||
+            (c >= 'a' && c <= 'z') ||
+            (c >= 192 && c <= 255))) { // Диапазон русских букв в CP1251
+            return false;
+        }
+    }
+    return !str.empty();
+}
+
+bool isValidNumber(const string& str) {
+    for (unsigned char c : str) {
+        if (!(c == '-' || (c == ' ') ||
+            (c >= 'A' && c <= 'Z') ||
+            (c >= 'a' && c <= 'z') ||
+            (c >= 48 && c <= 57) ||
+            (c >= 192 && c <= 255))) { // Диапазон русских букв в CP1251
+            return false;
+        }
+    }
+    return !str.empty();
+}
+
 int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
@@ -45,18 +70,25 @@ int main() {
     cout << "Ввод данных о поездах (для завершения введите 'exit' в пункте назначения):\n";
 
     while (true) {
+        if (trains.size() + 1 > 8) break;
         TRAIN newTrain;
         cout << "\nПоезд #" << (trains.size() + 1) << ":\n";
 
         // Ввод пункта назначения
-        cout << "Введите пункт назначения (или 'exit' для завершения): ";
-        getline(cin, newTrain.destination);
-        if (newTrain.destination == "exit") break;
+
+        while (true) {
+            cout << "Введите пункт назначения: ";
+            getline(cin, newTrain.destination);
+            if (isValidNameProfile(newTrain.destination)) break;
+            else cerr << "Ошибка! Введите корректный пункт назначения" << endl;
+        }
+
+
 
         // Ввод номера поезда с проверкой уникальности
         while (true) {
             cout << "Введите номер поезда: ";
-            if (cin >> newTrain.trainNumber) {
+            if (cin >> newTrain.trainNumber && isValidNumber(newTrain.trainNumber)) {
                 cin.ignore(9999, '\n');
 
                 // Проверка на дубликат
@@ -99,6 +131,12 @@ int main() {
     bool found = false;
     for (const auto& train : trains) {
         if (isAfterTime(train.departureTime, searchTime)) {
+            cout << "Направление: " << train.destination
+                << "\tНомер: " << train.trainNumber
+                << "\tВремя: " << train.departureTime << endl;
+            found = true;
+        }
+        else if (searchTime == "00:00" && train.departureTime == "00:00") {
             cout << "Направление: " << train.destination
                 << "\tНомер: " << train.trainNumber
                 << "\tВремя: " << train.departureTime << endl;

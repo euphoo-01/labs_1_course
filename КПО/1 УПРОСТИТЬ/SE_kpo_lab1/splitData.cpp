@@ -1,13 +1,13 @@
 #include "stdafx.h"
 #include "splitData.h"
 using namespace std;
-vector<int> splitData(string date)
+int* splitData(string date)  // Разделяет строку даты на 3 целых числа: год, месяц и день
 {
-    std::vector<int> temp;
+    int temp[3];
 
-    temp.push_back(stoi(date.substr(0, 2))); // day
-    temp.push_back(stoi(date.substr(2, 2))); // month
-    temp.push_back(stoi(date.substr(4, 4))); // year
+    temp[0] = stoi(date.substr(0, 2)); // day
+    temp[1] = stoi(date.substr(2, 2)); // month
+    temp[2] = stoi(date.substr(4, 4)); // year
 
     return temp;
 }

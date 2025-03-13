@@ -55,10 +55,21 @@ bool isRussianChar(char c) {
 }
 
 bool isValidName(const string& name) {
+    int count_space = 0;
+    for (char c : name) {
+
+        if (c == ' ') {
+            count_space++;
+        }
+    }
+    if (count_space < 1 || count_space > 2) {
+        return false;
+    }
     if (name.empty() || name.length() >= 100) return false;
     return all_of(name.begin(), name.end(), [](char c) {
         return isRussianChar(c) || c == ' ' || c == '-' || c == '\'';
         });
+
 }
 
 bool isValidClass(const string& className) {
@@ -83,8 +94,16 @@ void inputStudent(Student& student) {
     do {
         cout << "Введите ФИО ученика: ";
         cin.getline(student.fullName, 100);
+        for (int i = 0; i < sizeof(student.fullName) / sizeof(char); i++) {
+            if (i == 0) {
+                student.fullName[i] = toupper(student.fullName[i]);
+            }
+            if (student.fullName[i - 1] == ' ') {
+                student.fullName[i] = toupper(student.fullName[i]);
+            }
+        }
         if (!isValidName(student.fullName)) {
-            cout << "Ошибка! Используйте только русские буквы, пробелы и дефисы.\n";
+            cout << "Ошибка! Используйте только русские буквы, пробелы и дефисы. Введите как минимум фамилию и имя\n";
         }
     } while (!isValidName(student.fullName));
 
