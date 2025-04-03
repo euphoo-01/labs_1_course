@@ -1,0 +1,28 @@
+﻿Сборка начата 15.03.2025 12:50:36.
+Уровень детализации журнала: Normal.     1>Проект "D:\University\Labs_1_course\КПО\2\kpo_lab2\kpo_lab2.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+       InitializeBuildStatus:
+         Обращение к "kpo_lab2\x64\Release\kpo_lab2.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX64\x64\CL.exe /c /Zi /nologo /W3 /WX- /diagnostics:column /sdl- /O2 /Oi /GL /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"kpo_lab2\x64\Release\\" /Fd"kpo_lab2\x64\Release\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt kpo_lab2.cpp
+         kpo_lab2.cpp
+     1>D:\University\Labs_1_course\КПО\2\kpo_lab2\kpo_lab2.cpp(1,9): warning C4068: неизвестная прагма "error"
+     1>D:\University\Labs_1_course\КПО\2\kpo_lab2\kpo_lab2.cpp(76,21): error C2124: деление на ноль или остаток от деления на ноль
+     1>Сборка проекта "D:\University\Labs_1_course\КПО\2\kpo_lab2\kpo_lab2.vcxproj" завершена (целевые объекты Build) с ошибкой.
+
+Ошибка сборки.
+
+       "D:\University\Labs_1_course\КПО\2\kpo_lab2\kpo_lab2.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         D:\University\Labs_1_course\КПО\2\kpo_lab2\kpo_lab2.cpp(1,9): warning C4068: неизвестная прагма "error"
+
+
+       "D:\University\Labs_1_course\КПО\2\kpo_lab2\kpo_lab2.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         D:\University\Labs_1_course\КПО\2\kpo_lab2\kpo_lab2.cpp(76,21): error C2124: деление на ноль или остаток от деления на ноль
+
+    Предупреждений: 1
+    Ошибок: 1
+
+Прошло времени 00:00:00.72

@@ -15,6 +15,7 @@ int main()
     cout << "Введите число N (нумерация с 0): ";
     cin >> n;
 
+
     clock_t startTime = clock();
     for (int i = 2; i <= n; i++)
     {

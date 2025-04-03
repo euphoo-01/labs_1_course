@@ -1,0 +1,77 @@
+first: 0000000BDFEFF304 Значение: 01
+second : 0000000BDFEFF324 Значение: 00
+symbolEN : 0000000BDFEFF344 Значение: 61
+symbolRU : 0000000BDFEFF364 Значение: e0
+symbolRU2 : 0000000BDFEFF384 Значение: e0
+UTFsymbolEN : 0000000BDFEFF3A4 Значение: 6c 00
+UTFsymbolRU : 0000000BDFEFF3C4 Значение: eb ff
+number1 : 0000000BDFEFF3E4 Значение: 12 00
+number2 : 0000000BDFEFF404 Значение: ee ff
+maxShortNum : 0000000BDFEFF424 Значение: 32767
+minShortNum : 0000000BDFEFF444 Значение: -32768
+maxUnsignedShortNum : 0000000BDFEFF464 Значение: 65535
+minUnsignedShortNum : 0000000BDFEFF484 Значение: -65536
+y : 0000000BDFEFF4A4 Значение: 13 00 00 00
+minusY : 0000000BDFEFF4C4 Значение: ed ff ff ff
+maxInt : 0000000BDFEFF4E4 Значение: 2147483647
+minInt : 0000000BDFEFF504 Значение: -2147483648
+maxUnsignedInt : 0000000BDFEFF524 Значение: 3435973836
+minUnsignedInt : 0000000BDFEFF544 Значение: 0
+z : 0000000BDFEFF564 Значение: 14 00 00 00
+minusZ : 0000000BDFEFF584 Значение: ec ff ff ff
+maxLong : 0000000BDFEFF5A4 Значение: 2147483647
+minLong : 0000000BDFEFF5C4 Значение: -2147483648
+maxUnsignedLong : 0000000BDFEFF5E4 Значение: 3435973836
+minUnsignedLong : 0000000BDFEFF604 Значение: 0
+s : 0000000BDFEFF624 Значение: 00 00 20 41
+minusS : 0000000BDFEFF644 Значение: 00 00 20 c1
+ptrSymbolEN : 0000000BDFEFF688 Значение: 84 f7 7b a7 49 00 00 00
+ptrUTFSymbolEN : 0000000BDFEFF6A8 Значение: e4 f7 7b a7 49 00 00 00
+ptrMaxShortNum : 0000000BDFEFF6C8 Значение: 64 f8 7b a7 49 00 00 00
+ptrMaxInt : 0000000BDFEFF6E8 Значение: 24 f9 7b a7 49 00 00 00
+ptrS : 0000000BDFEFF708 Значение: 64 fa 7b a7 49 00 00 00
+ptrDbl : 0000000BDFEFF728 Значение: a8 fa 7b a7 49 00 00 00
+funcPtr : 0000000BDFEFF748 Значение: c5 13 35 ea f7 7f 00 00
+
+Значение: d7 f4 0f 4e bd 00 00 00
+Значение: 3a f5 0f 4e bd 00 00 00
+Значение: ba f5 0f 4e bd 00 00 00
+Значение: 80 f6 0f 4e bd 00 00 00
+Значение: c0 f7 0f 4e bd 00 00 00
+Значение: 10 f8 0f 4e bd 00 00 00
+
+
+    cout << "first: " << reinterpret_cast<void*>(&first) << endl;
+    cout << "second: " << reinterpret_cast<void*>(&second) << endl;
+    cout << "symbolEN: " << reinterpret_cast<void*>(&symbolEN) << endl;
+    cout << "symbolRU: " << reinterpret_cast<void*>(&symbolRU) << endl;
+    cout << "symbolRU2: " << reinterpret_cast<void*>(&symbolRU2) << endl;
+    cout << "UTFsymbolEN: " << reinterpret_cast<void*>(&UTFsymbolEN) << endl;
+    cout << "UTFsymbolRU: " << reinterpret_cast<void*>(&UTFsymbolRU) << endl;
+    cout << "number1: " << reinterpret_cast<void*>(&number1) << endl;
+    cout << "number2: " << reinterpret_cast<void*>(&number2) << endl;
+    cout << "maxShortNum: " << reinterpret_cast<void*>(&maxShortNum) << endl;
+    cout << "minShortNum: " << reinterpret_cast<void*>(&minShortNum) << endl;
+    cout << "maxUnsignedShortNum: " << reinterpret_cast<void*>(&maxUnsignedShortNum) << endl;
+    cout << "minUnsignedShortNum: " << reinterpret_cast<void*>(&minUnsignedShortNum) << endl;
+    cout << "y: " << reinterpret_cast<void*>(&y) << endl;
+    cout << "minusY: " << reinterpret_cast<void*>(&minusY) << endl;
+    cout << "maxInt: " << reinterpret_cast<void*>(&maxInt) << endl;
+    cout << "minInt: " << reinterpret_cast<void*>(&minInt) << endl;
+    cout << "maxUnsignedInt: " << reinterpret_cast<void*>(&maxUnsignedInt) << endl;
+    cout << "minUnsignedInt: " << reinterpret_cast<void*>(&minUnsignedInt) << endl;
+    cout << "z: " << reinterpret_cast<void*>(&z) << endl;
+    cout << "minusZ: " << reinterpret_cast<void*>(&minusZ) << endl;
+    cout << "maxLong: " << reinterpret_cast<void*>(&maxLong) << endl;
+    cout << "minLong: " << reinterpret_cast<void*>(&minLong) << endl;
+    cout << "maxUnsignedLong: " << reinterpret_cast<void*>(&maxUnsignedLong) << endl;
+    cout << "minUnsignedLong: " << reinterpret_cast<void*>(&minUnsignedLong) << endl;
+    cout << "s: " << reinterpret_cast<void*>(&s) << endl;
+    cout << "minusS: " << reinterpret_cast<void*>(&minusS) << endl;
+    cout << "ptrSymbolEN: " << reinterpret_cast<void*>(&ptrSymbolEN) << endl;
+    cout << "ptrUTFSymbolEN: " << reinterpret_cast<void*>(&ptrUTFSymbolEN) << endl;
+    cout << "ptrMaxShortNum: " << reinterpret_cast<void*>(&ptrMaxShortNum) << endl;
+    cout << "ptrMaxInt: " << reinterpret_cast<void*>(&ptrMaxInt) << endl;
+    cout << "ptrS: " << reinterpret_cast<void*>(&ptrS) << endl;
+    cout << "ptrDbl: " << reinterpret_cast<void*>(&ptrDbl) << endl;
+    cout << "funcPtr: " << reinterpret_cast<void*>(&funcPtr) << endl;
