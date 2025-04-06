@@ -1,0 +1,25 @@
+﻿Сборка начата 06.04.2025 15:26:32.
+Уровень детализации журнала: Normal.     1>Проект "D:\University\Labs_1_course\КПО\06_Статическая библиотека\SE_Lab06S\SE_Lab06L\SE_Lab06L.vcxproj" в узле 2 (целевые объекты Rebuild).
+     1>_PrepareForClean:
+         Файл "x64\Debug\SE_Lab06L.tlog\SE_Lab06L.lastbuildstate" удаляется.
+       PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+       InitializeBuildStatus:
+         Создание "x64\Debug\SE_Lab06L.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "x64\Debug\SE_Lab06L.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX64\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"x64\Debug\\" /Fd"D:\University\Labs_1_course\КПО\06_Статическая библиотека\SE_Lab06S\x64\Debug\SE_Lab06L.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt Dictionary.cpp
+         Dictionary.cpp
+       Lib:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX64\x64\Lib.exe /OUT:"D:\University\Labs_1_course\КПО\06_Статическая библиотека\SE_Lab06S\x64\Debug\SE_Lab06L.lib" /NOLOGO /MACHINE:X64 x64\Debug\Dictionary.obj
+         SE_Lab06L.vcxproj -> D:\University\Labs_1_course\КПО\06_Статическая библиотека\SE_Lab06S\x64\Debug\SE_Lab06L.lib
+       FinalizeBuildStatus:
+         Файл "x64\Debug\SE_Lab06L.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "x64\Debug\SE_Lab06L.tlog\SE_Lab06L.lastbuildstate".
+     1>Сборка проекта "D:\University\Labs_1_course\КПО\06_Статическая библиотека\SE_Lab06S\SE_Lab06L\SE_Lab06L.vcxproj" завершена (целевые объекты Rebuild).
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:01.33
