@@ -1,8 +1,4 @@
-#include <iostream>
-#include <exception>
-#include <conio.h>
-#include <cstring>
-#include "Dictionary.h"
+#include "stdafx.h"
 
 namespace Dictionary {
     Instance Create(char name[DICTNAMEMAXSIZE], int size) {

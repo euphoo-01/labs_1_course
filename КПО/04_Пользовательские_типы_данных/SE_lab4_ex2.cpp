@@ -44,7 +44,7 @@ struct WithdrawInfo {
     Amount amount;
 };
 
-TransferInfo operator>>(Amount amount, BankAccount& to) {
+TransferInfo operator >>(Amount amount, BankAccount& to) {
     Date date;
     time_t currentTime = time(nullptr);
     tm localTime = *localtime(&currentTime);
@@ -59,7 +59,7 @@ TransferInfo operator>>(Amount amount, BankAccount& to) {
     return { to.id, date, amount };
 }
 
-WithdrawInfo operator<<(Amount amount, BankAccount& from) {
+WithdrawInfo operator <<(Amount amount, BankAccount& from) {
     Date date;
     time_t currentTime = time(nullptr);
     tm localTime = *localtime(&currentTime);

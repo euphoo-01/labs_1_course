@@ -1,13 +1,15 @@
 #include <iostream>
 #include <ctime>
 #include <time.h>
+#include <windows.h>
 
 using namespace std;
 
 void qsort(int*, int);
 
 int main() {
-    setlocale(LC_ALL, "Russian");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
     long N;
     cout << "Введите число N: "; cin >> N;
 

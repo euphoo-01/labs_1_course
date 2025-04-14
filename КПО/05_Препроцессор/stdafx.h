@@ -1,5 +1,3 @@
-#pragma once
-
 #include <iostream>
 #include <exception>
 #include <conio.h>

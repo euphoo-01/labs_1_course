@@ -1,10 +1,9 @@
 #include "stdafx.h"
-
+#include <windows.h>
 
 using namespace Dictionary;
 using namespace std;
 
-// Функция для демонстрации работы словаря
 void demonstrateDictionary() {
     try {
         char dictName[DICTNAMEMAXSIZE] = "TestDict";
@@ -27,10 +26,12 @@ void demonstrateDictionary() {
 
         cout << "\nВывод содержимого словаря:" << endl;
         Print(dict);
+        system("pause");
 
         cout << "\nПолучение элемента с id=2:" << endl;
         Entry found = GetEntry(dict, 2);
         cout << "Найден элемент: id=" << found.id << ", name=" << found.name << endl;
+        system("pause");
 
         cout << "\nОбновление элемента с id=2:" << endl;
         Entry updated = { 2, "Обновленный" };
@@ -39,6 +40,7 @@ void demonstrateDictionary() {
 
         cout << "\nВывод содержимого словаря после обновления:" << endl;
         Print(dict);
+        system("pause");
 
         cout << "\nУдаление элемента с id=1:" << endl;
         DelEntry(dict, 1);
@@ -46,21 +48,21 @@ void demonstrateDictionary() {
 
         cout << "\nВывод содержимого словаря после удаления:" << endl;
         Print(dict);
+        system("pause");
 
         cout << "\nОсвобождение памяти словаря" << endl;
         Delete(dict);
         cout << "Память освобождена" << endl;
+        system("pause");
     }
     catch (std::exception& e) {
         cout << "Ошибка: " << e.what() << endl;
     }
 }
 
-// Функция для демонстрации обработки ошибок
 void demonstrateErrors() {
     cout << "\n--- Демонстрация обработки ошибок ---\n" << endl;
 
-    // Создание словаря с неверными параметрами
     try {
         cout << "Попытка создать словарь со слишком длинным именем:" << endl;
         char longName[50] = "ThisNameIsTooLongForDictionaryNameLimitTest";
@@ -69,6 +71,7 @@ void demonstrateErrors() {
     catch (std::exception& e) {
         cout << "Поймано исключение: " << e.what() << endl;
     }
+    system("pause");
 
     try {
         cout << "\nПопытка создать словарь с неверным размером:" << endl;
@@ -78,14 +81,13 @@ void demonstrateErrors() {
     catch (std::exception& e) {
         cout << "Поймано исключение: " << e.what() << endl;
     }
+    system("pause");
 
-    // Работа с корректным словарем
     try {
         cout << "\nСоздание корректного словаря для тестирования ошибок:" << endl;
         char name[DICTNAMEMAXSIZE] = "ErrorTest";
-        Instance dict = Create(name, 2); // Размер 2 для тестирования переполнения
+        Instance dict = Create(name, 2);
 
-        // Добавление элементов
         Entry e1 = { 1, "Первый" };
         Entry e2 = { 2, "Второй" };
 
@@ -93,7 +95,6 @@ void demonstrateErrors() {
         AddEntry(dict, e2);
         cout << "Добавлены два элемента в словарь размером 2" << endl;
 
-        // Тест на дублирование id
         try {
             cout << "\nПопытка добавить элемент с существующим id:" << endl;
             Entry duplicate = { 1, "Дубликат" };
@@ -102,8 +103,9 @@ void demonstrateErrors() {
         catch (std::exception& e) {
             cout << "Поймано исключение: " << e.what() << endl;
         }
+        system("pause");
 
-        // Тест на переполнение словаря
+
         try {
             cout << "\nПопытка добавить элемент в полный словарь:" << endl;
             Entry overflow = { 3, "Переполнение" };
@@ -112,8 +114,8 @@ void demonstrateErrors() {
         catch (std::exception& e) {
             cout << "Поймано исключение: " << e.what() << endl;
         }
+        system("pause");
 
-        // Тест на получение несуществующего элемента
         try {
             cout << "\nПопытка получить несуществующий элемент:" << endl;
             Entry notFound = GetEntry(dict, 99);
@@ -121,8 +123,8 @@ void demonstrateErrors() {
         catch (std::exception& e) {
             cout << "Поймано исключение: " << e.what() << endl;
         }
+        system("pause");
 
-        // Тест на удаление несуществующего элемента
         try {
             cout << "\nПопытка удалить несуществующий элемент:" << endl;
             DelEntry(dict, 99);
@@ -130,8 +132,8 @@ void demonstrateErrors() {
         catch (std::exception& e) {
             cout << "Поймано исключение: " << e.what() << endl;
         }
+        system("pause");
 
-        // Тест на обновление несуществующего элемента
         try {
             cout << "\nПопытка обновить несуществующий элемент:" << endl;
             Entry updNotFound = { 99, "Обновленный" };
@@ -140,18 +142,18 @@ void demonstrateErrors() {
         catch (std::exception& e) {
             cout << "Поймано исключение: " << e.what() << endl;
         }
+        system("pause");
 
-        // Тест на обновление элемента с дубликатом id
         try {
             cout << "\nПопытка обновить элемент с созданием дубликата id:" << endl;
-            Entry updDuplicate = { 2, "Обновление с id=2" }; // id=2 уже существует
+            Entry updDuplicate = { 2, "Обновление с id=2" };
             UpdEntry(dict, 1, updDuplicate);
         }
         catch (std::exception& e) {
             cout << "Поймано исключение: " << e.what() << endl;
         }
+        system("pause");
 
-        // Освобождение памяти
         Delete(dict);
     }
     catch (std::exception& e) {

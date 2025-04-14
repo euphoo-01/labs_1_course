@@ -4,7 +4,7 @@ using namespace std;
 
 typedef unsigned char day;
 typedef unsigned char month;
-typedef unsigned char year;
+typedef unsigned short year;
 struct Date {
     day dd;
     month mm;
@@ -12,30 +12,31 @@ struct Date {
 };
 
 bool operator > (Date a, Date b) {
-    if ((a.dd * a.mm > b.dd * b.mm) && (a.yyyy > b.yyyy || a.yyyy == b.yyyy)) {
-        return true;
+    if (a.yyyy != b.yyyy) {
+        return a.yyyy > b.yyyy;
     }
-    else {
-        return false;
+    
+    if (a.mm != b.mm) {
+        return a.mm > b.mm;
     }
+    
+    return a.dd > b.dd;
 }
 
 bool operator < (Date a, Date b) {
-    if ((a.dd * a.mm < b.dd * b.mm) && (a.yyyy < b.yyyy || a.yyyy == b.yyyy)) {
-        return true;
+    if (a.yyyy != b.yyyy) {
+        return a.yyyy < b.yyyy;
     }
-    else {
-        return false;
+    
+    if (a.mm != b.mm) {
+        return a.mm < b.mm;
     }
+    
+    return a.dd < b.dd;
 }
 
 bool operator == (Date a, Date b) {
-    if (a.dd == b.dd && a.mm == b.mm && a.yyyy == b.yyyy) {
-        return true;
-    }
-    else {
-        return false;
-    }
+    return a.dd == b.dd && a.mm == b.mm && a.yyyy == b.yyyy;
 }
 
 int main() {
