@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{6CBE0193-F682-48C4-8B8E-A40D5CCC971D}|SE_Lab06\\SE_Lab06.vcxproj|solutionrelative:SE_Lab06\\SE_Lab06.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0D9B122-351B-449E-BA0A-3950DD4A1FB7}|SE_Lab06L\\SE_Lab06L.vcxproj|D:\\University\\Labs_1_course\\\u041A\u041F\u041E\\06_\u0421\u0442\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0431\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430\\SE_Lab06S\\SE_Lab06L\\Dictionary.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C0D9B122-351B-449E-BA0A-3950DD4A1FB7}|SE_Lab06L\\SE_Lab06L.vcxproj|solutionrelative:SE_Lab06L\\Dictionary.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{6CBE0193-F682-48C4-8B8E-A40D5CCC971D}|SE_Lab06\\SE_Lab06.vcxproj|D:\\University\\Labs_1_course\\\u041A\u041F\u041E\\06_\u0421\u0442\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0431\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430\\SE_Lab06S\\SE_Lab06\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6CBE0193-F682-48C4-8B8E-A40D5CCC971D}|SE_Lab06\\SE_Lab06.vcxproj|solutionrelative:SE_Lab06\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C0D9B122-351B-449E-BA0A-3950DD4A1FB7}|SE_Lab06L\\SE_Lab06L.vcxproj|D:\\University\\Labs_1_course\\\u041A\u041F\u041E\\06_\u0421\u0442\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0431\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430\\SE_Lab06S\\SE_Lab06L\\Dictionary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C0D9B122-351B-449E-BA0A-3950DD4A1FB7}|SE_Lab06L\\SE_Lab06L.vcxproj|solutionrelative:SE_Lab06L\\Dictionary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CBE0193-F682-48C4-8B8E-A40D5CCC971D}|SE_Lab06\\SE_Lab06.vcxproj|D:\\University\\Labs_1_course\\\u041A\u041F\u041E\\06_\u0421\u0442\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0431\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430\\SE_Lab06S\\SE_Lab06\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6CBE0193-F682-48C4-8B8E-A40D5CCC971D}|SE_Lab06\\SE_Lab06.vcxproj|solutionrelative:SE_Lab06\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C0D9B122-351B-449E-BA0A-3950DD4A1FB7}|SE_Lab06L\\SE_Lab06L.vcxproj|D:\\University\\Labs_1_course\\\u041A\u041F\u041E\\06_\u0421\u0442\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0431\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430\\SE_Lab06S\\SE_Lab06L\\Dictionary.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C0D9B122-351B-449E-BA0A-3950DD4A1FB7}|SE_Lab06L\\SE_Lab06L.vcxproj|solutionrelative:SE_Lab06L\\Dictionary.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6CBE0193-F682-48C4-8B8E-A40D5CCC971D}|SE_Lab06\\SE_Lab06.vcxproj|D:\\University\\Labs_1_course\\\u041A\u041F\u041E\\06_\u0421\u0442\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0431\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430\\SE_Lab06S\\SE_Lab06\\stdafx.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -46,15 +46,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "stdafx.h",
               "DocumentMoniker": "D:\\University\\Labs_1_course\\\u041A\u041F\u041E\\06_\u0421\u0442\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0431\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430\\SE_Lab06S\\SE_Lab06\\stdafx.h",
               "RelativeDocumentMoniker": "SE_Lab06\\stdafx.h",
               "ToolTip": "D:\\University\\Labs_1_course\\\u041A\u041F\u041E\\06_\u0421\u0442\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0431\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430\\SE_Lab06S\\SE_Lab06\\stdafx.h",
               "RelativeToolTip": "SE_Lab06\\stdafx.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-06T12:23:11.732Z"
+              "WhenOpened": "2025-04-06T12:23:11.732Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -64,7 +65,7 @@
               "RelativeDocumentMoniker": "SE_Lab06\\SE_Lab06.cpp",
               "ToolTip": "D:\\University\\Labs_1_course\\\u041A\u041F\u041E\\06_\u0421\u0442\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0431\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430\\SE_Lab06S\\SE_Lab06\\SE_Lab06.cpp",
               "RelativeToolTip": "SE_Lab06\\SE_Lab06.cpp",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAkwG4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-06T12:22:43.326Z",
               "EditorCaption": ""
@@ -77,20 +78,20 @@
               "RelativeDocumentMoniker": "SE_Lab06L\\Dictionary.h",
               "ToolTip": "D:\\University\\Labs_1_course\\\u041A\u041F\u041E\\06_\u0421\u0442\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0431\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430\\SE_Lab06S\\SE_Lab06L\\Dictionary.h",
               "RelativeToolTip": "SE_Lab06L\\Dictionary.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-06T12:07:06.503Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Dictionary.cpp",
               "DocumentMoniker": "D:\\University\\Labs_1_course\\\u041A\u041F\u041E\\06_\u0421\u0442\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0431\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430\\SE_Lab06S\\SE_Lab06L\\Dictionary.cpp",
               "RelativeDocumentMoniker": "SE_Lab06L\\Dictionary.cpp",
               "ToolTip": "D:\\University\\Labs_1_course\\\u041A\u041F\u041E\\06_\u0421\u0442\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0431\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430\\SE_Lab06S\\SE_Lab06L\\Dictionary.cpp",
               "RelativeToolTip": "SE_Lab06L\\Dictionary.cpp",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-06T12:04:38.701Z",
               "EditorCaption": ""

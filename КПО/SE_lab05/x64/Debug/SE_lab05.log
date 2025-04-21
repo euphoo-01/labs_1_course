@@ -1,0 +1,3 @@
+﻿  SE_lab05.cpp
+D:\d\уник\2 сем\кпо\5 лаба\SE_lab05\SE_lab05.cpp(8,13): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  SE_lab05.vcxproj -> D:\d\уник\2 сем\кпо\5 лаба\SE_lab05\x64\Debug\SE_lab05.exe

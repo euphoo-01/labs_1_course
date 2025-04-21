@@ -1,0 +1,25 @@
+﻿Сборка начата 21.04.2025 8:26:44.
+Уровень детализации журнала: Normal.     1>Проект "D:\University\Labs_1_course\КПО\SE_lab05\SE_lab05.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+       InitializeBuildStatus:
+         Создание "SE_lab05\x64\Debug\SE_lab05.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "SE_lab05\x64\Debug\SE_lab05.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX64\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"SE_lab05\x64\Debug\\" /Fd"SE_lab05\x64\Debug\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt Dictionary.cpp SE_lab05.cpp
+         Dictionary.cpp
+         SE_lab05.cpp
+     1>D:\University\Labs_1_course\КПО\SE_lab05\SE_lab05.cpp(6,1): error C1189: #error:  Определено более одного макроса теста
+         Создание кода...
+     1>Сборка проекта "D:\University\Labs_1_course\КПО\SE_lab05\SE_lab05.vcxproj" завершена (целевые объекты Build) с ошибкой.
+
+Ошибка сборки.
+
+       "D:\University\Labs_1_course\КПО\SE_lab05\SE_lab05.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         D:\University\Labs_1_course\КПО\SE_lab05\SE_lab05.cpp(6,1): error C1189: #error:  Определено более одного макроса теста
+
+    Предупреждений: 0
+    Ошибок: 1
+
+Прошло времени 00:00:01.93

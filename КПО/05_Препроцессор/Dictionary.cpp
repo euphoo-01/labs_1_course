@@ -1,103 +1,106 @@
+#include "Dictionary.h"
 #include "stdafx.h"
+namespace dictionary {
 
-namespace Dictionary {
-    Instance Create(char name[DICTNAMEMAXSIZE], int size) {
-        if (strlen(name) > DICTNAMEMAXSIZE)
-            throw std::exception(THROW01);
-        if (size > DICTMAXSIZE || size <= 0)
-            throw std::exception(THROW02);
+	Instance Create(const char name[DICTNAMEMAXSIZE], int size) {
+		Instance newDict;
+		if (strlen(name) > DICTNAMEMAXSIZE) {
+			throw(char*)THROW01;
+		}
+		for (int i = 0; i < strlen(name); i++) {
+			newDict.name[i] = name[i];
+		}
+		newDict.name[strlen(name)] = '\0';
+		if (size > DICTMAXSIZE) {
+			throw(char*)THROW02;
+		}
+		newDict.maxsize = size;
+		newDict.size = 0;
+		return newDict;
+	}
+	void AddEntry(Instance& inst, Entry ed) {
+		if (inst.size == inst.maxsize) throw (char*)THROW03;
+		for (int i = 0; i < inst.size; i++) {
+			if (ed.id == inst.dictionary[i]->id) throw (char*)THROW04;
+		}
+		inst.dictionary[inst.size] = new Entry();
+		inst.dictionary[inst.size]->id = ed.id;
+		for (int i = 0; i < strlen(ed.name); i++) {
+			inst.dictionary[inst.size]->name[i] = ed.name[i];
+		}
+		inst.dictionary[inst.size]->name[strlen(ed.name)] = '\0';
+		inst.size++;
+	}
+	void DelEntry(Instance& inst, int id) {
+		for (int i = 0; i < inst.size; i++) {
+			if (inst.dictionary[i]->id == id) {
+				delete inst.dictionary[i];
+				for (int j = i; j < inst.size - 1; j++) {
+					inst.dictionary[j] = inst.dictionary[j + 1];
+				}
+				inst.size--;
+				inst.dictionary[inst.size] = nullptr;
+				return;
+			}
+		}
+		throw THROW06;
+	}
+	Entry GetEntry(Instance inst, int id) {
+		Entry getElement;
+		for (int i = 0; i < inst.size; i++) {
+			if (id == inst.dictionary[i]->id) {
+				getElement.id = inst.dictionary[i]->id;
+				for (int j = 0; j < strlen(inst.dictionary[i]->name); j++)
+					getElement.name[j] = inst.dictionary[i]->name[j];
+				getElement.name[strlen(inst.dictionary[i]->name)] = '\0';
+				return getElement;
+			}
+		}
+		throw (char*)THROW05;
+	}
+	void UpdEntry(Instance& inst, int id, Entry new_ed) {
+		bool isFound = false;
+		for (int i = 0; i < inst.size; i++)
+		{
+			if (inst.dictionary[i]->id == id)
+			{
+				for (int j = i; j < inst.size; j++) //+1
+				{
+					if (new_ed.id == inst.dictionary[j]->id) {
+						throw (char*)THROW08;
+					}
+				}
+				isFound = true;
 
-        Instance newInstance;
-        strncpy_s(newInstance.name, name, DICTNAMEMAXSIZE);
-        newInstance.maxsize = size;
-        newInstance.size = 0;
-        newInstance.dictionary = new Entry[size];
+				inst.dictionary[i]->id = new_ed.id;
+				strcpy_s(inst.dictionary[i]->name, new_ed.name);
+				break;
+			}
+			else if (new_ed.id == inst.dictionary[i]->id)
+			{
+				throw (char*)THROW08;
+			}
+		}
+		if (!isFound)
+		{
+			throw (char*)THROW07;
+		}
+	}
 
-        return newInstance;
-    }
-
-    void AddEntry(Instance& inst, Entry ed) {
-        if (inst.size >= inst.maxsize)
-            throw std::exception(THROW03);
-
-        // Проверка на дублирование идентификатора
-        for (int i = 0; i < inst.size; i++) {
-            if (inst.dictionary[i].id == ed.id)
-                throw std::exception(THROW04);
-        }
-
-        inst.dictionary[inst.size] = ed;
-        inst.size++;
-    }
-
-    void DelEntry(Instance& inst, int id) {
-        int foundIndex = -1;
-
-        // Поиск элемента с указанным id
-        for (int i = 0; i < inst.size; i++) {
-            if (inst.dictionary[i].id == id) {
-                foundIndex = i;
-                break;
-            }
-        }
-
-        if (foundIndex == -1)
-            throw std::exception(THROW06);
-
-        // Сдвиг элементов для удаления
-        for (int i = foundIndex; i < inst.size - 1; i++) {
-            inst.dictionary[i] = inst.dictionary[i + 1];
-        }
-
-        inst.size--;
-    }
-
-    void UpdEntry(Instance& inst, int id, Entry new_ed) {
-        int foundIndex = -1;
-
-        // Поиск элемента с указанным id
-        for (int i = 0; i < inst.size; i++) {
-            if (inst.dictionary[i].id == id) {
-                foundIndex = i;
-                break;
-            }
-        }
-
-        if (foundIndex == -1)
-            throw std::exception(THROW07);
-
-        // Проверка на дублирование id (если новый id отличается от обновляемого)
-        if (new_ed.id != id) {
-            for (int i = 0; i < inst.size; i++) {
-                if (i != foundIndex && inst.dictionary[i].id == new_ed.id)
-                    throw std::exception(THROW08);
-            }
-        }
-
-        inst.dictionary[foundIndex] = new_ed;
-    }
-
-    Entry GetEntry(Instance inst, int id) {
-        for (int i = 0; i < inst.size; i++) {
-            if (inst.dictionary[i].id == id) {
-                return inst.dictionary[i];
-            }
-        }
-
-        throw std::exception(THROW05);
-    }
-
-    void Print(Instance d) {
-        std::cout << "----- " << d.name << " -----" << std::endl;
-
-        for (int i = 0; i < d.size; i++) {
-            std::cout << d.dictionary[i].name << std::endl;
-        }
-    }
-
-    void Delete(Instance& d) {
-        delete[] d.dictionary;
-        d.size = 0;
-        d.maxsize = 0;
-    }
+	void Delete(Instance& inst) {
+		for (int i = 0; i < inst.size; i++) {
+			delete[] inst.dictionary[i];
+		}
+		inst.size = 0;
+	}
+	void Print(Instance inst) {
+		std::cout << "-------" << inst.name << "-------" << std::endl;
+		for (int i = 0; i < inst.size; i++) {
+			std::cout << inst.dictionary[i]->id << ' ';
+			for (int j = 0; j < strlen(inst.dictionary[i]->name); j++) {
+				std::cout << inst.dictionary[i]->name[j];
+			}
+			std::cout << std::endl;
+		}
+	}
 }

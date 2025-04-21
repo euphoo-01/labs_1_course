@@ -1,173 +1,91 @@
 #include "stdafx.h"
-#include <windows.h>
+#pragma comment(lib, "D:\\University\\Labs_1_course\\КПО\\06_Статическая библиотека\\SE_Lab06S\\x64\\Debug\\SE_Lab06L.lib")
 
-using namespace Dictionary;
-using namespace std;
-
-void demonstrateDictionary() {
-    try {
-        char dictName[DICTNAMEMAXSIZE] = "TestDict";
-        cout << "Создание словаря '" << dictName << "'" << endl;
-        Instance dict = Create(dictName, 5);
-
-        cout << "\nДобавление элементов в словарь:" << endl;
-        Entry e1 = { 1, "Первый" };
-        Entry e2 = { 2, "Второй" };
-        Entry e3 = { 3, "Третий" };
-
-        AddEntry(dict, e1);
-        cout << "Добавлен элемент с id=" << e1.id << ", name=" << e1.name << endl;
-
-        AddEntry(dict, e2);
-        cout << "Добавлен элемент с id=" << e2.id << ", name=" << e2.name << endl;
-
-        AddEntry(dict, e3);
-        cout << "Добавлен элемент с id=" << e3.id << ", name=" << e3.name << endl;
-
-        cout << "\nВывод содержимого словаря:" << endl;
-        Print(dict);
-        system("pause");
-
-        cout << "\nПолучение элемента с id=2:" << endl;
-        Entry found = GetEntry(dict, 2);
-        cout << "Найден элемент: id=" << found.id << ", name=" << found.name << endl;
-        system("pause");
-
-        cout << "\nОбновление элемента с id=2:" << endl;
-        Entry updated = { 2, "Обновленный" };
-        UpdEntry(dict, 2, updated);
-        cout << "Элемент обновлен" << endl;
-
-        cout << "\nВывод содержимого словаря после обновления:" << endl;
-        Print(dict);
-        system("pause");
-
-        cout << "\nУдаление элемента с id=1:" << endl;
-        DelEntry(dict, 1);
-        cout << "Элемент удален" << endl;
-
-        cout << "\nВывод содержимого словаря после удаления:" << endl;
-        Print(dict);
-        system("pause");
-
-        cout << "\nОсвобождение памяти словаря" << endl;
-        Delete(dict);
-        cout << "Память освобождена" << endl;
-        system("pause");
-    }
-    catch (std::exception& e) {
-        cout << "Ошибка: " << e.what() << endl;
-    }
-}
-
-void demonstrateErrors() {
-    cout << "\n--- Демонстрация обработки ошибок ---\n" << endl;
-
-    try {
-        cout << "Попытка создать словарь со слишком длинным именем:" << endl;
-        char longName[50] = "ThisNameIsTooLongForDictionaryNameLimitTest";
-        Instance dict = Create(longName, 10);
-    }
-    catch (std::exception& e) {
-        cout << "Поймано исключение: " << e.what() << endl;
-    }
-    system("pause");
-
-    try {
-        cout << "\nПопытка создать словарь с неверным размером:" << endl;
-        char name[DICTNAMEMAXSIZE] = "Dict";
-        Instance dict = Create(name, DICTMAXSIZE + 10);
-    }
-    catch (std::exception& e) {
-        cout << "Поймано исключение: " << e.what() << endl;
-    }
-    system("pause");
-
-    try {
-        cout << "\nСоздание корректного словаря для тестирования ошибок:" << endl;
-        char name[DICTNAMEMAXSIZE] = "ErrorTest";
-        Instance dict = Create(name, 2);
-
-        Entry e1 = { 1, "Первый" };
-        Entry e2 = { 2, "Второй" };
-
-        AddEntry(dict, e1);
-        AddEntry(dict, e2);
-        cout << "Добавлены два элемента в словарь размером 2" << endl;
-
-        try {
-            cout << "\nПопытка добавить элемент с существующим id:" << endl;
-            Entry duplicate = { 1, "Дубликат" };
-            AddEntry(dict, duplicate);
-        }
-        catch (std::exception& e) {
-            cout << "Поймано исключение: " << e.what() << endl;
-        }
-        system("pause");
-
-
-        try {
-            cout << "\nПопытка добавить элемент в полный словарь:" << endl;
-            Entry overflow = { 3, "Переполнение" };
-            AddEntry(dict, overflow);
-        }
-        catch (std::exception& e) {
-            cout << "Поймано исключение: " << e.what() << endl;
-        }
-        system("pause");
-
-        try {
-            cout << "\nПопытка получить несуществующий элемент:" << endl;
-            Entry notFound = GetEntry(dict, 99);
-        }
-        catch (std::exception& e) {
-            cout << "Поймано исключение: " << e.what() << endl;
-        }
-        system("pause");
-
-        try {
-            cout << "\nПопытка удалить несуществующий элемент:" << endl;
-            DelEntry(dict, 99);
-        }
-        catch (std::exception& e) {
-            cout << "Поймано исключение: " << e.what() << endl;
-        }
-        system("pause");
-
-        try {
-            cout << "\nПопытка обновить несуществующий элемент:" << endl;
-            Entry updNotFound = { 99, "Обновленный" };
-            UpdEntry(dict, 99, updNotFound);
-        }
-        catch (std::exception& e) {
-            cout << "Поймано исключение: " << e.what() << endl;
-        }
-        system("pause");
-
-        try {
-            cout << "\nПопытка обновить элемент с созданием дубликата id:" << endl;
-            Entry updDuplicate = { 2, "Обновление с id=2" };
-            UpdEntry(dict, 1, updDuplicate);
-        }
-        catch (std::exception& e) {
-            cout << "Поймано исключение: " << e.what() << endl;
-        }
-        system("pause");
-
-        Delete(dict);
-    }
-    catch (std::exception& e) {
-        cout << "Непредвиденная ошибка: " << e.what() << endl;
-    }
-}
-
+#if (defined(TEST_CREATE_01)+defined(TEST_CREATE_02)+defined(TEST_ADDENTRY_03)+\
+    defined(TEST_ADDENTRY_04)+defined(TEST_GETENTRY_05)+defined(TEST_GETENTRY_06)+\
+    defined(TEST_UPDENTRY_07)+defined(TEST_UPDENTRY_08)+defined(TEST_DICTIONARY)>1)
+#error Определено более одного макроса теста
+#endif
 int main() {
-    setlocale(LC_ALL, "Russian");
-
-    cout << "=== Демонстрация работы словаря ===" << endl;
-    demonstrateDictionary();
-
-    demonstrateErrors();
-
+    setlocale(LC_ALL, "rus");
+    try {
+#ifdef TEST_CREATE_01
+        Instance test1 = Create("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZzz", 5);
+#endif
+#ifdef TEST_CREATE_02
+        Instance test2 = Create((char*)"test", 100000000000);
+#endif
+#ifdef TEST_ADDENTRY_03
+        Instance test3 = Create((char*)"test", 1);
+        Entry en_test3 = { 1,"zzzzzz" };
+        AddEntry(test3, en_test3);
+#endif
+#ifdef TEST_ADDENTRY_04 
+        Instance test4 = Create((char*)"test", 5);
+        Entry en_test4 = { 1,"zzzzzz" };
+        AddEntry(test4, en_test4);
+        AddEntry(test4, en_test4);
+#endif
+#ifdef TEST_GETENTRY_05
+        Instance test5 = Create((char*)"test", 5);
+        Entry en_test5 = { 1,"zzzzzz" };
+        AddEntry(test5, en_test5);
+        GetEntry(test5, 2);
+#endif
+#ifdef TEST_GETENTRY_06
+        Instance test6 = Create((char*)"test", 5);
+        Entry* en_test6 = new Entry{ 1, "zzzzzz" };
+        AddEntry(test6, *en_test6);
+        try {
+            DelEntry(test6, 2);
+        }
+        catch (...) {
+            std::cout << THROW06 << std::endl;
+        }
+        delete en_test6;
+#endif
+#ifdef TEST_UPDENTRY_07
+        Instance test7 = Create((char*)"TEST", 5);
+        Entry test_e7 = { 1,"aaaaaaaaa" }, test_upd_e7 = { 2,"zzzzzzzz" };
+        AddEntry(test7, test_e7);
+        UpdEntry(test7, 3, test_upd_e7);
+#endif
+#ifdef TEST_UPDENTRY_08
+        Instance test8 = Create((char*)"TEST", 5);
+        Entry test_e8 = { 1,"aaaaaaaaa" }, test_upd_e8 = { 1,"zzzzzzzz" };
+        AddEntry(test8, test_e8);
+        UpdEntry(test8, 1, test_upd_e8);
+#endif
+#ifdef TEST_DICTIONARY
+        dictionary::Instance d1 = dictionary::Create("Преподаватели", 5);
+        dictionary::Entry e1 = { 1,"Белодед" }, e2 = { 2,"Шиман" },
+            e3 = { 3,"Смелов" }, e4 = { 4,"Гончар" }, e5 = { 5,"Барковский" };
+        dictionary::AddEntry(d1, e1);
+        dictionary::AddEntry(d1, e2);
+        dictionary::AddEntry(d1, e3);
+        dictionary::AddEntry(d1, e4);
+        dictionary::Entry ex2 = dictionary::GetEntry(d1, 4);
+        dictionary::Print(d1);
+        dictionary::DelEntry(d1, 2);
+        dictionary::Print(d1);
+        dictionary::Entry newEntry1 = { 6,"Королев" };
+        dictionary::UpdEntry(d1, 3, newEntry1);
+        dictionary::Print(d1);
+        dictionary::Instance d2 = { "Cтуденты", 5 };
+        dictionary::Entry s1 = { 1,"Макаревич" }, s2 = { 2,"Хаткевич" }, s3 = { 3,"Киселев" };
+        dictionary::AddEntry(d2, s1);
+        dictionary::AddEntry(d2, s2);
+        dictionary::AddEntry(d2, s3);
+        dictionary::Entry newEntry2 = { 4,"Лавшук" };
+        dictionary::UpdEntry(d2, 3, newEntry2);
+        dictionary::DelEntry(d2, 2);
+        dictionary::Print(d2);
+        Delete(d1);
+        Delete(d2);
+#endif
+    }
+    catch (char* e) {
+        std::cout << e << std::endl;
+    }
     return 0;
 }

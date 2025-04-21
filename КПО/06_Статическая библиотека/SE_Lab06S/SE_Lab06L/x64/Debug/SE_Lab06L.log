@@ -1,8 +1,6 @@
-﻿Сборка начата 06.04.2025 15:26:32.
-Уровень детализации журнала: Normal.     1>Проект "D:\University\Labs_1_course\КПО\06_Статическая библиотека\SE_Lab06S\SE_Lab06L\SE_Lab06L.vcxproj" в узле 2 (целевые объекты Rebuild).
-     1>_PrepareForClean:
-         Файл "x64\Debug\SE_Lab06L.tlog\SE_Lab06L.lastbuildstate" удаляется.
-       PrepareForBuild:
+﻿Сборка начата 21.04.2025 8:33:42.
+Уровень детализации журнала: Normal.     1>Проект "D:\University\Labs_1_course\КПО\06_Статическая библиотека\SE_Lab06S\SE_Lab06L\SE_Lab06L.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
          Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
        InitializeBuildStatus:
          Создание "x64\Debug\SE_Lab06L.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
@@ -16,10 +14,10 @@
        FinalizeBuildStatus:
          Файл "x64\Debug\SE_Lab06L.tlog\unsuccessfulbuild" удаляется.
          Обращение к "x64\Debug\SE_Lab06L.tlog\SE_Lab06L.lastbuildstate".
-     1>Сборка проекта "D:\University\Labs_1_course\КПО\06_Статическая библиотека\SE_Lab06S\SE_Lab06L\SE_Lab06L.vcxproj" завершена (целевые объекты Rebuild).
+     1>Сборка проекта "D:\University\Labs_1_course\КПО\06_Статическая библиотека\SE_Lab06S\SE_Lab06L\SE_Lab06L.vcxproj" завершена (целевые объекты Build).
 
 Сборка успешно завершена.
     Предупреждений: 0
     Ошибок: 0
 
-Прошло времени 00:00:01.33
+Прошло времени 00:00:01.03
