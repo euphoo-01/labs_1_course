@@ -74,8 +74,11 @@ int main() {
             counter++;
         }
     }
+    else if (N > 0) {
+        counter = N;
+    }
     else {
-        for (counter = 0; counter < N; counter++);
+        cerr << "Ошибка! Недостаточно данных." << endl;
     }
 
 

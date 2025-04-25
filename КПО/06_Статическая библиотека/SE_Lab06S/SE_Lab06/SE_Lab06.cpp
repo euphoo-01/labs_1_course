@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#pragma comment(lib, "D:\\University\\Labs_1_course\\КПО\\06_Статическая библиотека\\SE_Lab06S\\x64\\Debug\\SE_Lab06L.lib")
+#pragma comment(lib, "D:\\University\\Labs_1_course\\КПО\\06_Статическая библиотека\\SE_Lab06S\\SE_Lab06L\\x64\\Debug\\dict.lib")
 
 #if (defined(TEST_CREATE_01)+defined(TEST_CREATE_02)+defined(TEST_ADDENTRY_03)+\
     defined(TEST_ADDENTRY_04)+defined(TEST_GETENTRY_05)+defined(TEST_GETENTRY_06)+\

@@ -1,25 +1,25 @@
-﻿Сборка начата 21.04.2025 8:26:44.
+﻿Сборка начата 21.04.2025 8:55:29.
 Уровень детализации журнала: Normal.     1>Проект "D:\University\Labs_1_course\КПО\SE_lab05\SE_lab05.vcxproj" в узле 2 (целевые объекты Build).
      1>PrepareForBuild:
          Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
        InitializeBuildStatus:
-         Создание "SE_lab05\x64\Debug\SE_lab05.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
          Обращение к "SE_lab05\x64\Debug\SE_lab05.tlog\unsuccessfulbuild".
        ClCompile:
          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX64\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"SE_lab05\x64\Debug\\" /Fd"SE_lab05\x64\Debug\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt Dictionary.cpp SE_lab05.cpp
          Dictionary.cpp
          SE_lab05.cpp
-     1>D:\University\Labs_1_course\КПО\SE_lab05\SE_lab05.cpp(6,1): error C1189: #error:  Определено более одного макроса теста
          Создание кода...
-     1>Сборка проекта "D:\University\Labs_1_course\КПО\SE_lab05\SE_lab05.vcxproj" завершена (целевые объекты Build) с ошибкой.
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\University\Labs_1_course\КПО\SE_lab05\x64\Debug\SE_lab05.exe" /INCREMENTAL /ILK:"SE_lab05\x64\Debug\SE_lab05.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\University\Labs_1_course\КПО\SE_lab05\x64\Debug\SE_lab05.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\University\Labs_1_course\КПО\SE_lab05\x64\Debug\SE_lab05.lib" /MACHINE:X64 SE_lab05\x64\Debug\Dictionary.obj
+         SE_lab05\x64\Debug\SE_lab05.obj
+         SE_lab05.vcxproj -> D:\University\Labs_1_course\КПО\SE_lab05\x64\Debug\SE_lab05.exe
+       FinalizeBuildStatus:
+         Файл "SE_lab05\x64\Debug\SE_lab05.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "SE_lab05\x64\Debug\SE_lab05.tlog\SE_lab05.lastbuildstate".
+     1>Сборка проекта "D:\University\Labs_1_course\КПО\SE_lab05\SE_lab05.vcxproj" завершена (целевые объекты Build).
 
-Ошибка сборки.
-
-       "D:\University\Labs_1_course\КПО\SE_lab05\SE_lab05.vcxproj" (целевой объект Build ) (1) ->
-       (Целевой объект ClCompile) -> 
-         D:\University\Labs_1_course\КПО\SE_lab05\SE_lab05.cpp(6,1): error C1189: #error:  Определено более одного макроса теста
-
+Сборка успешно завершена.
     Предупреждений: 0
-    Ошибок: 1
+    Ошибок: 0
 
-Прошло времени 00:00:01.93
+Прошло времени 00:00:02.99
