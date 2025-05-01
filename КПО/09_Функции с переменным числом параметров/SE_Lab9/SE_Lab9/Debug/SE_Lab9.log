@@ -1,0 +1,24 @@
+﻿Сборка начата 30.04.2025 12:45:34.
+Уровень детализации журнала: Normal.     1>Проект "D:\University\Labs_1_course\КПО\09_Функции с переменным числом параметров\SE_Lab9\SE_Lab9\SE_Lab9.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+       InitializeBuildStatus:
+         Создание "Debug\SE_Lab9.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "Debug\SE_Lab9.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt Varparm.cpp
+         Varparm.cpp
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"D:\University\Labs_1_course\КПО\09_Функции с переменным числом параметров\SE_Lab9\Debug\SE_Lab9.exe" /INCREMENTAL /ILK:"Debug\SE_Lab9.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\University\Labs_1_course\КПО\09_Функции с переменным числом параметров\SE_Lab9\Debug\SE_Lab9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\University\Labs_1_course\КПО\09_Функции с переменным числом параметров\SE_Lab9\Debug\SE_Lab9.lib" /MACHINE:X86 Debug\main.obj
+         Debug\Varparm.obj
+         SE_Lab9.vcxproj -> D:\University\Labs_1_course\КПО\09_Функции с переменным числом параметров\SE_Lab9\Debug\SE_Lab9.exe
+       FinalizeBuildStatus:
+         Файл "Debug\SE_Lab9.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "Debug\SE_Lab9.tlog\SE_Lab9.lastbuildstate".
+     1>Сборка проекта "D:\University\Labs_1_course\КПО\09_Функции с переменным числом параметров\SE_Lab9\SE_Lab9\SE_Lab9.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:00.59

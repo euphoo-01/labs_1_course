@@ -12,8 +12,7 @@ int defaultparm(int a, int b, int c, int d = 1, int e = 1) {
 int main() {
 	setlocale(LC_ALL, "Russian");
 
-	int a, b, c;
-	cout << "Введите a, b, c: "; cin >> a >> b >> c;
-	cout << "Среднее арифметическое: " << defaultparm(a, b, c);
+	defaultparm(5, 4, 3);
+	defaultparm(5, 4, 3, 2, 1);
 	return 0;
 }

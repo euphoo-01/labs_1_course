@@ -1,9 +1,7 @@
 #pragma once
 
-#include <stdarg.h>
-
 namespace Call {
-	int _cdecl funcA(int, int, int);
-	int _stdcall funcB(int*, int, int);
-	int _fastcall funcC(int, int, int, int);
+	int _cdecl cdecll(int, int, int);
+	int _stdcall cstd(int&, int, int);
+	int _fastcall cfst(int, int, int, int);
 }

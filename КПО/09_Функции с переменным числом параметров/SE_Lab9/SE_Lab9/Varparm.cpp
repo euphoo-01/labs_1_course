@@ -1,55 +1,47 @@
 #include "Varparm.h"
-#include <cstdarg>
-#include <climits>
 #include <cfloat>
 
 namespace Varparm {
+
     int ivarparm(int count, ...) {
-        va_list args;
-        va_start(args, count);
+        int* p = (int*)(&count + 1); // указатель на первый переменный аргумент
         int product = 1;
         for (int i = 0; i < count; ++i) {
-            product *= va_arg(args, int);
+            product *= p[i];
         }
-        va_end(args);
         return product;
     }
 
     short svarparm(short count, ...) {
-        va_list args;
-        va_start(args, count);
-        short max = static_cast<short>(va_arg(args, int)); // short передается как int
+        int* p = (int*)(&count + 2); // переменные аргументы передаются как int
+        int max = p[0];
         for (int i = 1; i < count; ++i) {
-            short value = static_cast<short>(va_arg(args, int));
-            if (value > max) max = value;
+            if (p[i] > max) {
+                max = p[i];
+            }
         }
-        va_end(args);
-        return max;
+        return static_cast<short>(max);
     }
 
-    double fvarparm(...) {
-        int a;
-        va_list args;
-        va_start(args,a);
-        double sum = 0.0;
-        double value;
-        while ((value = va_arg(args, double)) != static_cast<double>(FLT_MAX)) {
-            sum += value;
+    double fvarparm(float first, ...) {
+        double* p = (double*)(&first + 1); // после float идёт double (выравнивание!)
+        double sum = first;
+        while (*p == DBL_MAX) {
+            float value = static_cast<float>(*p);
+            sum += *p;
+            ++p;
         }
-        va_end(args);
         return sum;
     }
 
-    double dvarparm(...) {
-        int a;
-        va_list args;
-        va_start(args, a);
-        double sum = 0.0;
-        double value;
-        while ((value = va_arg(args, double)) != DBL_MAX) {
-            sum += value;
+    double dvarparm(double first, ...) {
+        double* p = &first + 1;
+        double sum = first;
+        while (*p == DBL_MAX) {
+            sum += *p;
+            ++p;
         }
-        va_end(args);
         return sum;
     }
+
 }
