@@ -1,12 +1,13 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include <windows.h>
 
 using namespace std;
 
-void qsort(int* arr, int size) {
-    if (size <= 1) {
+void qsort(int *arr, int size)
+{
+    if (size <= 1)
+    {
         return;
     }
 
@@ -15,81 +16,92 @@ void qsort(int* arr, int size) {
 
     int mid = arr[size / 2];
 
-    do {
-        while (arr[i] > mid) {
+    do
+    {
+        while (arr[i] > mid)
+        {
             i++;
         }
-        while (arr[j] < mid) {
+        while (arr[j] < mid)
+        {
             j--;
         }
 
-        if (i <= j) {
+        if (i <= j)
+        {
             swap(arr[i], arr[j]);
             i++;
             j--;
         }
     } while (i <= j);
 
-    if (j > 0) {
+    if (j > 0)
+    {
         qsort(arr, j + 1);
     }
-    if (i < size) {
+    if (i < size)
+    {
         qsort(arr + i, size - i);
     }
 }
 
-int main() {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
+int main()
+{
 
     int N;
     cout << "Введите N: ";
     cin >> N;
 
-    if (N >= 10000) {
+    if (N >= 10000)
+    {
         cerr << "Ошибка! N слишком большое." << endl;
         return 1;
     }
 
     srand(static_cast<int>(time(nullptr)));
-    int* price_array = new int[N];
-    for (int i = 0; i < N; i++) {
+    int *price_array = new int[N];
+    for (int i = 0; i < N; i++)
+    {
         price_array[i] = (std::rand() % 100) + 1;
     }
 
     qsort(price_array, N);
 
-    // Отсортированный массив делим пополам. 
-    // Левая половина - нечетные элементы, правая половина - четные элементы
-    int* left_half = new int[N / 2];
-    int* right_half = new int[N - N / 2];
+    int *left_half = new int[N / 2 + 1];
+    int *right_half = new int[N - N / 2 + 1];
 
-    for (int i = 0; i < N / 2; i++) {
+    for (int i = 0; i < N / 2 + 1; i++)
+    {
         left_half[i] = price_array[i];
     }
-    for (int i = N / 2, j = 0; i < N; i++, j++) {
+    for (int i = N / 2 + 1, j = 0; i < N; i++, j++)
+    {
         right_half[j] = price_array[i];
     }
 
-
     int left_index = 0, right_index = 0;
-    for (int i = 0; i < N; i++) {
-        if (i % 2 == 0 && left_index < N / 2) {
+    for (int i = 0; i < N; i++)
+    {
+        if (i % 2 == 0 && left_index < N / 2 + 1)
+        {
             price_array[i] = left_half[left_index++];
         }
-        else if (right_index < N - N / 2) { // Те что по акции на халяву
+        else if (right_index < N / 2 + 1)
+        { // Те что на халяву
             price_array[i] = right_half[right_index++];
         }
     }
 
     int max_sum = 0;
-    for (int i = 0; i < N; i += 2) {
+    for (int i = 0; i < N; i += 2)
+    {
         max_sum += price_array[i];
     }
 
-    cout << "Порядок пробивания товаров: ";
-    for (int i = 0; i < N; i++) {
-        cout << price_array[i] << '\t';
+    cout << "Порядок пробивания товаров:\t";
+    for (int i = 0; i < N; i++)
+    {
+        cout << price_array[i] << ' ';
     }
     cout << endl;
     cout << "Максимальная сумма чека: " << max_sum << endl;

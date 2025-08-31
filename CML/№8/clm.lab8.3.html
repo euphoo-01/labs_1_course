@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3</title>
+    <style>
+        nav ul.first>li{
+            border: 1px black solid;
+            background-color: yellow;
+            width: 150px;
+            padding: 5px;
+            list-style-type: none;
+            margin-left: -40px;
+        }
+        nav ul.second>li a{
+            display: block;
+            color: black;
+            list-style-type: none;
+            text-decoration: none;
+            border: 1px dashed black;
+            width: 90px;
+            padding: 5px;
+            margin-bottom: -1px;
+            background-color: rgb(256,100,60);
+            margin-left: -80px;
+            transition: all .1s ease-in-out;
+        }
+        nav ul.second>li a:hover{
+            opacity: 0.8;
+        }
+        nav ul.second>li {
+            list-style: none;  
+        }
+        nav>ul>li {position: relative;}
+        nav ul {position: absolute;}
+        nav ul.first:hover ul.second{
+            visibility: visible;
+            opacity: 1;
+        }
+        ul.second {
+            visibility: hidden;
+            transition: all .2s ease-in-out;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <ul class="first">
+            <li>Меню</li>
+            <ul class="second">
+                <li><a href="../№5/clm.lab5.3.html">Форма</a></li>
+                <li><a href="../№5/clm.lab5.html #c1">Шахматная доска</a></li>
+                <li><a href="../№6/clm.lab6.3.html">Фотогалерея</a></li>
+            </ul>
+        </ul>
+    </nav>
+    
+</body>
+</html>

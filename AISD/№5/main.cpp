@@ -1,15 +1,9 @@
 #include <iostream>
+#include <stack>
+#include <string>
 using namespace std;
 
-struct node {
-    char data;
-    struct node *next;
-};
-
-node* push(node* head, char data);
-node* pop(node* head);
-
-bool isMatchingPair(char open, char close) {
+bool isMatchingPair (char open, char close)  {
     if (open == '(' && close == ')') {
         return true;
     }
@@ -23,53 +17,31 @@ bool isMatchingPair(char open, char close) {
 }
 
 int main() {
-    char str[99];
-    cout << "Р’РІРµРґРёС‚Рµ СЃС‚СЂРѕРєСѓ: "; cin >> str;
+    string str;
+    cout << "Введите строку: "; cin >> str;
 
-    node* head = nullptr;
+    stack<char> brackets;
     bool error = false;
 
     for (int i = 0; str[i] != '\0'; i++) {
         if (str[i] == '(' || str[i] == '{' || str[i] == '[') {
-            head = push(head, str[i]);
+            brackets.push(str[i]);
         }
         else if (str[i] == ')' || str[i] == '}' || str[i] == ']') {
-            if (head == nullptr) {
-                error = true;
-                break;
-            } else if (!isMatchingPair(head->data, str[i])) {
+            if (!isMatchingPair(brackets.top(), str[i])) {
                 error = true;
                 break;
             } else {
-                head = pop(head);
+                brackets.pop();
             }
         }
     }
 
-    if (!error && head == nullptr) {
-        cout << "\nРЎРєРѕР±РєРё СЂР°СЃСЃС‚Р°РІР»РµРЅС‹ РїСЂР°РІРёР»СЊРЅРѕ" << endl;
+    if (!error && brackets.empty()) {
+        cout << "\nСкобки расставлены правильно" << endl;
     } else {
-        cout << "\nРЎРєРѕР±РєРё СЂР°СЃСЃС‚Р°РІР»РµРЅС‹ РЅРµРІРµСЂРЅРѕ" << endl;
-        while (head != nullptr) {
-            pop(head);
-        }
+        cout << "\nСкобки расставлены неверно" << endl;
     }
 
     return 0;
-}
-
-node* push(node* head, char data) {
-    node* newNode = new node();
-    newNode->data = data;
-    newNode->next = head;
-    return newNode;
-}
-
-node* pop(node* head) {
-    if (head == nullptr) {
-        return nullptr;
-    }
-    node* ptrNext = head->next;
-    delete head;
-    return ptrNext;
 }

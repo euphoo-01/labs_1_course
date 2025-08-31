@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блочная модель</title>
+    <style>
+        div{
+            padding: 10px;
+            margin-top: 10px;
+            display: inline-block;
+        } 
+        #d1{
+            border: rgb(255, 0, 0) 5px inset; 
+        }
+        #d2{
+            border: rgb(0, 255, 0) 5px dashed;
+        }
+        #d3{
+            border: rgb(0,0,255) 5px dotted;
+        }
+        #d4{
+            border: rgb(0, 255, 255) 5px double;
+        }
+        #d5{
+            border: rgb(255,0,255) 5px groove;
+        }
+        #d6{
+            border: rgb(255,255,0) 5px outset;
+        }
+        #d7{
+            border: rgb(0,0,0) 5px solid;
+        }
+        span{
+            display: inline-block;
+            background-color: #FFA500;
+            margin: 5px;
+            padding: 5px;
+            border: 2px #FF4500 solid;
+        }
+        #p1{
+            width: 400px;
+            text-align: center;
+            border: 3px  #FF7F50 solid;
+        }
+        #p2{
+            border: 5px red solid;
+            border-radius: 20px 40px;
+            box-shadow: inset rgba(0, 0, 0, .5) 2px 2px 8px 8px;
+            overflow: auto;
+        }
+        #p3{
+            border: 5px #FF6347 solid;
+        }
+        
+        #p4{
+            border-top-color: orange;
+            border-right-color: darkblue;
+            border-bottom-color: yellow;
+            border-left-color: brown;    
+            border-width: 5px;
+            border-style: solid;
+        }
+        #p5{
+            border-left: 5px solid  #007BA7;
+            border-right: 5px solid  #007BA7;
+        }
+        #p6{
+            border-top: rgb(229,43,80) solid 5px;
+            border-right: 5px turquoise dashed;
+            border-bottom: 5px turquoise dashed;
+            border-left: 5px turquoise dashed;
+        }
+        #p7{
+            border: orange 1px dotted;
+        }
+        #p8{
+            border-top: darkblue 2px solid;
+            border-bottom: darkblue 2px solid;
+            border-left: darkred 2px dotted;
+            border-right: darkred 2px dotted;
+        }
+        #p9{
+            border: double #B3446C 5px;
+        }
+        #p10{
+            border-top: #808000 1px dotted;
+            border-bottom: #FF7518 3px solid;
+        }
+        #p11{
+            border-left: #CC7722 double 5px;
+            border-bottom: #CC7722 double 5px;
+        }
+        #p12{
+            border-right: ridge #B5A642 5px;
+            border-top: ridge #B5A642 5px;
+        }
+        #p13{
+            border-left: 5px rgb(0,40,0) dotted;
+            border-right: 5px rgb(0,40,0) dotted;
+            border-bottom: 5px rgb(0,40,0) dotted;
+        }
+        #d8{
+            display: inline-block;
+            box-sizing: border-box;
+            border: 5px black solid;
+            height: 100px;
+            width: 100px;
+            padding-top: 0px;
+            vertical-align: top;
+            text-align: center;
+        }
+        #d9{
+            box-sizing: content-box;
+            border: 5px black solid;
+            height: 90px;
+            width: 90px;     
+            vertical-align: top;
+            text-align: center;   
+            padding: 0px;
+        }
+        h1{
+            border: 5px dotted red;
+            padding-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">R</div>
+    <div id="d2">G</div>
+    <div id="d3">B</div>
+    <div id="d4">C</div>
+    <div id="d5">M</div>
+    <div id="d6">Y</div>
+    <div id="d7">K</div>
+    <p id="p1">Lorem ipsum dolor sit amet <span>consectetur adipisicing elit. Sapiente, facere.</span> Ratione veritatis velit vero laborum?</p>
+    <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio error praesentium <span>vero quis</span> perspiciatis officiis?</p>
+    <p id="p3">Lorem ipsum dolor sit amet, <span> adipisicing elit. Non, accusamus corrupti molestiae</span> harum odit cum.</p>
+    <p id="p4">Cплошная граница коричневого цвета слева, внизу желтая, справа темно-синяя, вверху оранжевая.</p>
+    <p id="p5">Слева и справа сплошная линия #007BA7</p>
+    <p id="p6">Сплошную граница (229 43 80) сверху, и пунктирную границу голубого цвета слева, справа и снизу.</p>
+    <p id="p7">Точечная граница оранжевого цвета 1 пиксель</p>
+    <p id="p8">Граница темно-синего цвета толщиной 2 пикселя сверху и снизу и пунктирную границу  бордового цвета слева и справа</p>
+    <p id="p9">Двойная сплошная граница #B3446C цвета</p> 
+    <p id="p10">Пунктирную границу #808000 цвета и толщиной 1 пиксель сверху и сплошную границу #FF7518 цвета толщиной 3 пикселя снизу.</p>
+    <p id="p11">Двойная сплошная граница #CC7722 цвета слева и внизу</p>
+    <p id="p12">Граница гребень #B5A642 цвета справа и сверху</p>
+    <p id="p13">Точечная граница слева, справа, снизу толщиной 5px и (0 40 0) цвета</p>
+    <div id="d8"><p>1</p></div>
+    <div id="d9"><p>2</p></div>
+    <h1>Блочный элемент</h1>
+</body>
+</html>

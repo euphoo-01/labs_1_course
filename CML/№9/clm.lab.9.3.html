@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3</title>
+</head>
+<style>
+    *{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+        margin: 0;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-areas: 
+        'menu head head head head'
+        'menu main main main side'
+        'foot foot foot foot foot';
+        grid-template-rows: 50px 1fr 50px;
+        grid-gap: 2px;
+        align-items: stretch;
+        height: 100vh;
+    }
+    header{
+        grid-area: head;
+        border: 1px black solid;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        background-color: #dedede;
+    }
+    nav {
+        grid-area: menu;
+        border: 1px black solid;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: #b5b5b5;
+    }
+    article{
+        grid-area: main;
+        border: 1px black solid;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: #ebe8e8;
+    }
+    aside {
+        grid-area: side;
+        border: 1px black solid;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: #ebe8e8;
+    }
+    footer{
+        display: flex;
+        height: 50px;
+        grid-area: foot;
+        border: 1px black solid;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        background-color: #b5b5b5;
+    }
+    ul li {
+        list-style: none;
+        margin-left: -40px;
+        margin-bottom: 15px;
+    }
+    ul li a{
+        color: black;
+        text-decoration: none;
+        border: 1px black solid;
+        border-radius: 5px;
+    }
+    ul li a:hover{
+        color: red;
+        border-color: red;
+    }
+</style>
+<body>
+    <div class="grid-container">
+        <header>Голова</header>
+        <nav>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid">MDN Web Docs</a></li>
+                <li><a href="https://www.freecodecamp.org/">FreeCodeCamp</a></li>
+                <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS Tricks</a></li>
+            </ul>
+        </nav>
+        <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique et dolorem dolore in nesciunt tenetur quia vel consequuntur nisi natus maiores libero quas soluta, voluptate error at esse, accusantium qui.
+        Voluptas dolorem fuga, optio itaque eum suscipit ipsam deleniti debitis modi ipsum asperiores cumque hic ratione minus temporibus laudantium nam nostrum totam eius id ea veniam beatae sed labore. Sit?
+        Nostrum, magni quam quod eveniet nisi quis quos, dolorum, sequi harum mollitia officia tempore perspiciatis culpa ab! Nulla ex non atque beatae voluptatibus harum sint nemo sequi pariatur? Commodi, quis.
+        Quis iste vero veritatis hic quisquam voluptatum. Nisi accusamus quos voluptatibus illum voluptatem ipsa cupiditate. Provident dolores vel harum fugiat modi unde nobis, iste vitae ducimus. Consequatur et numquam accusamus?
+        Sed temporibus nam quas, in exercitationem consectetur. Fugiat quasi illum nostrum esse ut ullam delectus, similique, velit sint pariatur, rerum harum nisi eum facere laudantium architecto eaque dolorem consequatur earum.
+        Molestiae, accusamus? Molestiae ut excepturi placeat, delectus repellat harum suscipit aspernatur ducimus temporibus deleniti maxime minima dolores autem laborum, sequi nam atque odit fuga porro ratione, vel animi. Hic, aspernatur?
+        Temporibus, nam cum dignissimos quo commodi impedit et reiciendis modi in obcaecati, assumenda magni, eum consequatur id nostrum soluta? Excepturi omnis quisquam tempore nostrum, nam doloremque velit ipsam in at!</article>
+        <aside>Сайдбар</aside>
+        <footer>Лавшук Станислав, ФИТ 1-7-1, БГТУ</footer>
+    </div>
+</body>
+</html>

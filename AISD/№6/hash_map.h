@@ -6,14 +6,15 @@ typedef struct _hash_map_entry_ hash_map_entry;
 
 typedef struct _hash_map_ hash_map;
 
-void hash_map_insert(hash_map *map, int key, std::string value);
-void hash_map_del(hash_map *map, int key);
-void hash_map_display(hash_map *map);
-std::string hash_map_at(hash_map *map, int key);
+void hash_map_insert(hash_map*, int, std::string);
+void hash_map_del(hash_map*, int);
+void hash_map_display(hash_map*);
+void hash_map_resize(hash_map&);
+std::string hash_map_at(hash_map*, int);
 int hash (int, int);
 
 
-hash_map *hash_map_create(int size);
-void hash_map_free(hash_map *map);
+hash_map *hash_map_create(int);
+void hash_map_free(hash_map*);
 
 #endif //HASH_MAP_H

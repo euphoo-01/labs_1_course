@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта изображение</title>
+    <style>
+        img {
+            width: 800px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/belarus.jpg" alt="Карта Беларуси" usemap="#belmap">
+    <map name="belmap"> 
+        <area coords="350,250,100" shape="circle" href="images/minsk.jpg" target="_blank" title="Минск">
+        <area coords="600,450,100" shape="circle" href="images/gomel.jpg" target="_blank" title="Гомель">
+        <area coords="150,300,100" shape="circle" href="images/grodno.jpg" target="_blank" title="Гродно">
+        <area coords="200,450,100" shape="circle" href="images/brest.jpg" target="_blank" title="Брест">
+        <area coords="600,300,100" shape="circle" href="images/mogilev.jpg" target="_blank" title="Могилев">
+        <area coords="500,100,100" shape="circle" href="images/vitebsk.jpg" target="_blank" title="Витебск">
+    </map>
+</body>
+</html>

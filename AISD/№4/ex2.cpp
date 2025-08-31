@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include <windows.h>
 
 using namespace std;
 
@@ -39,15 +38,12 @@ void qsort(int* arr, int size) {
 }
 
 int main() {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
-
     int N;
     cout << "Введите N: ";
     cin >> N;
 
     if (N >= 10000 || N <= 0) {
-        cerr << "Ошибка! Введите корректное N." << endl;
+        cerr << "Некорректное N." << endl;
         return 1;
     }
 
@@ -78,7 +74,7 @@ int main() {
         counter = N;
     }
     else {
-        cerr << "Ошибка! Недостаточно данных." << endl;
+        cerr << "Призеров нет." << endl;
     }
 
 

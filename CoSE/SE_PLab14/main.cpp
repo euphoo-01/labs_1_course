@@ -1,0 +1,40 @@
+#include <iostream>
+#include <cwchar>
+#include <cstring>
+#include <cstdlib>
+
+#include "Modules/Headers/Error.h"
+#include "Modules/Headers/In.h"
+#include "Modules/Headers/Log.h"
+#include "Modules/Headers/Parm.h"
+
+int main(int argc, char* argv[]) {
+    wchar_t* wargv[argc];
+    for (int i = 0; i < argc; ++i) {
+        size_t len = strlen(argv[i]) + 1; // +1 для \0
+        wargv[i] = new wchar_t[len];;
+        mbstowcs(wargv[i], argv[i], len);
+    }
+
+    Log::LOG log = Log::INITLOG;
+    try {
+        Parm::PARM parameters = Parm::getparm(argc, wargv);
+        log = Log::getlog(parameters.log);
+        Log::WriteLog(log);
+        Log::WriteParm(log, parameters);
+        In::IN input = In::getin(parameters.in);
+        Log::WriteIn(log, input);
+        std::cout << "Файл обработан успешно! \n" << "Результат: \n" << input.text << std::endl;
+    }
+    catch (Error::ERROR e) {
+        std::cerr << "Ошибка " << e.id << " на строке " << e.inext.line << " символ " << e.inext.col
+        << ". " << e.message << std::endl;
+        Log::WriteError(log, e);
+    }
+    // Очистка
+    for (int i = 0; i < argc; i++) {
+        delete wargv[i];
+    }
+    Log::Close(log);
+    return 0;
+}
