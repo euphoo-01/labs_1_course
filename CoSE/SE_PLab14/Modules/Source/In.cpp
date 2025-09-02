@@ -27,15 +27,12 @@ unsigned char *convertWindows1251ToUTF8(const unsigned char *input) {
         iconv_close(cd);
         throw ERROR_THROW(1);
     }
-    // Завершаем строку
     *outptr = '\0';
 
-    // Обрезаем буфер до фактической длины
     size_t converted_len = outptr - outbuf;
     unsigned char *result_buf = new unsigned char[converted_len + 1];
-    memcpy(result_buf, outbuf, converted_len + 1); // Копируем с нулевым байтом
+    memcpy(result_buf, outbuf, converted_len + 1); // Плюс нуль байт
 
-    // Очистка временного буфера
     delete[] outbuf;
     iconv_close(cd);
 
@@ -49,7 +46,7 @@ namespace In {
         char filename[filename_length];
         wcstombs(filename, infile, filename_length);
 
-        int cur_line = 1, cur_col = 1, cur_pos = 0,
+        int cur_line = 1, cur_col = 0, cur_pos = 0,
                 result_pos = 0, ignored = 0;
 
         result.text = new unsigned char[IN_MAX_LEN_TEXT];
@@ -84,9 +81,9 @@ namespace In {
             } else if (result.code[ch] >= 0 && result.code[ch] <= 255) {
                 result.text[result_pos++] = result.code[ch];
             } else if (result.code[ch] == IN::F) {
-                throw ERROR_THROW_IN(116, cur_line, cur_col);
+                throw ERROR_THROW_IN(111, cur_line, cur_col);
             } else {
-                throw ERROR_THROW_IN(116, cur_line, cur_col);
+                throw ERROR_THROW_IN(111, cur_line, cur_col);
             }
         }
         unsigned char *utf8text = convertWindows1251ToUTF8(result.text);

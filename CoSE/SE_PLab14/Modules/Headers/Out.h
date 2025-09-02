@@ -1,8 +1,16 @@
-//
-// Created by euphoo on 01.09.25.
-//
+#pragma once;
+#include <fstream>;
+#include "Parm.h";
 
-#ifndef OUT_H
-#define OUT_H
+namespace Out {
+    struct OUT {
+        unsigned char* text;
+        wchar_t outfile[PARM_MAXSIZE];
+        std::ofstream* stream;
+    };
 
-#endif //OUT_H
+    static const OUT INITOUT = {nullptr,L"",NULL};
+    OUT getout(wchar_t outfile[PARM_MAXSIZE], unsigned char* text);
+    void Write (OUT out);
+    void Close (OUT out);
+}

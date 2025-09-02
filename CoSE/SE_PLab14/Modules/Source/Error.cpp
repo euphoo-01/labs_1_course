@@ -21,11 +21,10 @@ namespace Error {
         ERROR_ENTRY_NODEF(105), ERROR_ENTRY_NODEF(106), ERROR_ENTRY_NODEF(107),
         ERROR_ENTRY_NODEF(108), ERROR_ENTRY_NODEF(109),
         ERROR_ENTRY(110, "Ошибка при открытии файла с исходным кодом (-in)"),
-        ERROR_ENTRY_NODEF(111),
+        ERROR_ENTRY(111, "Недопустимый символ"),
         ERROR_ENTRY(112, "Ошибка создания потока логирования"),
         ERROR_ENTRY(113, "Ошибка обработки протокола"),
-        ERROR_ENTRY_NODEF(114), ERROR_ENTRY_NODEF(115),
-        ERROR_ENTRY(116, "Недопустимый символ"),
+        ERROR_ENTRY(114, "Ошибка создания потока вывода"),
         ERROR_ENTRY(115, "Превышена длина входного файла")
     };
 

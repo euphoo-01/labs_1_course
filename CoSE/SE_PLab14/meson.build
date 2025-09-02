@@ -7,7 +7,8 @@ sources = files(
     'Modules/Source/Error.cpp',
     'Modules/Source/Log.cpp',
     'Modules/Source/Parm.cpp',
-    'Modules/Source/In.cpp'
+    'Modules/Source/In.cpp',
+    'Modules/Source/Out.cpp'
 )
 
 iconv_dep = dependency('iconv', required : true)

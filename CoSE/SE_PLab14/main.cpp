@@ -7,6 +7,7 @@
 #include "Modules/Headers/In.h"
 #include "Modules/Headers/Log.h"
 #include "Modules/Headers/Parm.h"
+#include "Modules/Headers/Out.h"
 
 int main(int argc, char* argv[]) {
     wchar_t* wargv[argc];
@@ -17,6 +18,7 @@ int main(int argc, char* argv[]) {
     }
 
     Log::LOG log = Log::INITLOG;
+    Out::OUT out = Out::INITOUT;
     try {
         Parm::PARM parameters = Parm::getparm(argc, wargv);
         log = Log::getlog(parameters.log);
@@ -24,7 +26,9 @@ int main(int argc, char* argv[]) {
         Log::WriteParm(log, parameters);
         In::IN input = In::getin(parameters.in);
         Log::WriteIn(log, input);
-        std::cout << "Файл обработан успешно! \n" << "Результат: \n" << input.text << std::endl;
+        std::cout << "Файл обработан успешно!\n";
+        out = Out::getout(parameters.out, input.text);
+        Out::Write(out);
     }
     catch (Error::ERROR e) {
         std::cerr << "Ошибка " << e.id << " на строке " << e.inext.line << " символ " << e.inext.col

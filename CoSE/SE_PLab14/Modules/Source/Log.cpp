@@ -3,7 +3,7 @@
 
 namespace Log {
     LOG getlog(wchar_t logfile[]) {
-        LOG log = {};
+        LOG log = Log::INITLOG;
         wcscpy(log.logfile, logfile);
 
         char clogfile[PARM_MAXSIZE];
@@ -28,6 +28,9 @@ namespace Log {
                 current++;
             }
             (*log.stream) << std::endl;
+        }
+        else {
+            throw ERROR_THROW(112);
         }
     }
 
