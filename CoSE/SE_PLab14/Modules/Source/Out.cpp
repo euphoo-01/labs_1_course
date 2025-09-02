@@ -5,7 +5,7 @@
 #include <cstring>
 
 namespace Out {
-    OUT getout(wchar_t outfile[PARM_MAXSIZE], unsigned char* text) {
+    OUT getout(wchar_t outfile[PARM_MAXSIZE]) {
         OUT out = Out::INITOUT;
         wcscpy(out.outfile,outfile);
 
@@ -18,15 +18,14 @@ namespace Out {
             out.stream = nullptr;
             throw ERROR_THROW(114);
         }
-        out.text = text;
         return out;
     }
 
-    void Write(OUT out) {
+    void Write(OUT out, unsigned char* text) {
         if (out.stream->good() || !out.stream->is_open()) {
             int idx = 0;
-            while (out.text[idx] != '\0') {
-                (*out.stream) << out.text[idx];
+            while (text[idx] != '\0') {
+                (*out.stream) << text[idx];
                 idx++;
             }
             (*out.stream) << std::endl;
@@ -34,6 +33,13 @@ namespace Out {
             throw ERROR_THROW(1);
         }
 
+    }
+
+    void WriteError(OUT out, Error::ERROR error) {
+        if (out.stream->good() || out.stream->is_open()) {
+            (*out.stream) << "Ошибка " << error.id << ". " << error.message << ", строка: " << error.inext.line <<
+                    ", символ: " << error.inext.col << std::endl;
+        }
     }
 
     void Close(OUT out) {

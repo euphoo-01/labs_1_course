@@ -69,7 +69,7 @@ namespace In {
 
             if (ch == IN_CODE_ENDL) {
                 cur_line++;
-                cur_col = 1;
+                cur_col = 0;
             } else {
                 cur_col++;
             }

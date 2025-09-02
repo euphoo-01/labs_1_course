@@ -22,23 +22,25 @@ int main(int argc, char* argv[]) {
     try {
         Parm::PARM parameters = Parm::getparm(argc, wargv);
         log = Log::getlog(parameters.log);
+        out = Out::getout(parameters.out);
         Log::WriteLog(log);
         Log::WriteParm(log, parameters);
         In::IN input = In::getin(parameters.in);
         Log::WriteIn(log, input);
+        Out::Write(out, input.text);
         std::cout << "Файл обработан успешно!\n";
-        out = Out::getout(parameters.out, input.text);
-        Out::Write(out);
     }
     catch (Error::ERROR e) {
         std::cerr << "Ошибка " << e.id << " на строке " << e.inext.line << " символ " << e.inext.col
         << ". " << e.message << std::endl;
         Log::WriteError(log, e);
+        Out::WriteError(out, e);
     }
-    // Очистка
+
     for (int i = 0; i < argc; i++) {
         delete wargv[i];
     }
     Log::Close(log);
+    Out::Close(out);
     return 0;
 }
